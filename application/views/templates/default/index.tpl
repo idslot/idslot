@@ -1,0 +1,121 @@
+<?php
+	$lang = $this->config->item('languages');
+	$this->load->helper('url');
+	$this->lang->load('idslot', strtolower($lang[$user->language]));
+	$base_url = base_url();
+	$this->load->helper('language');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="<?php echo $user->meta_keywords;?>" />
+  <meta name="title" content="<?php echo $user->title;?>" />
+  <meta name="description" content="<?php echo $user->meta_description;?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><?php echo $user->title;?></title>
+	<!--styles-->
+	<link href="application/views/idslot/theme/styles/reset.css" type="text/css" rel="stylesheet" />
+	<link href="application/views/idslot/theme/styles/style.css" type="text/css" rel="stylesheet" />
+	<?php
+		if(lang('direction') == 'rtl') echo '<link href="application/views/idslot/theme/styles/rtl.css" type="text/css" rel="stylesheet" />';
+	?>
+	<link href="application/views/idslot/theme/styles/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" />
+	<!--javascript-->
+	<script type="text/javascript" src="application/views/idslot/theme/js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="application/views/idslot/theme/js/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="application/views/idslot/theme/js/jquery.infieldlabel.min.js"></script>
+	<script type="text/javascript" src="application/views/idslot/theme/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+		var title = "<?php echo $user->title;?>";
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$("label").inFieldLabels();
+		
+		$("a.map").fancybox({
+			'transitionIn'	:	'fade',
+			'transitionOut'	:	'fade',
+			'speedIn'		:	600, 
+			'speedOut'		:	200, 
+			'overlayShow'	:	false,
+			'overlayShow' : true,
+			'titlePosition' : 'inside',
+			'padding': 5
+		});
+		
+		$("a.photos").fancybox({
+			'transitionIn'	:	'elastic',
+			'transitionOut'	:	'elastic',
+			'speedIn'		:	600, 
+			'speedOut'		:	200, 
+			'overlayShow'	:	false,
+			'overlayShow' : true,
+			'titlePosition' : 'inside',
+			'padding': 5
+		});
+		
+		$('.item').click(function() {
+			$('.item').removeClass("active");
+			$(this).addClass("active");
+		}); 
+		
+	});
+	</script>
+
+</head>
+<body>
+
+<div class="cornerBox">
+    <div class="absolute T"></div>
+		<div class="absolute L"></div>
+		<div class="absolute R"></div>
+		<div class="absolute B"></div>
+    <div class="corner TL"></div>
+    <div class="corner TR"></div>
+    <div class="corner BL"></div>
+    <div class="corner BR"></div>
+    <div class="cornerBoxInner">
+			
+      <div class="maincontent idslot">
+				<div class="header">
+					<div class="pic frame"><span></span><img src="application/views/idslot/files/about/thumb_<?php echo $uid;?>.png" /></div>
+					<span class="htitle"><?php echo $user->title;?></span>
+					<span class="desc"><?php echo $user->short_description;?></span>
+				</div>
+				
+				<div class="navigation">
+					<?php
+						foreach($plugins as $pname=>$plugin){
+							if ($pname=='about'){
+								?>
+								<span class="item active"><a href="<?php echo "#".$pname ?>"><?php echo lang(ucfirst($pname)); ?></a></span>
+								<?php
+							}else{
+								?>
+						    <span class="item"><a href="<?php echo "#".$pname ?>"><?php echo lang(ucfirst($pname)); ?></a></span>
+								<?php
+							}
+						}
+					?>
+				</div>
+				
+				<div id="datacontent" class="panels">
+				<?php
+				  foreach($plugins as $plugin){
+						print($plugin);
+					}
+				?>
+				</div>
+				
+			</div>
+				
+    </div>
+</div>
+
+<script src="application/views/idslot/theme/js/init.js" type="text/javascript"></script>
+</body>
+</html>
