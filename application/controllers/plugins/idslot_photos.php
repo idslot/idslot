@@ -18,7 +18,7 @@
  * @link	http://idslot.org
  */
 class idslot_photos extends VC_Controller {
-  function __construct(){
+  public function __construct(){
     parent::__construct();
     $this->load->helper('form');
     $this->load->model('system');
@@ -31,7 +31,7 @@ class idslot_photos extends VC_Controller {
     $this->lang->load('idslot');
   }
   
-  function add($pid){
+  public function add($pid){
     $config = $this->photos->row_form_rules();
     $this->form_validation->set_rules($config);
     if($this->form_validation->run() == TRUE){
@@ -51,7 +51,7 @@ class idslot_photos extends VC_Controller {
     redirect('idslot/edit/photos');
   }
 
-  function edit($id){
+  public function edit($id){
     $config = $this->photos->row_form_rules();
     $this->form_validation->set_rules($config);
     if($this->form_validation->run() == TRUE){
@@ -71,7 +71,7 @@ class idslot_photos extends VC_Controller {
     redirect('idslot/edit/photos');
   }
 
-  function remove($id){
+  public function remove($id){
     if($this->photos->remove_row($id)){
       $this->system->render($this->uid);
       $this->system->add_msg(lang('Photos removed.'));

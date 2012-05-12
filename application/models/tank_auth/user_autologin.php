@@ -31,7 +31,7 @@ class User_Autologin extends CI_Model
 	private $table_name			= 'user_autologin';
 	private $users_table_name	= 'users';
 
-	function __construct()
+	public function __construct()
 	{
 		parent::__construct();
 
@@ -48,7 +48,7 @@ class User_Autologin extends CI_Model
 	 * @param	string
 	 * @return	object
 	 */
-	function get($user_id, $key)
+	public function get($user_id, $key)
 	{
 		$this->db->select($this->users_table_name.'.id');
 		$this->db->select($this->users_table_name.'.username');
@@ -68,7 +68,7 @@ class User_Autologin extends CI_Model
 	 * @param	string
 	 * @return	bool
 	 */
-	function set($user_id, $key)
+	public function set($user_id, $key)
 	{
 		return $this->db->insert($this->table_name, array(
 			'user_id' 		=> $user_id,
@@ -85,7 +85,7 @@ class User_Autologin extends CI_Model
 	 * @param	string
 	 * @return	void
 	 */
-	function delete($user_id, $key)
+	public function delete($user_id, $key)
 	{
 		$this->db->where('user_id', $user_id);
 		$this->db->where('key_id', $key);
@@ -98,7 +98,7 @@ class User_Autologin extends CI_Model
 	 * @param	int
 	 * @return	void
 	 */
-	function clear($user_id)
+	public function clear($user_id)
 	{
 		$this->db->where('user_id', $user_id);
 		$this->db->delete($this->table_name);
@@ -110,7 +110,7 @@ class User_Autologin extends CI_Model
 	 * @param	int
 	 * @return	void
 	 */
-	function purge($user_id)
+	public function purge($user_id)
 	{
 		$this->db->where('user_id', $user_id);
 		$this->db->where('user_agent', substr($this->input->user_agent(), 0, 149));

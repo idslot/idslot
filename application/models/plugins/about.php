@@ -25,7 +25,7 @@ class about extends CI_Model {
   /**
    * Constructor
    **/
-  function __construct(){
+  public function __construct(){
     $this->lang->load('idslot');
     parent::__construct();
   }
@@ -36,7 +36,7 @@ class about extends CI_Model {
    * @param  integer  User id
    * @return array    About
    **/
-  function fetch($uid){
+  public function fetch($uid){
     $this->load->database();
     $query = $this->db->query('SELECT * FROM biography WHERE uid = ' . $this->db->escape($uid));
     return $query->row_array();
@@ -52,7 +52,7 @@ class about extends CI_Model {
    *              string   About
    * @return boolean  True on success and false on failure
    **/
-  function create($uid, $arr){
+  public function create($uid, $arr){
     $this->load->database();
     $arr['uid'] = $uid;
     $result = $this->db->insert('biography', $arr);
@@ -70,7 +70,7 @@ class about extends CI_Model {
    *              string   About
    * @return boolean  True on success and false on failure
    **/
-  function update($uid, $arr){
+  public function update($uid, $arr){
     $this->load->database();
     $this->db->where('uid', $uid);
     $result = $this->db->update('biography', $arr);
@@ -80,14 +80,14 @@ class about extends CI_Model {
   /**
    * Delete plugin
    **/
-  function delete($uid){
+  public function delete($uid){
     return false;
   }
 
   /**
    * Form rules
    **/
-  function form_rules(){
+  public function form_rules(){
     return array(
       array(
         'field'   => 'about[title]',
@@ -108,7 +108,7 @@ class about extends CI_Model {
    * @param string  action
    * @return  array image sizes
    **/
-  function image_size($action=false){
+  public function image_size($action=false){
     return array(
                  'thumb_' => array('100', '100', 0),
                  ''       => array('400', '300', 0)

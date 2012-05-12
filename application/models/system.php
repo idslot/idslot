@@ -25,7 +25,7 @@ class System extends CI_Model {
   /**
    * Constructor
    **/
-  function __construct(){
+  public function __construct(){
     parent::__construct();
     $this->load->library('session');
   }
@@ -36,7 +36,7 @@ class System extends CI_Model {
    * @param  integer  user id
    * @return mixed    idslot
    **/
-  function render($uid){
+  public function render($uid){
     $this->load->helper('path');
     $this->load->helper('file');
     $this->load->library('html_purifier');
@@ -90,7 +90,7 @@ header("Location: {$_SERVER[\'HTTP_REFERER\']}");
     symlink("{$ids_path}/application/views/themes/{$data['user']->template}/", "application/views/idslot/theme");
   }
   
-  function upload_images($uid, $sizes=false, $id=false)
+  public function upload_images($uid, $sizes=false, $id=false)
   {
     $plugins = $this->config->item('plugins');
     $this->load->model('tank_auth/users');
@@ -171,7 +171,7 @@ header("Location: {$_SERVER[\'HTTP_REFERER\']}");
     }
   }
 
-  function add_msg($msg){
+  public function add_msg($msg){
     $this->load->library('session');
     $msgs = $this->session->userdata('msgs');
     $msgs[] = $msg;
@@ -179,21 +179,21 @@ header("Location: {$_SERVER[\'HTTP_REFERER\']}");
     $this->session->set_userdata($data);
   }
 
-  function get_msgs(){
+  public function get_msgs(){
     $this->load->library('session');
     $msgs = $this->session->userdata('msgs');
     $this->session->unset_userdata('msgs');
     return $msgs;
   }
   
-  function choose_language(){
+  public function choose_language(){
     $languages = $this->config->item('languages');
     $lang = $this->change_language('');
     
     $this->config->set_item('language', strtolower($languages[$lang]));
   }
   
-  function change_language($lang){
+  public function change_language($lang){
     $languages = $this->config->item('languages');
     if(!array_key_exists($lang, $languages)){
       $lang = key($languages);
@@ -203,7 +203,7 @@ header("Location: {$_SERVER[\'HTTP_REFERER\']}");
     return $lang;
   }
   
-  function rrmdir($dir) {
+  public function rrmdir($dir) {
     if (is_dir($dir)) {
       $objects = scandir($dir);
       foreach ($objects as $object) {
@@ -216,7 +216,7 @@ header("Location: {$_SERVER[\'HTTP_REFERER\']}");
     }
   }
   
-  function render_path($plugin=''){
+  public function render_path($plugin=''){
     $uid = $this->session->userdata('user_id');
     $username = $this->session->userdata('username');
     $ids_path = dirname($_SERVER['SCRIPT_FILENAME']);
@@ -226,7 +226,7 @@ header("Location: {$_SERVER[\'HTTP_REFERER\']}");
     return "{$ids_path}/application/views/idslot/files/" . $plugin;
   }
   
-  function is_required($data, $field, $css_class = 'required'){
+  public function is_required($data, $field, $css_class = 'required'){
     if(!isset($data[$field])){
       return '';
     }

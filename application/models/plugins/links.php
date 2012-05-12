@@ -25,7 +25,7 @@ class links extends CI_Model {
   /**
    * Constructor
    **/
-  function __construct(){
+  public function __construct(){
     $this->lang->load('idslot');
     parent::__construct();
   }
@@ -36,7 +36,7 @@ class links extends CI_Model {
    * @param  integer  User id
    * @return array    Links
    **/
-  function fetch($uid){
+  public function fetch($uid){
     $this->load->database();
     $query = $this->db->query('SELECT * FROM social WHERE uid = ' . $this->db->escape($uid));
 
@@ -55,7 +55,7 @@ class links extends CI_Model {
    *              string  Description
    * @return boolean  True on success and false on failure
    **/
-  function create($uid, $arr){
+  public function create($uid, $arr){
     $this->load->database();
     $arr['uid'] = $uid;
     $result = $this->db->insert('social', $arr);
@@ -72,7 +72,7 @@ class links extends CI_Model {
    *              string  Description
    * @return boolean  True on success and false on failure
    **/
-  function update($uid, $arr){
+  public function update($uid, $arr){
     $this->load->database();
     $this->db->where('uid', $uid);
     $result = $this->db->update('social', $arr);
@@ -82,14 +82,14 @@ class links extends CI_Model {
   /**
    * Delete plugin
    **/
-  function delete($uid){
+  public function delete($uid){
     return false;
   }
 
   /**
    * Form rules
    **/
-  function form_rules(){
+  public function form_rules(){
     return array(
                    array(
                          'field'   => 'links[title]',
@@ -104,7 +104,7 @@ class links extends CI_Model {
                 );
   }
   
-  function row_form_rules(){
+  public function row_form_rules(){
     return array(
       array(
         'field'   => 'name', 
@@ -124,7 +124,7 @@ class links extends CI_Model {
     );
   }
 
-  function fetch_row($id){
+  public function fetch_row($id){
     $this->load->database();
     $uid = $this->session->userdata('user_id');
     $query = $this->db->query('SELECT sl.* FROM social_links sl, social s
@@ -134,7 +134,7 @@ class links extends CI_Model {
     return $query->row_array();
   }
 
-  function add_row($sid, $name, $url, $icon){
+  public function add_row($sid, $name, $url, $icon){
     $this->load->database();
     $uid = $this->session->userdata('user_id');
     $this->db->where('uid', $uid);
@@ -151,7 +151,7 @@ class links extends CI_Model {
     return false;
   }
 
-  function edit_row($id, $name, $url, $icon){
+  public function edit_row($id, $name, $url, $icon){
     $this->load->database();
     
     $uid = $this->session->userdata('user_id');
@@ -167,7 +167,7 @@ class links extends CI_Model {
     return $this->db->update('social_links', $data);
   }
 
-  function remove_row($id){
+  public function remove_row($id){
     $this->load->database();
     
     $uid = $this->session->userdata('user_id');
@@ -186,7 +186,7 @@ class links extends CI_Model {
    * @param string  action
    * @return  array image sizes
    **/
-  function image_size($action=false){
+  public function image_size($action=false){
     return false;
   }
 }

@@ -25,7 +25,7 @@ class photos extends CI_Model {
   /**
    * Constructor
    **/
-  function __construct(){
+  public function __construct(){
     $this->lang->load('idslot');
     parent::__construct();
   }
@@ -36,7 +36,7 @@ class photos extends CI_Model {
    * @param  integer  User id
    * @return array    Photos
    **/
-  function fetch($uid){
+  public function fetch($uid){
     $this->load->database();
     $query = $this->db->query('SELECT * FROM portfolio WHERE uid = ' . $this->db->escape($uid));
     $arr = $query->row_array();
@@ -55,7 +55,7 @@ class photos extends CI_Model {
    *              string  Description
    * @return boolean  True on success and false on failure
    **/
-  function create($uid, $arr){
+  public function create($uid, $arr){
     $this->load->database();
     $arr['uid'] = $uid;
     $result = $this->db->insert('portfolio', $arr);
@@ -72,7 +72,7 @@ class photos extends CI_Model {
    *              string  Description
    * @return boolean  True on success and false on failure
    **/
-  function update($uid, $arr){
+  public function update($uid, $arr){
     $this->load->database();
     $this->db->where('uid', $uid);
     $result = $this->db->update('portfolio', $arr);
@@ -82,14 +82,14 @@ class photos extends CI_Model {
   /**
    * Delete plugin
    **/
-  function delete($uid){
+  public function delete($uid){
     return false;
   }
 
   /**
    * Form rules
    **/
-  function form_rules(){
+  public function form_rules(){
     return array(
                    array(
                          'field'   => 'photos[title]',
@@ -104,7 +104,7 @@ class photos extends CI_Model {
                 );
   }
   
-  function row_form_rules(){
+  public function row_form_rules(){
     return array(
                    array(
                          'field'   => 'content',
@@ -119,7 +119,7 @@ class photos extends CI_Model {
                 );    
   }
 
-  function fetch_row($id){
+  public function fetch_row($id){
     $this->load->database();
     $uid = $this->session->userdata('user_id');
     $query = $this->db->query('SELECT pl.* FROM portfolio_list pl, portfolio p
@@ -128,7 +128,7 @@ class photos extends CI_Model {
     return $query->row_array();
   }
 
-  function add_row($pid, $content){
+  public function add_row($pid, $content){
     $this->load->database();
     $uid = $this->session->userdata('user_id');
     $this->db->where('uid', $uid);
@@ -142,7 +142,7 @@ class photos extends CI_Model {
     return false;
   }
 
-  function edit_row($id, $content){
+  public function edit_row($id, $content){
     $this->load->database();
     
     $uid = $this->session->userdata('user_id');
@@ -155,7 +155,7 @@ class photos extends CI_Model {
     return $this->db->update('portfolio_list', $data);
   }
 
-  function remove_row($id){
+  public function remove_row($id){
     $this->load->database();
     
     $uid = $this->session->userdata('user_id');
@@ -174,7 +174,7 @@ class photos extends CI_Model {
    * @param string  action
    * @return  array image sizes
    **/
-  function image_size($action=false){
+  public function image_size($action=false){
     return array(
                  'thumb_' => array('80', '80', 1),
                  ''       => array('640', '480', 0)

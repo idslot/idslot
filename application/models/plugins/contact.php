@@ -25,7 +25,7 @@ class contact extends CI_Model {
   /**
    * Constructor
    **/
-  function __construct(){
+  public function __construct(){
     $this->lang->load('idslot');
     parent::__construct();
   }
@@ -36,7 +36,7 @@ class contact extends CI_Model {
    * @param  integer  User id
    * @return array    Contact
    **/
-  function fetch($uid){
+  public function fetch($uid){
     $this->load->database();
     $query = $this->db->query('SELECT * FROM contact WHERE uid = ' . $this->db->escape($uid));
 
@@ -53,7 +53,7 @@ class contact extends CI_Model {
    *              string   Contact
    * @return boolean  True on success and false on failure
    **/
-  function create($uid, $arr){
+  public function create($uid, $arr){
     $this->load->database();
     $arr['uid'] = $uid;
     $result = $this->db->insert('contact', $arr);
@@ -71,7 +71,7 @@ class contact extends CI_Model {
    *              string   Contact
    * @return boolean  True on success and false on failure
    **/
-  function update($uid, $arr){
+  public function update($uid, $arr){
     $this->load->database();
     $this->db->where('uid', $uid);
     $result = $this->db->update('contact', $arr);
@@ -81,14 +81,14 @@ class contact extends CI_Model {
   /**
    * Delete plugin
    **/
-  function delete($uid){
+  public function delete($uid){
     return false;
   }
 
   /**
    * Form rules
    **/
-  function form_rules(){
+  public function form_rules(){
     return array(
       array(
         'field'   => 'contact[title]',
@@ -155,7 +155,7 @@ class contact extends CI_Model {
    * @param string  action
    * @return  array image sizes
    **/
-  function image_size($action=false){
+  public function image_size($action=false){
     return false;
   }
 }

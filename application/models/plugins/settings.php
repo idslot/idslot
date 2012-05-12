@@ -25,7 +25,7 @@ class settings extends CI_Model {
   /**
    * Constructor
    **/
-  function __construct(){
+  public function __construct(){
     $this->lang->load('idslot');
     parent::__construct();
   }
@@ -36,7 +36,7 @@ class settings extends CI_Model {
    * @param  integer  User id
    * @return array    user
    **/
-  function fetch($uid){
+  public function fetch($uid){
     $this->load->database();
     $query = $this->db->query('SELECT * FROM user WHERE id = ' . $this->db->escape($uid));
 
@@ -50,7 +50,7 @@ class settings extends CI_Model {
    * @param  array
    * @return boolean  True on success and false on failure
    **/
-  function update($uid, $arr){
+  public function update($uid, $arr){
     $this->load->database();
     $this->db->where('id', $uid);
     $this->load->library('tank_auth');
@@ -94,7 +94,7 @@ class settings extends CI_Model {
   /**
    * Form rules
    **/
-  function form_rules(){
+  public function form_rules(){
     return array(
       array(
             'field'   => 'settings[email]',
@@ -126,7 +126,7 @@ class settings extends CI_Model {
    * @param string  action
    * @return  array image sizes
    **/
-  function image_size($action=false){
+  public function image_size($action=false){
     return false;
   }
   
@@ -138,7 +138,7 @@ class settings extends CI_Model {
    * @param	array
    * @return	void
    */
-  function _send_email($type, $email, &$data) {
+  public function _send_email($type, $email, &$data) {
     $this->load->library('email');
     $this->email->from($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
     $this->email->reply_to($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));

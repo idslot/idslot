@@ -24,7 +24,7 @@ if (!defined('BASEPATH'))
 
 class Auth extends CI_Controller {
 
-  function __construct() {
+  public function __construct() {
     parent::__construct();
 
     $this->load->helper(array('form', 'url'));
@@ -38,7 +38,7 @@ class Auth extends CI_Controller {
     $this->lang->load('tank_auth');
   }
 
-  function index() {
+  public function index() {
     if ($message = $this->session->flashdata('message')) {
       $this->load->view('auth/general_message', array('message' => $message));
     } else {
@@ -46,7 +46,7 @@ class Auth extends CI_Controller {
     }
   }
 
-  function login() {
+  public function login() {
     if ($this->tank_auth->is_logged_in()) { // logged in
       redirect('idslot');
     }
@@ -104,7 +104,7 @@ class Auth extends CI_Controller {
    *
    * @return void
    */
-  function _login() {
+  public function _login() {
     $data['errors'] = array();
 
     if ($this->tank_auth->is_logged_in(FALSE)) {
@@ -163,7 +163,7 @@ class Auth extends CI_Controller {
    *
    * @return void
    */
-  function logout() {
+  public function logout() {
     $this->tank_auth->logout();
     redirect('auth/login');
   }
@@ -174,7 +174,7 @@ class Auth extends CI_Controller {
    *
    * @return void
    */
-  function _forgot_password() {
+  public function _forgot_password() {
     $data['errors'] = array();
 
     $this->form_validation->set_rules('login', 'Login', 'trim|required|xss_clean');
@@ -210,7 +210,7 @@ class Auth extends CI_Controller {
    *
    * @return void
    */
-  function reset_password() {
+  public function reset_password() {
     $this->load->model('system');
     $user_id = $this->uri->segment(3);
     $new_pass_key = $this->uri->segment(4);
@@ -251,7 +251,7 @@ class Auth extends CI_Controller {
    *
    * @return void
    */
-  function change_password() {
+  public function change_password() {
     if (!$this->tank_auth->is_logged_in()) {        // not logged in or not activated
       redirect('/auth/login/');
     } else {
@@ -280,7 +280,7 @@ class Auth extends CI_Controller {
    *
    * @return void
    */
-  function change_email() {
+  public function change_email() {
     if (!$this->tank_auth->is_logged_in()) {        // not logged in or not activated
       redirect('/auth/login/');
     } else {
@@ -315,7 +315,7 @@ class Auth extends CI_Controller {
    *
    * @return void
    */
-  function reset_email() {
+  public function reset_email() {
     $user_id = $this->uri->segment(3);
     $new_email_key = $this->uri->segment(4);
 
@@ -334,7 +334,7 @@ class Auth extends CI_Controller {
    * @param	string
    * @return	void
    */
-  function _show_message($message) {
+  public function _show_message($message) {
     $this->session->set_flashdata('message', $message);
     redirect('/auth/');
   }
@@ -347,7 +347,7 @@ class Auth extends CI_Controller {
    * @param	array
    * @return	void
    */
-  function _send_email($type, $email, &$data) {
+  public function _send_email($type, $email, &$data) {
     $this->load->library('email');
     $this->email->from($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
     $this->email->reply_to($this->config->item('webmaster_email', 'tank_auth'), $this->config->item('website_name', 'tank_auth'));
@@ -363,7 +363,7 @@ class Auth extends CI_Controller {
    *
    * @return	string
    */
-  function _create_captcha() {
+  public function _create_captcha() {
     $captcha_path = $this->config->item('base_url') . 'index.php?/captcha/generate';
     return "<img src='$captcha_path' border='0' />";
   }
@@ -374,7 +374,7 @@ class Auth extends CI_Controller {
    * @param	string
    * @return	bool
    */
-  function _check_captcha($code) {
+  public function _check_captcha($code) {
     $captcha = $this->session->userdata('captcha_code');
     $this->session->unset_userdata('captcha_code');
     if($code == $captcha){
@@ -390,7 +390,7 @@ class Auth extends CI_Controller {
    *
    * @return	string
    */
-  function _create_recaptcha() {
+  public function _create_recaptcha() {
     $this->load->helper('recaptcha');
 
     // Add custom theme so we can get only image
@@ -407,7 +407,7 @@ class Auth extends CI_Controller {
    *
    * @return	bool
    */
-  function _check_recaptcha() {
+  public function _check_recaptcha() {
     $this->load->helper('recaptcha');
 
     $resp = recaptcha_check_answer($this->config->item('recaptcha_private_key', 'tank_auth'), $_SERVER['REMOTE_ADDR'], $_POST['recaptcha_challenge_field'], $_POST['recaptcha_response_field']);

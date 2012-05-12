@@ -32,7 +32,7 @@ class Users extends CI_Model
   private $table_name			= 'user';			// user accounts
   private $profile_table_name	= 'user_profile';	// user profiles
   
-  function __construct()
+  public function __construct()
   {
     parent::__construct();
 
@@ -41,7 +41,7 @@ class Users extends CI_Model
     $this->profile_table_name	= $ci->config->item('db_table_prefix', 'tank_auth').$this->profile_table_name;
   }
 
-  function get_users($filter, $num, $offset)
+  public function get_users($filter, $num, $offset)
   {
     if($filter     == 'inactives')  $this->db->where('activated', '0');
     elseif($filter == 'banned') 	$this->db->where('banned', '1');
@@ -51,7 +51,7 @@ class Users extends CI_Model
     return $query->result_array();
   }
   
-  function get_users_ids(){
+  public function get_users_ids(){
     $this->db->select('id');
     $query = $this->db->get('users');
     return $query->result_array();    
@@ -64,7 +64,7 @@ class Users extends CI_Model
    * @param	bool
    * @return	object
    */
-  function get_user_by_id($user_id, $activated=-1)
+  public function get_user_by_id($user_id, $activated=-1)
   {
     $this->db->where('id', $user_id);
     if($activated >= 0){
@@ -82,7 +82,7 @@ class Users extends CI_Model
    * @param	string
    * @return	object
    */
-  function get_user_by_login($login)
+  public function get_user_by_login($login)
   {
 	$this->db->where('LOWER(username)=', strtolower($login));
 	$this->db->or_where('LOWER(email)=', strtolower($login));
@@ -98,7 +98,7 @@ class Users extends CI_Model
    * @param	string
    * @return	object
    */
-  function get_user_by_username($username)
+  public function get_user_by_username($username)
   {
 	$this->db->where('LOWER(username)=', strtolower($username));
 
@@ -113,7 +113,7 @@ class Users extends CI_Model
    * @param	string
    * @return	object
    */
-  function get_user_by_email($email)
+  public function get_user_by_email($email)
   {
 	$this->db->where('LOWER(email)=', strtolower($email));
 
@@ -128,7 +128,7 @@ class Users extends CI_Model
    * @param	string
    * @return	bool
    */
-  function is_username_available($username)
+  public function is_username_available($username)
   {
 	$this->db->select('1', FALSE);
 	$this->db->where('LOWER(username)=', strtolower($username));
@@ -143,7 +143,7 @@ class Users extends CI_Model
    * @param	string
    * @return	bool
    */
-  function is_email_available($email)
+  public function is_email_available($email)
   {
 	$this->db->select('1', FALSE);
 	$this->db->where('LOWER(email)=', strtolower($email));
@@ -160,7 +160,7 @@ class Users extends CI_Model
    * @param	bool
    * @return	array
    */
-  function create_user($data, $activated = TRUE)
+  public function create_user($data, $activated = TRUE)
   {
 	$data['created'] = date('Y-m-d H:i:s');
 	$data['activated'] = $activated ? 1 : 0;
@@ -180,7 +180,7 @@ class Users extends CI_Model
    * @param	bool
    * @return	array
    */
-  function update_user($uid, $data, $activated = TRUE)
+  public function update_user($uid, $data, $activated = TRUE)
   {
 	$data['modified'] = date('Y-m-d H:i:s');
 	$this->db->where(array('id'=>$uid));
@@ -199,7 +199,7 @@ class Users extends CI_Model
    * @param	bool
    * @return	bool
    */
-  function activate_user($user_id, $activation_key, $activate_by_email)
+  public function activate_user($user_id, $activation_key, $activate_by_email)
   {
 	$this->db->select('1', FALSE);
 	$this->db->where('id', $user_id);
@@ -229,7 +229,7 @@ class Users extends CI_Model
    * @param	int
    * @return	void
    */
-  function purge_na($expire_period = 172800)
+  public function purge_na($expire_period = 172800)
   {
 	$this->db->where('activated', 0);
 	$this->db->where('UNIX_TIMESTAMP(created) <', time() - $expire_period);
@@ -242,7 +242,7 @@ class Users extends CI_Model
    * @param	int
    * @return	bool
    */
-  function delete_user($user_id)
+  public function delete_user($user_id)
   {
 	$this->db->where('id', $user_id);
 	$this->db->delete($this->table_name);
@@ -261,7 +261,7 @@ class Users extends CI_Model
    * @param	string
    * @return	bool
    */
-  function set_password_key($user_id, $new_pass_key)
+  public function set_password_key($user_id, $new_pass_key)
   {
 	$this->db->set('new_password_key', $new_pass_key);
 	$this->db->set('new_password_requested', date('Y-m-d H:i:s'));
@@ -279,7 +279,7 @@ class Users extends CI_Model
    * @param	int
    * @return	void
    */
-  function can_reset_password($user_id, $new_pass_key, $expire_period = 900)
+  public function can_reset_password($user_id, $new_pass_key, $expire_period = 900)
   {
 	$this->db->select('1', FALSE);
 	$this->db->where('id', $user_id);
@@ -299,7 +299,7 @@ class Users extends CI_Model
    * @param	int
    * @return	bool
    */
-  function reset_password($user_id, $new_pass, $new_pass_key, $expire_period = 900)
+  public function reset_password($user_id, $new_pass, $new_pass_key, $expire_period = 900)
   {
 	$this->db->set('password', $new_pass);
 	$this->db->set('new_password_key', NULL);
@@ -319,7 +319,7 @@ class Users extends CI_Model
    * @param	string
    * @return	bool
    */
-  function change_password($user_id, $new_pass)
+  public function change_password($user_id, $new_pass)
   {
 	$this->db->set('password', $new_pass);
 	$this->db->where('id', $user_id);
@@ -338,7 +338,7 @@ class Users extends CI_Model
    * @param	bool
    * @return	bool
    */
-  function set_new_email($user_id, $new_email, $new_email_key, $activated)
+  public function set_new_email($user_id, $new_email, $new_email_key, $activated)
   {
 	$this->db->set($activated ? 'new_email' : 'email', $new_email);
 	$this->db->set('new_email_key', $new_email_key);
@@ -356,7 +356,7 @@ class Users extends CI_Model
    * @param	string
    * @return	bool
    */
-  function activate_new_email($user_id, $new_email_key)
+  public function activate_new_email($user_id, $new_email_key)
   {
 	$this->db->set('email', 'new_email', FALSE);
 	$this->db->set('new_email', NULL);
@@ -377,7 +377,7 @@ class Users extends CI_Model
    * @param	bool
    * @return	void
    */
-  function update_login_info($user_id, $record_ip, $record_time)
+  public function update_login_info($user_id, $record_ip, $record_time)
   {
 	$this->db->set('new_password_key', NULL);
 	$this->db->set('new_password_requested', NULL);
@@ -396,7 +396,7 @@ class Users extends CI_Model
    * @param	string
    * @return	void
    */
-  function ban_user($user_id, $reason = NULL)
+  public function ban_user($user_id, $reason = NULL)
   {
 	$this->db->where('id', $user_id);
 	$this->db->update($this->table_name, array(
@@ -411,7 +411,7 @@ class Users extends CI_Model
    * @param	int
    * @return	void
    */
-  function unban_user($user_id)
+  public function unban_user($user_id)
   {
 	$this->db->where('id', $user_id);
 	$this->db->update($this->table_name, array(
@@ -426,7 +426,7 @@ class Users extends CI_Model
    * @param	int
    * @return	void
    */
-  function approve($user_id)
+  public function approve($user_id)
   {
 	$this->db->where('id', $user_id);
 	$this->db->update($this->table_name, array(

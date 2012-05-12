@@ -21,7 +21,7 @@ class idslot_resume extends VC_Controller {
   
   private $rid; // Resume ID
   
-  function __construct(){
+  public function __construct(){
     parent::__construct();
     $this->load->helper('form');
     $this->load->library('form_validation');
@@ -36,7 +36,7 @@ class idslot_resume extends VC_Controller {
     $this->rid = $this->rid['id'];
   }
   
-  function suggest_skill(){
+  public function suggest_skill(){
     $skill = $this->input->get('term');
     $skill = urldecode($skill);
     $skills = $this->resume->fetch_skills_like($skill);
@@ -59,7 +59,7 @@ class idslot_resume extends VC_Controller {
     exit();
   }
   
-  function add_skill(){
+  public function add_skill(){
     $rules = $this->resume->form_rules_skill();
     $this->form_validation->set_rules($rules);
     
@@ -76,7 +76,7 @@ class idslot_resume extends VC_Controller {
     redirect('idslot/edit/resume');
   }
 
-  function edit_skill($id){
+  public function edit_skill($id){
     $rules = $this->resume->form_rules_skill();
     $this->form_validation->set_rules($rules);
     
@@ -93,13 +93,13 @@ class idslot_resume extends VC_Controller {
     redirect('idslot/edit/resume');
   }
 
-  function remove_skill($id){
+  public function remove_skill($id){
     $this->resume->remove_skill($id);
     $this->system->add_msg(lang('Skill removed'));
     redirect('idslot/edit/resume');
   }
   
-  function add_education(){
+  public function add_education(){
     $rules = $this->resume->form_rules_event();
     $this->form_validation->set_rules($rules);
     
@@ -122,7 +122,7 @@ class idslot_resume extends VC_Controller {
     redirect('idslot/edit/resume');
   }
 
-  function edit_education($id){
+  public function edit_education($id){
     $rules = $this->resume->form_rules_event();
     $this->form_validation->set_rules($rules);
     
@@ -142,13 +142,13 @@ class idslot_resume extends VC_Controller {
     redirect('idslot/edit/resume');
   }
 
-  function remove_education($id){
+  public function remove_education($id){
     $this->resume->remove_event($id);
     $this->system->add_msg(lang('Education removed'));
     redirect('idslot/edit/resume');
   }
   
-  function add_experience(){
+  public function add_experience(){
     $rules = $this->resume->form_rules_event();
     $this->form_validation->set_rules($rules);
     
@@ -171,7 +171,7 @@ class idslot_resume extends VC_Controller {
     redirect('idslot/edit/resume');
   }
 
-  function edit_experience($id){
+  public function edit_experience($id){
     $rules = $this->resume->form_rules_event();
     $this->form_validation->set_rules($rules);
     
@@ -191,13 +191,13 @@ class idslot_resume extends VC_Controller {
     redirect('idslot/edit/resume');
   }
 
-  function remove_experience($id){
+  public function remove_experience($id){
     $this->resume->remove_event($id);
     $this->system->add_msg(lang('Experience removed'));
     redirect('idslot/edit/resume');
   }
   
-  function add_publication(){
+  public function add_publication(){
     $rules = $this->resume->form_rules_publication();
     $this->form_validation->set_rules($rules);
     
@@ -220,7 +220,7 @@ class idslot_resume extends VC_Controller {
     redirect('idslot/edit/resume');
   }
 
-  function edit_publication($id){
+  public function edit_publication($id){
     $rules = $this->resume->form_rules_publication();
     $this->form_validation->set_rules($rules);
     
@@ -240,13 +240,13 @@ class idslot_resume extends VC_Controller {
     redirect('idslot/edit/resume');
   }
 
-  function remove_publication($id){
+  public function remove_publication($id){
     $this->resume->remove_publication($id);
     $this->system->add_msg(lang('Publication removed'));
     redirect('idslot/edit/resume');
   }
   
-  function build_pdf($uid = false){
+  public function build_pdf($uid = false){
     if(!$uid){
       $uid = $this->session->userdata('user_id');
     }

@@ -18,7 +18,7 @@
  * @link	http://idslot.org
  */
 class idslot_links extends VC_Controller {
-  function __construct(){
+  public function __construct(){
     parent::__construct();
     $this->load->helper('form');
     $this->load->library('form_validation');
@@ -30,7 +30,7 @@ class idslot_links extends VC_Controller {
     $this->lang->load('idslot');
   }
   
-  function add($sid){
+  public function add($sid){
     $config = $this->links->row_form_rules();
     $this->form_validation->set_rules($config);
     if($this->form_validation->run() == TRUE){
@@ -47,7 +47,7 @@ class idslot_links extends VC_Controller {
     redirect('idslot/edit/links');
   }
 
-  function edit($id){
+  public function edit($id){
     $config = $this->links->row_form_rules();
     $this->form_validation->set_rules($config);
     if($this->form_validation->run() == TRUE){
@@ -64,7 +64,7 @@ class idslot_links extends VC_Controller {
     redirect('idslot/edit/links');
   }
 
-  function remove($id){
+  public function remove($id){
     if($this->links->remove_row($id)){
       $this->system->render($this->uid);
       $this->system->add_msg(lang('Link removed.'));

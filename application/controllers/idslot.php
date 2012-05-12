@@ -22,7 +22,7 @@
  **/
 class Idslot extends CI_Controller {
 
-  function __construct()
+  public function __construct()
   {
     parent::__construct();
 
@@ -41,7 +41,7 @@ class Idslot extends CI_Controller {
   /**
    * Default method
    **/
-  function index(){
+  public function index(){
     $plugins = $this->config->item('plugins');
     $plugin = array_shift($plugins);
     $this->edit($plugin);
@@ -50,7 +50,7 @@ class Idslot extends CI_Controller {
   /**
    * Stats method
    **/
-  function statistics(){
+  public function statistics(){
     $data['plugins'] = $this->config->item('plugins');
     $this->load->model('system');
     $this->system->add_msg(lang('Under Construction'));
@@ -62,37 +62,37 @@ class Idslot extends CI_Controller {
   /**
    * Settings method
    **/
-  function settings(){
+  public function settings(){
     $this->edit('settings');
   }
   
   /**
    * Details method
    **/
-  function details(){
+  public function details(){
     $this->edit('details');
   }
   
-  function feedback(){
+  public function feedback(){
     $this->edit('feedback');
   }
   
-  function resume(){
+  public function resume(){
     $this->edit('resume');
   }
   
-  function inviter(){
+  public function inviter(){
     $this->edit('inviter');
   }
   
-  function services(){
+  public function services(){
     $this->edit('services');
   }
   
   /**
    * Edit method
    **/
-  function edit($plugin, $refresh=false){
+  public function edit($plugin, $refresh=false){
     if (!$this->tank_auth->is_logged_in()) {
       redirect('auth/login');
     }
@@ -145,7 +145,7 @@ class Idslot extends CI_Controller {
     $this->load->view('user/index.tpl', $data);
   }
 
-  function run($plugin, $command, $param=false){
+  public function run($plugin, $command, $param=false){
     $this->load->model('plugins/' . $plugin);
     $this->$plugin->$command($param);
   }
@@ -156,13 +156,13 @@ class Idslot extends CI_Controller {
    * @param	string
    * @return	void
    */
-  function _show_message($message)
+  public function _show_message($message)
   {
     $this->session->set_flashdata('message', $message);
     redirect('auth/login');
   }
   
-  function remove_img($plugin, $id=false){
+  public function remove_img($plugin, $id=false){
     $uid = $this->session->userdata('user_id');
     $username = $this->session->userdata('username');
     $this->load->helper('file');

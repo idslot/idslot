@@ -19,12 +19,12 @@
  */
 
 class Captcha extends CI_Controller{
-  function __construct() {
+  public function __construct() {
     parent::__construct();
     $this->load->library('session');
   }
   
-  function generate($idslot=false){
+  public function generate($idslot=false){
     $str = "";
     $length = 0;
     for ($i = 0; $i < 4; $i++) {

@@ -1,4 +1,8 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+
+if (!defined('BASEPATH'))
+  exit('No direct script access allowed');
+
 /**
  * IDSlot
  *
@@ -17,12 +21,11 @@
  * @license	http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * @link	http://idslot.org
  */
-
 class Home extends CI_Controller {
 
-	public function index()
-	{
-		$this->load->view('idslot/index.html');
-	}
+  public function index() {
+    $this->load->view('idslot/index.html');
+  }
+
 }
 

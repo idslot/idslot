@@ -25,7 +25,7 @@ class resume extends CI_Model {
   /**
    * Constructor
    **/
-  function __construct(){
+  public function __construct(){
       parent::__construct();
       $this->load->database();
       $this->lang->load('idslot');
@@ -38,7 +38,7 @@ class resume extends CI_Model {
    * @param  integer  User id
    * @return array    Links
    **/
-  function fetch($uid = ''){
+  public function fetch($uid = ''){
     if(!$uid){
       $uid = $this->session->userdata('user_id');
     }
@@ -60,7 +60,7 @@ class resume extends CI_Model {
    * @param  array
    * @return boolean  True on success and false on failure
    **/
-  function create($uid, $arr){
+  public function create($uid, $arr){
     $arr['user_id'] = $uid;
     $result = $this->db->insert('resume', $arr);
     return $result?$this->db->insert_id():false;
@@ -74,7 +74,7 @@ class resume extends CI_Model {
    * @param  array
    * @return boolean  True on success and false on failure
    **/
-  function update($uid, $arr){
+  public function update($uid, $arr){
     $this->db->where('user_id', $uid);
     $result = $this->db->update('resume', $arr);
     return $result;
@@ -83,7 +83,7 @@ class resume extends CI_Model {
   /**
    * Delete plugin
    **/
-  function delete($uid){
+  public function delete($uid){
     $resume = $this->fetch($uid);
     
     $this->db->where(array('resume_id'=>$resume['id']));
@@ -102,7 +102,7 @@ class resume extends CI_Model {
   /**
    * Form rules
    **/
-  function form_rules(){
+  public function form_rules(){
     return array(
       array(
         'field'   => 'resume[summary]',
@@ -112,7 +112,7 @@ class resume extends CI_Model {
     );
   }
 
-  function fetch_skills($rid){
+  public function fetch_skills($rid){
     $this->db->from('resume_has_skill');
     $this->db->join('skills', 'skills.id = resume_has_skill.skill_id');
     $this->db->where(array('resume_has_skill.resume_id' => $rid));
@@ -120,14 +120,14 @@ class resume extends CI_Model {
     return $skills->result_array();
   }
   
-  function fetch_skills_like($skill){
+  public function fetch_skills_like($skill){
     $skill = str_replace(array('\\', '_', '%'), array('\\\\', '\\_', '\\%'), $skill);
     $skill = "%{$skill}%";
     $query = $this->db->query('SELECT * FROM skills WHERE title LIKE ' . $this->db->escape($skill));
     return $query->result_array();
   }
   
-  function suggest_skill($skill){
+  public function suggest_skill($skill){
     // if already we have this skill, just return its ID
     // make skill safe for LIKE!
     $temp = str_replace(array('\\', '_', '%'), array('\\\\', '\\_', '\\%'), $skill);
@@ -147,7 +147,7 @@ class resume extends CI_Model {
     }
   }
 
-  function add_skill($rid, $skill){
+  public function add_skill($rid, $skill){
     $sid = $this->suggest_skill($skill);
     if($this->resume_has_skill($rid, $sid)){
       return false;
@@ -159,7 +159,7 @@ class resume extends CI_Model {
     return $this->db->insert('resume_has_skill', $data);
   }
   
-  function edit_skill($rid, $id, $skill){
+  public function edit_skill($rid, $id, $skill){
     $sid = $this->suggest_skill($skill);
     if($this->resume_has_skill($rid, $sid)){
       return false;
@@ -170,7 +170,7 @@ class resume extends CI_Model {
     return $this->db->update('resume_has_skill', $data);
   }
   
-  function remove_skill($id){
+  public function remove_skill($id){
     $resume = $this->fetch();
     $this->db->where(array('resume_id'=>$resume['id'], 'skill_id'=>$id));
     return $this->db->delete('resume_has_skill');
@@ -186,7 +186,7 @@ class resume extends CI_Model {
     }
   }
   
-  function form_rules_skill(){
+  public function form_rules_skill(){
     return array(
       array(
         'field'   => 'title',
@@ -196,7 +196,7 @@ class resume extends CI_Model {
     );
   }
   
-  function fetch_events($rid, $type){
+  public function fetch_events($rid, $type){
     $this->db->from('events');
     $this->db->where(array('resume_id' => $rid, 'type' => $type));
     $events = $this->db->get();
@@ -208,7 +208,7 @@ class resume extends CI_Model {
     return $events;
   }
 
-  function add_event($rid, $category_id, $summary, $description, $start, $end, $type){
+  public function add_event($rid, $category_id, $summary, $description, $start, $end, $type){
     $start = $this->change_date($start, 'from');
     $end   = $this->change_date($end, 'from');
     $event = array(
@@ -227,7 +227,7 @@ class resume extends CI_Model {
     return $eid;
   }
   
-  function edit_event($id, $category_id, $summary, $description, $start, $end, $type){
+  public function edit_event($id, $category_id, $summary, $description, $start, $end, $type){
     $start = $this->change_date($start, 'from');
     $end   = $this->change_date($end, 'from');
     $events = array(
@@ -242,14 +242,14 @@ class resume extends CI_Model {
     return $this->db->update('events', $events);
   }
   
-  function remove_event($id){
+  public function remove_event($id){
     $uid = $this->session->userdata('user_id');
     $resume = $this->fetch($uid);
     $this->db->where(array('resume_id'=>$resume['id'], 'id'=>$id));
     $this->db->delete('events');
   }
   
-  function form_rules_event(){
+  public function form_rules_event(){
     return array(
       array(
         'field'   => 'summary',
@@ -279,7 +279,7 @@ class resume extends CI_Model {
     );
   }
   
-  function fetch_publications($rid){
+  public function fetch_publications($rid){
     $this->db->from('publications');
     $this->db->where(array('resume_id' => $rid));
     $publications = $this->db->get();
@@ -290,7 +290,7 @@ class resume extends CI_Model {
     return $publications;
   }
 
-  function add_publication($rid, $title, $creators, $date, $urn, $urn_type, $publisher){
+  public function add_publication($rid, $title, $creators, $date, $urn, $urn_type, $publisher){
     $date = $this->change_date($date, 'from');
     $publication = array(
       'title'    => $title,
@@ -308,7 +308,7 @@ class resume extends CI_Model {
     return $pid;
   }
   
-  function edit_publication($id, $title, $creators, $date, $urn, $urn_type, $publisher){
+  public function edit_publication($id, $title, $creators, $date, $urn, $urn_type, $publisher){
     $date = $this->change_date($date, 'from');
     $publication = array(
       'title'    => $title,
@@ -322,14 +322,14 @@ class resume extends CI_Model {
     return $this->db->update('publications', $publication);
   }
   
-  function remove_publication($id){
+  public function remove_publication($id){
     $uid = $this->session->userdata('user_id');
     $resume = $this->fetch($uid);
     $this->db->where(array('resume_id'=>$resume['id'], 'id'=>$id));
     $this->db->delete('publications');
   }
   
-  function form_rules_publication(){
+  public function form_rules_publication(){
     return array(
       array(
         'field'   => 'title',
@@ -364,21 +364,21 @@ class resume extends CI_Model {
     );
   }
   
-  function fetch_event_parent_categories(){
+  public function fetch_event_parent_categories(){
     $this->db->from('events_categories');
     $this->db->where(array('pid' => 0));
     $cats = $this->db->get();
     return $cats->result_array();
   }
   
-  function fetch_event_child_categories($id){
+  public function fetch_event_child_categories($id){
     $this->db->from('events_categories');
     $this->db->where(array('pid' => $id));
     $cats = $this->db->get();
     return $cats->result_array();
   }
   
-  function find_parent($id){
+  public function find_parent($id){
     $this->db->from('events_categories');
     $this->db->where(array('id' => $id));
     $cats = $this->db->get();
@@ -390,7 +390,7 @@ class resume extends CI_Model {
     }
   }
   
-  function image_size($action=false){
+  public function image_size($action=false){
     return false;
   }
   
@@ -398,7 +398,7 @@ class resume extends CI_Model {
    *@param $date  string  date string
    *@param $type  string  could be "from" or "to". "from" means from a foreign language to gregorian!
    **/
-  function change_date($date, $type = 'from'){
+  public function change_date($date, $type = 'from'){
     $this->load->model('tank_auth/users');
     
     $cal = lang('Calendar Type');
@@ -410,7 +410,7 @@ class resume extends CI_Model {
     return $date;
   }
   
-  function build_pdf($uid=false){
+  public function build_pdf($uid=false){
     if(!$uid){
       $uid = $this->session->userdata('user_id');
     }

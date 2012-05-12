@@ -25,7 +25,7 @@ class details extends CI_Model {
   /**
    * Constructor
    **/
-  function __construct(){
+  public function __construct(){
     $this->lang->load('idslot');
     parent::__construct();
   }
@@ -36,7 +36,7 @@ class details extends CI_Model {
    * @param  integer  User id
    * @return array    user
    **/
-  function fetch($uid){
+  public function fetch($uid){
     $this->load->database();
     $query = $this->db->query('SELECT * FROM user WHERE id = ' . $this->db->escape($uid));
 
@@ -50,7 +50,7 @@ class details extends CI_Model {
    * @param  array
    * @return boolean  True on success and false on failure
    **/
-  function update($uid, $arr){
+  public function update($uid, $arr){
     $this->load->library('tank_auth');
     $this->lang->load('tank_auth');
     
@@ -133,7 +133,7 @@ class details extends CI_Model {
   /**
    * Form rules
    **/
-  function form_rules(){
+  public function form_rules(){
     return array(
       array(
         'field'   => 'details[title]',
@@ -185,7 +185,7 @@ class details extends CI_Model {
    * @param string  action
    * @return  array image sizes
    **/
-  function image_size($action=false){
+  public function image_size($action=false){
     return false;
   }
 }
