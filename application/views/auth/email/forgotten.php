@@ -9,7 +9,5 @@ If the link doesn't work, then please use the form provided here:
 Your New Password: <?=$password;?>
 Key for Activation: <?=$key;?>
 
-If you have any more problems with gaining access to your account please contact <?=$this->config->item('CL_webmaster_email')?>.
 
-Regards,
-The <?=$this->config->item('CL_website_name');?> Team
+Regards.
