@@ -4,7 +4,7 @@
 		<ul class="photos">
 			<?php
 			foreach($photoss as $photos){
-				echo '<li><a class="photos" rel="group1" title="'.$photos['content'].'" href="application/views/idslot/files/photos/' . $uid . '-' . $photos['id'] . '.png"><img src="application/views/idslot/files/photos/thumb_' . $uid . '-' . $photos['id'] . '.png" /></a></li>' . "\n";
+				echo '<li><a class="photos" rel="group1" title="'.$photos['content'].'" href="application/views/idslot/files/photos/' . $uid . '-' . $photos['id'] . '.png"><img alt="'.$photos['content'].'" src="application/views/idslot/files/photos/thumb_' . $uid . '-' . $photos['id'] . '.png" /></a></li>' . "\n";
 			}
 			?>
 		</ul>

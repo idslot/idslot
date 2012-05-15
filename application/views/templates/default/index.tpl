@@ -57,7 +57,16 @@
 			'titlePosition' : 'inside',
 			'padding': 5
 		});
-		
+		$("a.photo").fancybox({
+			'transitionIn'	:	'elastic',
+			'transitionOut'	:	'elastic',
+			'speedIn'		:	600, 
+			'speedOut'		:	200, 
+			'overlayShow'	:	false,
+			'overlayShow' : true,
+			'titlePosition' : 'inside',
+			'padding': 5
+		});
 		$('.item').click(function() {
 			$('.item').removeClass("active");
 			$(this).addClass("active");

@@ -1,5 +1,5 @@
 <?php
-$web = base_url() . 'application/views/social_icons1/';
+$web = base_url() . 'application/views/social_icons/';
 ?>
 <div id="links" class="panel">
 	<span class="ptitle block"><?php print($title); ?></span>
@@ -7,7 +7,7 @@ $web = base_url() . 'application/views/social_icons1/';
 		<ul class="links">
 			<?php
 				foreach($links as $link){
-					echo '<li><a href="'. $link['url'] .'"><img src="' . $web . $link['icon'] . '.png" class="float" /><span class="linkTitle block">' . $link['name'] .'</span><span class="address block">'. $link['url'] . '</span></a></li>' ."\n";
+					echo '<li><a href="'. $link['url'] .'" title="' . $link['name'] . '" target="_blank"><img src="' . $web . $link['icon'] . '.png" class="float" alt="' . $link['name'] . '" /><span class="linkTitle block">' . $link['name'] .'</span><span class="address block">'. $link['url'] . '</span></a></li>' ."\n";
 				}
 			?>
 		</ul>
