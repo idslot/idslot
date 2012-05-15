@@ -16,9 +16,9 @@ $login = array(
     'class' => 'ltr login-inp'
 );
 if ($login_by_username AND $login_by_email) {
-  $login_label = lang('Email');
+  $login_label = lang('Username');
 } else if ($login_by_username) {
-  $login_label = lang('Login');
+  $login_label = lang('Username');
 } else {
   $login_label = lang('Email');
 }
@@ -233,7 +233,7 @@ if (lang('direction') == 'rtl') {
                     <h4 class="subtitle"><?php echo lang('Please send us your email and we\'ll reset your password.'); ?></h4>
 
               <div class="form">
-<?php echo form_label($login_label.":", $login['id']); ?><input type="text" name="login" value="" class="ltr login-inp" />
+<?php echo form_label(lang('Email').":", $login['id']); ?><input type="text" name="login" value="" class="ltr login-inp" />
               </div>
 
               <div class="submit">
