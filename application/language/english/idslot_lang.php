@@ -5,8 +5,8 @@ $lang['lang'] = 'en';
 $lang['direction'] = 'ltr';
 $lang['Calendar Type'] = 'gregorian';
 $lang['Date Format'] = 'yy-mm-dd';
-$lang['Idslot'] = 'IDSlot, Online Identity management system';
-$lang['Idslot Description'] = 'IDSlot collect all of your contacts in one place on a personal domain, any information such as About, Photos, contact information, links network links and your location map. IDSlot is a free service.';
+$lang['Idslot'] = 'IDSlot, Online identity management system';
+$lang['Idslot Description'] = 'IDSlot is an open source online identity management system.<br />Use IDSlot to present everything about you, any information such as your identity, photos, resume, skills, links, contact information, location map, ...';
 $lang['Update idslot'] = 'Update IDSlot';
 $lang['How to update idslot'] = 'enter your desired content then click \'submit\' / \'add\' button.';
 $lang['Required'] = 'This field is required';
@@ -45,44 +45,15 @@ $lang['Details'] = 'Details';
 $lang['Meta Keywords'] = 'Meta Keywords';
 $lang['Meta Description'] = 'Meta Description';
 $lang['Short Description'] = 'Short Description';
-$lang['Domain'] = 'Domain';
 $lang['Template'] = 'Template';
 $lang['comma separated'] = 'comma separated';
 $lang['Language'] = 'Language';
 $lang['English'] = 'English';
 $lang['Details Description'] = 'Here you can change your IDSlot settings.';
-$lang['Local Email'] = 'Local Email';
-$lang['Local Email Description'] = 'Enter your email without @ and without your domain name';
-$lang['Email Password'] = 'Email Password';
-$lang['Email Password Description'] = 'if you want to change your Email password fill this field with your new passphrase.';
-$lang['Please fill password for local email'] = 'Please fill in the password field of your email';
-$lang['Webmail link'] = 'Click here to go to Webmail';
-
-// Services
-$lang['Services'] = 'Services';
-$lang['Services Description'] = 'You can order available services.';
-$lang['Service'] = 'Service';
-$lang['No service'] = 'There is no new service for your account';
-$lang['Orders'] = 'Orders';
-$lang['Order added'] = 'Order sent.';
-$lang['Domain service'] = 'Register domain';
-$lang['Domain service description'] = '';
-$lang['Park service'] = 'Park domain';
-$lang['Park service description'] = '';
-$lang['Status'] = 'Status';
-$lang['Data'] = 'Information';
-$lang['payed'] = 'Payed';
-$lang['done'] = 'Done';
 
 // Statistics
 $lang['Statistics'] = 'Statistics';
 $lang['Statistics Description'] = '';
-
-// Feedback
-$lang['Feedback'] = 'Whats your idea?';
-$lang['Feedback Description'] = 'What facilities do you need for your IDSlot? Let us know your needs, this is important to us.';
-$lang['Feature Request'] = 'Which features do you like to see in your IDSlot?';
-$lang['Feedback sent'] = 'Your idea sent successfully';
 
 // Links Links
 $lang['Links'] = 'Links';
@@ -266,24 +237,12 @@ $lang['Fill email or new password fields'] = 'Fill email or new password fields.
 $lang['Email Desc'] = 'To change your email address, you must enter old password too. Changing email address needs validation.';
 $lang['Password Desc'] = 'To change your password, you must enter old password too.';
 
-// Inviter
-$lang['Invite'] = 'Invitation';
-$lang['Invites sent'] = 'Invitations sent';
-$lang['Available invites'] = 'Available invititaions';
-$lang['Invite is not valid'] = 'Invalid invitation';
-$lang['Inviter'] = 'Send invitation';
-$lang['Inviter Description'] = 'Invite your coworkers, friends and family to use idslot';
-$lang['Friend email desc'] = '';
-$lang['Invite message desc'] = '';
-
 // Login page
 $lang['Please send us your email and we\'ll reset your password.'] = 'Please send us your email and we\'ll reset your password.';
 $lang['Back to login'] = 'Back to login';
 $lang['Get a new password'] = 'Get a new password';
 $lang['Forgot Password?'] = 'Forgot Password?';
 $lang['Forgot Password'] = 'Forgot Password';
-$lang['Register'] = 'Register';
-$lang['Register Description'] = 'To join IDSlot, sign up below ... it\'s free!';
 $lang['Let me in'] = 'Let me in';
 $lang['Login'] = 'Login';
 $lang['Email or Login'] = 'Email or Login:';
@@ -301,29 +260,10 @@ $lang['Password'] = 'Password';
 $lang['Password Confirm'] = 'Password Confirm';
 $lang['Remember me'] = 'Remember me';
 $lang['Confirmation Code'] = 'Confirmation Code';
-$lang['How to register'] = '
-Please fill in the all fields.
-<br/><br/><b>Caution:</b> "Domain name" only can contain alphanumeric and hyphon (-) characters and you cannot use hyphon at start or end of it. And please do not insert "www." in front of it.
-<br/><br/><b>Caution:</b> We can register your domain name, if it is available and no one have not registered that.
-<br/><br/><b>Caution:</b> After submit, you will redirect to payment gateway, and after payment, you will be back to site and please complete registration process.
-';
 
-// Coupons
-$lang['Coupon'] = 'Coupon';
-$lang['Coupon is not valid'] = 'Coupon code you entered is invalid';
-
-//Domains
-$lang['Domain is not valid'] = 'Domain is invalid. Domain names contains alphanumeric and hyphon (-) characters';
-$lang['Domain is not available'] = 'Domain is not available. Please choose another domain name.';
 
 // Others
 $lang['auth_subject_send_password'] = 'Welcome to %s';
 
 // Links
 $lang['Home'] = 'Home';
-$lang['What is idslot'] = 'Whats is IDSlot?';
-$lang['Support'] = 'Support';
-$lang['About'] = 'About Me';
-$lang['Employment'] = 'Employment';
-$lang['Terms of use'] = 'Terms of Use';
-$lang['Privacy'] = 'Privacy';
