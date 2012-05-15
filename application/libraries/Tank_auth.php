@@ -196,7 +196,7 @@ class Tank_auth
    * @param  bool
    * @return  array
    */
-  function create_user($rid, $username, $email, $password, $title, $short_desc, $domain, $local_email, $template, $language, $keywords, $description, $activate, $email_activation, $is_new = false)
+  function create_user($username, $email, $password, $title, $short_desc, $template, $language, $keywords, $description)
   {
 
     // Hash password using phpass
@@ -207,21 +207,16 @@ class Tank_auth
     $email_activation = false;
 
     $data = array(
-    'reseller_id'       => $rid,
     'username'          => $username,
     'password'          => $hashed_password,
     'email'             => $email,
     'last_ip'           => $this->ci->input->ip_address(),
     'title'             => $title,
     'short_description' => $short_desc,
-    'domain'            => $domain,
-    'local_email'       => $local_email,
     'template'          => $template,
     'language'          => $language,
     'meta_keywords'     => $keywords,
-    'meta_description'  => $description,
-    'activated'         => $activate==1?1:0,
-    'is_new'            => $is_new?'true':'false'
+    'meta_description'  => $description
     );
 
     if ($email_activation) {
@@ -235,6 +230,43 @@ class Tank_auth
     return $data;
     }
 
+    return NULL;
+  }
+  
+function update_user($uid, $username, $email, $password, $title, $short_desc, $template, $language, $keywords, $description)
+  {
+    $old = $this->ci->users->get_user_by_id($uid);
+    if ($username != $old->username AND (strlen($username) > 0) AND !$this->ci->users->is_username_available($username)) {
+      $this->error = array('username' => 'auth_username_in_use');
+    } elseif ($email != $old->email AND !$this->ci->users->is_email_available($email)) {
+      $this->error = array('email' => 'auth_email_in_use');
+    } else {
+      $data = array(
+        'username'          => $username,
+        'last_ip'           => $this->ci->input->ip_address(),
+        'title'             => $title,
+        'short_description' => $short_desc,
+        'template'          => $template,
+        'language'          => $language,
+        'meta_keywords'     => $keywords,
+        'meta_description'  => $description,
+      );
+      // Hash password using phpass
+      if($password){
+        $hasher = new PasswordHash(PHPASS_HASH_STRENGTH, PHPASS_HASH_PORTABLE);
+        $hashed_password = $hasher->HashPassword($password);
+        $data['password']= $hashed_password;
+      }
+      
+      if($email !== false){
+        $data['email'] = $email;
+      }
+
+      if (!is_null($res = $this->ci->users->update_user($uid, $data))) {
+        unset($data['last_ip']);
+        return $data;
+      }
+    }
     return NULL;
   }
 

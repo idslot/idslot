@@ -139,7 +139,6 @@ class Idslot extends CI_Controller {
     $user = $this->users->get_user_by_id($data['uid']);
     
     $data['username'] = $user->username;
-    $data['domain'] = $user->domain;
     $data['language'] = $user->language;
     
     $this->load->view('user/index.tpl', $data);

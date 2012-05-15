@@ -3,9 +3,9 @@ function initialize() {
   map_colors_index = 5;
   map_link = document.getElementById('contact[map]').value;
   
-  var latlng = new google.maps.LatLng(32.324276, 55.107422);
+  var latlng = new google.maps.LatLng(44.024421, -15.908202);
   var myOptions = {
-    zoom: 5,
+    zoom: 1,
     center: latlng,
     mapTypeControl: false,
     streetViewControl: false,
