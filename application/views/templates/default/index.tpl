@@ -82,7 +82,6 @@
 			
       <div class="maincontent idslot">
 				<div class="header">
-					<div class="pic frame"><span></span><img src="application/views/idslot/files/about/thumb_<?php echo $uid;?>.png" /></div>
 					<span class="htitle"><?php echo $user->title;?></span>
 					<span class="desc"><?php echo $user->short_description;?></span>
 				</div>
@@ -110,11 +109,12 @@
 					}
 				?>
 				</div>
-				
+        
 			</div>
 				
     </div>
 </div>
+  <div class="footer">Powered by <a href="http://idslot.org" title="<?php echo lang('Idslot'); ?>">IDSlot</a>.</div>
 
 <script src="application/views/idslot/theme/js/init.js" type="text/javascript"></script>
 </body>
