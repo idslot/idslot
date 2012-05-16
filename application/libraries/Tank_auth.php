@@ -123,23 +123,6 @@ class Tank_auth
   }
 
   /**
-   * Login as a user
-   *
-   * @param  integer  User id
-   **/
-  function login_as($uid){
-    if (!is_null($user = $this->ci->users->get_user_by_id($uid))) {
-      $this->ci->session->set_userdata(array(
-          'user_id'  => $user->id,
-          'username'  => $user->username,
-          'status'  => ($user->activated == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
-      ));
-      return TRUE;
-    }
-    return FALSE;
-  }
-
-  /**
    * Logout user from the site
    *
    * @return  void
@@ -204,7 +187,6 @@ class Tank_auth
     $hashed_password = $hasher->HashPassword($password);
 
     $activate = 1;
-    $email_activation = false;
 
     $data = array(
     'username'          => $username,
@@ -218,10 +200,6 @@ class Tank_auth
     'meta_keywords'     => $keywords,
     'meta_description'  => $description
     );
-
-    if ($email_activation) {
-        $data['new_email_key'] = md5(rand().microtime());
-    }
 
     if (!is_null($res = $this->ci->users->create_user($data, $activate))) {
     $data['user_id'] = $res['user_id'];
