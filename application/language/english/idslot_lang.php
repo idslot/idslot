@@ -164,7 +164,7 @@ $lang['Category'] = 'Category';
 $lang['Subcategory'] = 'Subcategory';
 $lang['Start'] = 'Start';
 $lang['End'] = 'End';
-$lang['Build pdf'] = 'Build/ReBuild PDF';
+$lang['Build pdf'] = '(Re)Build HTML/PDF';
 
 // Skills
 $lang['Skills'] = 'Skills';
