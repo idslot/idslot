@@ -156,7 +156,7 @@ class Install extends CI_Controller {
           $this->$pmodel->create($udata['user_id'], false);
         }
         $this->system->render($udata['user_id']);
-
+        $this->session->unset_userdata('install');
         $data['current_step'] = 'success';
       } else {
         $errors = $this->tank_auth->get_error_message();
@@ -168,8 +168,6 @@ class Install extends CI_Controller {
       $data['errors'][] = validation_errors();
     }
 
-
-    $this->session->unset_userdata('install');
     $this->load->view('user/install.tpl', $data);
   }
 
