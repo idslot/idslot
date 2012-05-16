@@ -123,7 +123,7 @@
 				
     </div>
 </div>
-  <div class="footer">Powered by <a href="http://idslot.org" title="<?php echo lang('Idslot'); ?>">IDSlot</a>.</div>
+  <div class="footer">Powered by <a href="http://idslot.org" title="<?php echo lang('Idslot'); ?>"><img src="application/views/images/footer.png" alt="<?php echo lang('Idslot'); ?>" /></a></div>
 
 <script src="application/views/idslot/theme/js/init.js" type="text/javascript"></script>
 </body>

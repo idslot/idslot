@@ -78,4 +78,4 @@ span.type{display:none;}
 input#captcha{width:138px; position:absolute; margin-left:52px;}
 img.captcha{border:1px solid #ccc; position:absolute;}
 label.captcha{margin-left:54px;}
-.footer { font-size: 11px; font-style: italic; width:600px; margin:10px auto; text-align: center; }
+.footer { font-size: 11px; font-style: italic; color: #737373; width:600px; margin:10px auto; text-align: center; }

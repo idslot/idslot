@@ -271,7 +271,7 @@ input[type=text], input[type=password] {width:300px;}
 .container1 {background: #fff; border:1px solid #bbb;}
 .header {background: url(../images/back.png) no-repeat; width:950px; height: 111px; margin-bottom: 10px}
 .htop {height: 91px;}
-h2.logo {background:url(../images/logoen.png) no-repeat 0 0;width:115px;height:51px;margin: 10px 0 0 15px;}
+h2.logo {background:url(../images/logoen.png) no-repeat 0 0;width:220px;height:52px;margin: 22px 0 0 22px;}
 h2.logo a {height:51px;text-indent:-9999px;display:block;}
 
 
