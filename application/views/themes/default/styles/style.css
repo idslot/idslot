@@ -6,7 +6,7 @@ a:hover {color:#444444; text-decoration:underline;}
 a:active {color:#444444;}
 a:enabled {color:#444444;}
 
-.cornerBox {position:relative; width:600px; margin:100px auto 0;}
+.cornerBox {position:relative; width:600px; margin:60px auto 0;}
 .absolute {position:absolute;}
 .corner {position:absolute;	width:13px;	height:13px; background:url('../images/corners.png') no-repeat;}
 .cornerBoxInner {	padding:13px;  background:#f6f6f6;}
