@@ -27,7 +27,7 @@ class Captcha extends CI_Controller{
   public function generate($idslot=false){
     $str = "";
     $length = 0;
-    for ($i = 0; $i < 4; $i++) {
+    for ($i = 0; $i < 3; $i++) {
       // these numbers represent ASCII table (small letters)
       $str .= chr(rand(97, 122));
     }
@@ -36,18 +36,12 @@ class Captcha extends CI_Controller{
     if($idslot){
       $imgW = 45;
       $imgH = 22;      
-      
-      // Just for working! :( There are many things you can learn from an asshole. The first one is flexibility. I learned :D ;)
-      /*FIXME*/
-      @session_start();
-      $_SESSION['captcha_' . $idslot] = $str;
-      
     }else{
       $imgW = 300;
       $imgH = 100;
-      $data['captcha_code'] = $str;
-      $this->session->set_userdata($data);
     }    
+    $data['captcha_code'] = $str;
+    $this->session->set_userdata($data);
 
     $image = imagecreatetruecolor($imgW, $imgH);
 
