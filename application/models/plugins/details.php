@@ -95,7 +95,7 @@ class details extends CI_Model {
       array(
         'field'   => 'details[short_description]',
         'label'   => lang('Short Description'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'xss_clean'
       ),
       array(
         'field'   => 'details[meta_keywords]',
