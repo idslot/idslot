@@ -25,7 +25,7 @@ foreach($photoss as $photos){
 	
 	<td>
 <?php
-echo sprintf('<div id="%d-link" class="pli li"><a href="%s" onclick="$(\'#%d-link\').slideUp(); $(\'#%d-link-form\').slideDown();return false;"><div><img src="%s" class="photosimg"/></div>%s</a>', $photos['id'], site_url('plugins/idslot_photos/edit/' . $photos['id']), $photos['id'], $photos['id'], $web . $uid . '-' . $photos['id'] . '.png', $photos['content']);
+echo sprintf('<div id="%d-link" class="pli li"><a href="%s" onclick="$(\'#%d-link\').slideUp(); $(\'#%d-link-form\').slideDown();return false;"><div><img src="%s" class="photosimg"/></div>%s</a>', $photos['id'], site_url('plugins/idslot_photos/edit/' . $photos['id']), $photos['id'], $photos['id'], $web . $uid . '-' . $photos['id'] . '.png?' . rand(10, 99), $photos['content']);
 echo form_open_multipart('plugins/idslot_photos/edit/' . $photos['id']); 
 ?>
 	</div>
@@ -40,7 +40,7 @@ echo form_open_multipart('plugins/idslot_photos/edit/' . $photos['id']);
     <label><?php echo lang('Image'); ?>:</label><input type="file" name="photos_file" class="file_1"/>
   </div>
   <div class="form">
-		<label>&nbsp;</label><img src="<?php echo $web . $uid . '-' . $photos['id'] . '.png'; ?>" />
+    <label>&nbsp;</label><img src="<?php echo $web . $uid . '-' . $photos['id'] . '.png?' . rand(10, 99); ?>" />
   </div>
   <div>
 		<label></label><a class="button form-delete" href="<?php echo site_url('/plugins/idslot_photos/remove/' . $photos['id']) ?>" onclick="return confirm('<?php echo lang('Are you sure to delete this work?') ?>');"><?php echo lang('Delete'); ?></a><input type="submit" name="submit" value="<?php echo lang('Edit'); ?>" class="form-submit" />
