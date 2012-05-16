@@ -142,6 +142,8 @@ $lang['Name'] = 'Name';
 $lang['Message'] = 'Message';
 $lang['Send'] = 'Send';
 $lang['Contact note'] = '';
+$lang['Your message send.'] = 'Your message send.';
+$lang['New message from your page'] = 'New message from your page';
 
 // About
 $lang['About'] = 'About';
