@@ -169,7 +169,7 @@ class Idslot extends CI_Controller {
     $this->load->model('plugins/' . $plugin);
     $images = $this->$plugin->image_size();
     $ids_path = dirname($_SERVER['SCRIPT_FILENAME']);
-    $ids_path = "{$ids_path}/idslots/users/{$uid}-{$username}/";
+    $ids_path = "{$ids_path}/application/views/idslot/";
     foreach($images as $prefix=>$size){
       if($id){
         $filename = $prefix . "{$uid}-{$id}.png";
