@@ -75,8 +75,9 @@
 			
 			echo '<a href="'.$map.'&amp;.png" class="map"><img src="'.$tmap.'" id="map" class="map" /></a>';
 		}
-		?>
-		<form action="contact.php" method="post">
+		
+                if($use_form){ ?>
+          <form action="<?php echo site_url('contact'); ?>" method="post">
 			<span class="block"><label for="name"><?php echo lang('Name'); ?></label><input type="text" name="name" id="name" /></span>
 			<span class="block"><label for="email"><?php echo lang('Email'); ?></label><input type="text" name="email" id="email" /></span>
 			<span class="block"><label for="msg"><?php echo lang('Message'); ?></label><textarea name="message" id="msg"></textarea></span>
@@ -86,6 +87,7 @@
 			
 			<span class="submit"><input type="submit" name="submit" class="button" id="submit_btn" value="<?php echo lang('Send'); ?>..."/></span>
 		</form>		
+                <?php } ?>
 	</div>
 	<div class="clear-both"></div>
 </div>
