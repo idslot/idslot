@@ -6,6 +6,13 @@ $this->lang->load('idslot');
 $this->lang->load('install');
 $data = $this->form_validation->_field_data;
 
+$title = array(
+    'name' => 'title',
+    'id' => 'title',
+    'value' => set_value('title'),
+    'size' => 30,
+);
+
 $username = array(
     'name' => 'username',
     'id' => 'username',
@@ -46,6 +53,9 @@ $password_confirm = array(
 
   <div class="form">
     <?php echo lang('setup info'); ?><br /><br />
+  </div>
+  <div class="form" title="<?php echo lang('Title Description'); ?>">
+    <?php echo form_label(lang('Title') . ':', $title['id']); ?><?php echo form_input($title); ?>
   </div>
   <div class="form" title="<?php echo lang('Username Description'); ?>">
     <?php echo form_label(lang('Username') . ':', $username['id']); ?><?php echo form_input($username); ?>

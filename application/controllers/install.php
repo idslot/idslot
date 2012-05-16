@@ -116,6 +116,11 @@ class Install extends CI_Controller {
 
     $config = array(
         array(
+            'field' => 'title',
+            'label' => lang('Title'),
+            'rules' => 'required|xss_clean'
+        ),
+        array(
             'field' => 'username',
             'label' => lang('Username'),
             'rules' => 'trim|required|xss_clean|alpha_dash'
@@ -142,7 +147,7 @@ class Install extends CI_Controller {
       $this->lang->load('tank_auth');
       $template = key($this->config->item('templates'));
       if (!is_null($udata = $this->tank_auth->create_user(
-                      $this->form_validation->set_value('username'), $this->form_validation->set_value('email'), $this->form_validation->set_value('password'), '', '', key($this->config->item('templates')), $this->config->item('language'), '', ''))) {    // success
+                      $this->form_validation->set_value('username'), $this->form_validation->set_value('email'), $this->form_validation->set_value('password'), $this->form_validation->set_value('title'), '', key($this->config->item('templates')), $this->config->item('language'), '', ''))) {    // success
         $this->load->model('system');
 
         $plugins = $this->config->item('plugins');
