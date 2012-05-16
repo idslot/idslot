@@ -94,7 +94,7 @@ class links extends CI_Model {
                    array(
                          'field'   => 'links[title]',
                          'label'   => lang('Links Title'),
-                         'rules'   => 'required|xss_clean'
+                         'rules'   => 'xss_clean'
                       ),
                    array(
                          'field'   => 'links[description]',

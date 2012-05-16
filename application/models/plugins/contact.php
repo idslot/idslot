@@ -93,7 +93,7 @@ class contact extends CI_Model {
       array(
         'field'   => 'contact[title]',
         'label'   => lang('Contact Title'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'xss_clean'
       ),
       array(
         'field'   => 'contact[description]',

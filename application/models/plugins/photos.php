@@ -94,7 +94,7 @@ class photos extends CI_Model {
                    array(
                          'field'   => 'photos[title]',
                          'label'   => lang('Photos Title'),
-                         'rules'   => 'required|xss_clean'
+                         'rules'   => 'xss_clean'
                       ),
                    array(
                          'field'   => 'photos[description]',
