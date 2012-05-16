@@ -12,7 +12,7 @@
 				}
 			},
 			style: {
-				width: 215,
+				width: 115,
 		    padding: 0,
         background: 'transparent',
 		    color: '#666',

@@ -74,9 +74,10 @@ input[type=text]:focus, input[type=password]:focus, input.text:focus, input.titl
 
 /* div.required input:focus , div.required textarea:focus {border:1px solid #E4ACA3;} */
 
-input.text, input.title {width:300px;padding:5px;}
+input.text, input.title {width:400px;padding:5px;}
 input.title {font-size:11px;}
-textarea {width:300px;height:120px;padding:4px; font-size:11px;}
+textarea {width:400px;height:120px;padding:4px; font-size:11px;}
+textarea[name="about[content]"]{height: 240px;}
 form.inline {line-height:3;}
 form.inline p {margin-bottom:0;}
 .error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
@@ -265,11 +266,11 @@ hr {
 input {font-size:11px;}
 input[type=text], input[type=password] {padding:4px;}
 select {width: 250px;}
-input[type=text], input[type=password] {width:300px;}
+input[type=text], input[type=password] {width:400px;}
 .qtip-content {margin: 3px; font-size:10px;}
 .form{margin:10px 0 10px 0;}
 .container1 {background: #fff; border:1px solid #bbb;}
-.header {background: url(../images/back.png) no-repeat; width:950px; height: 111px; margin-bottom: 10px}
+.header {background-color:#85A5BA; background-image:-moz-linear-gradient(center top , #96B2C4 0%, #85A5BA 100%); width:950px; height: 111px; margin-bottom: 10px}
 .htop {height: 91px;}
 h2.logo {background:url(../images/logoen.png) no-repeat 0 0;width:220px;height:52px;margin: 22px 0 0 22px;}
 h2.logo a {height:51px;text-indent:-9999px;display:block;}
@@ -315,8 +316,8 @@ h2.ban a {height:16;text-indent:-9999px;display:block;}
 
 .transparent {filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;}
 
-.block {padding:0;margin-bottom:10px;border:1px solid #ccc; color: #666;}
-.block-title {padding:0.3em 0.5em 0.3em 0.5em; background-color:#f6f6f6;}
+.block {padding:0;margin-bottom:10px;border:1px solid #ccc; color: #666; background-color: #FAFAF8;}
+.block-title {font-size:105%; padding:0.3em 0.5em 0.3em 0.5em; background-color:#f2f2EC;}
 .block-content {padding:0.5em; text-align: justify;}
 
 
@@ -351,7 +352,7 @@ a.button:hover, a.button:active, a.button:visited { color:#d12f19; text-decorati
 .desc{font-size:10px;display:inline-block;margin-left:5px;vertical-align:top;color:#666;}
 .reverse-float {float:right;}
 .icon-list {
-	width: 300px;
+	width: 400px;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -442,7 +443,7 @@ color: #000;
 .leftpad {margin-right: 10px;}
 .sidepad {margin: 0 10px 0 10px;}
 
-.mainbox {border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; min-height: 400px;}
+.mainbox {background-color:#FAFAF8; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; min-height: 400px;}
 
 .toplinks { background: #CEDBE3; padding: 2px 5px 2px 5px;}
 .toplinks:hover { background: #E3EBF1}
