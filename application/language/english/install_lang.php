@@ -8,11 +8,11 @@ $lang['Idslot already installed!'] = 'Idslot already installed!';
 $lang['Install steps'] = 'Install steps';
 
 $lang['check'] = 'Check requirements';
-$lang['check info'] = 'Please check the following issues:';
+$lang['check info'] = 'Prior to install IDSlot, you must set some permissions. You must make the config files and the compile folder writeable, so that the installer can edit it.';
 $lang['must be writable'] = 'must be writable';
 $lang['Refresh'] = 'Refresh';
 $lang['database'] = 'Install idslot';
-$lang['database info'] = 'Please enter your database connection details.';
+$lang['database info'] = 'You must create an empty database. You must also add a user who has full access to this newly created database.<br />Please enter your database details.';
 $lang['Database host'] = 'Database host';
 $lang['Database host description'] = 'The hostname of your database server';
 $lang['Database name'] = 'Database name';

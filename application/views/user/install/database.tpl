@@ -6,7 +6,7 @@ $data = $this->form_validation->_field_data;
 <form method="post" action="<?php echo site_url('install/database') ?>">
 
   <div class="form">
-    <?php echo lang('setup info'); ?><br /><br />
+    <?php echo lang('database info'); ?><br /><br />
   </div>
   <div class="form <?php echo $this->system->is_required($data, 'db_host'); ?>" title="<?php echo lang('Database host description'); ?>">
     <label><?php echo lang('Database host'); ?>:</label><input type="text" class="inp-form" name="db_host" value="<?php echo set_value('db_host'); ?>" />
