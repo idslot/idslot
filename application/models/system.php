@@ -60,11 +60,13 @@ class System extends CI_Model {
     
     foreach($plugins as $pname=>$ptitle){
       $this->load->model("plugins/{$ptitle}");
-      $subdata = $this->html_purifier->purify($this->$ptitle->fetch($uid));
-      $data['plugins'][$pname] = $this->load->view('templates/' . $data['user']->template . '/plugins/' . $pname . '.tpl', $subdata, true);
+      $subdata = $this->html_purifier->purify($plugin_data = $this->$ptitle->fetch($uid));
+      $data['plugins'][$pname]['title'] = $plugin_data['title'];
+      $data['plugins'][$pname]['view'] = $this->load->view('templates/' . $data['user']->template . '/plugins/' . $pname . '.tpl', $subdata, true);
     }
     
-    if(is_file("{$ids_path}/application/views/idslot/files/resume/{$uid}.pdf")){
+    if(is_file("{$ids_path}/application/views/idslot/files/resume/{$uid}.pdf")
+    || is_file("{$ids_path}/application/views/idslot/files/resume/{$uid}.html")){
       $data['has_resume'] = true;
     } else {
       $data['has_resume'] = false;
@@ -72,18 +74,6 @@ class System extends CI_Model {
     
     $idslot = $this->load->view('templates/' . $data['user']->template . '/index.tpl', $data, true);
     write_file("{$ids_path}/application/views/idslot/index.html", $idslot);
-    
-    // write contact file
-    write_file("{$ids_path}/application/views/idslot/contact.php",
-'<?php
-error_reporting(0);
-session_start();
-if($_SESSION[\'captcha_\' . md5(\'' . $uid . '\')] == $_POST[\'captcha\']){
-require_once(\'../../contact.php\');
-send_email(' . $uid . ',$_POST[\'name\'],$_POST[\'email\'],$_POST[\'message\']);
-}
-header("Location: {$_SERVER[\'HTTP_REFERER\']}");
-');
     
     // create symlink to template
     @unlink("{$ids_path}/application/views/idslot/theme");

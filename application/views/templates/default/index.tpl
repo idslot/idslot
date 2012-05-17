@@ -100,11 +100,11 @@
 						foreach($plugins as $pname=>$plugin){
 							if ($pname=='about'){
 								?>
-								<span class="item active"><a href="<?php echo "#".$pname ?>"><?php echo lang(ucfirst($pname)); ?></a></span>
+								<span class="item active"><a href="<?php echo "#".$pname ?>"><?php echo trim($plugin['title'])?$plugin['title']:lang(ucfirst($pname)); ?></a></span>
 								<?php
 							}else{
 								?>
-						    <span class="item"><a href="<?php echo "#".$pname ?>"><?php echo lang(ucfirst($pname)); ?></a></span>
+						    <span class="item"><a href="<?php echo "#".$pname ?>"><?php echo trim($plugin['title'])?$plugin['title']:lang(ucfirst($pname)); ?></a></span>
 								<?php
 							}
 						}
@@ -114,7 +114,7 @@
 				<div id="datacontent" class="panels">
 				<?php
 				  foreach($plugins as $plugin){
-						print($plugin);
+						print($plugin['view']);
 					}
 				?>
 				</div>
