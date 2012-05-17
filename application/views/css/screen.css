@@ -274,7 +274,7 @@ input[type=text], input[type=password] {width:400px;}
 .container2 {background:#292929;width: 100%;}
 .header {background-color:#85A5BA; background-image:-moz-linear-gradient(center top , #96B2C4 0%, #85A5BA 100%); width:950px; height: 111px; margin-bottom: 10px; margin:0 auto;}
 .htop {height: 91px;}
-h2.logo {background:url(../images/logoen.png) no-repeat 0 0;width:220px;height:52px;margin: 22px 0 0 22px;}
+h2.logo {background:url(../images/logoen.png) no-repeat 0 0;width:220px;height:52px;margin: 22px 0 0 10px;}
 h2.logo a {height:51px;text-indent:-9999px;display:block;}
 
 
