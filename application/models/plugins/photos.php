@@ -40,7 +40,7 @@ class photos extends CI_Model {
     $this->load->database();
     $query = $this->db->query('SELECT * FROM portfolio WHERE uid = ' . $this->db->escape($uid));
     $arr = $query->row_array();
-    $query = $this->db->query('SELECT * FROM portfolio_list WHERE pid=' . $this->db->escape($arr['id']));
+    $query = $this->db->query('SELECT * FROM portfolio_list WHERE pid=' . $this->db->escape($arr['id']) . ' ORDER BY id DESC');
     $arr['photoss'] = $query->result_array();
 
     return $arr;

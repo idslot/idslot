@@ -41,7 +41,7 @@ class links extends CI_Model {
     $query = $this->db->query('SELECT * FROM social WHERE uid = ' . $this->db->escape($uid));
 
     $arr = $query->row_array();
-    $query = $this->db->query('SELECT * FROM social_links WHERE sid=' . $this->db->escape($arr['id']));
+    $query = $this->db->query('SELECT * FROM social_links WHERE sid=' . $this->db->escape($arr['id']) . ' ORDER BY name');
     $arr['links'] = $query->result_array();
     return $arr;
   }
