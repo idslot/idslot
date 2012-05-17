@@ -29,6 +29,14 @@ class Auth extends CI_Controller {
 
     $this->load->helper(array('form', 'url'));
     $this->load->library('form_validation');
+    
+    
+    include(APPPATH . 'config/database.php');
+    if ($db['default']['hostname'] == '') {
+      redirect('install');
+      exit();
+    }
+    
     $this->load->library('security');
     $this->load->library('tank_auth');
     $this->load->helper('language');

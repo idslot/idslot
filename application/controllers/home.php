@@ -24,6 +24,12 @@ if (!defined('BASEPATH'))
 class Home extends CI_Controller {
 
   public function index() {
+    $this->load->helper('url');
+    include(APPPATH . 'config/database.php');
+    if ($db['default']['hostname'] == '') {
+      redirect('install');
+      exit();
+    }
     $this->load->view('idslot/index.html');
   }
 
