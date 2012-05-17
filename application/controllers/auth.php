@@ -234,10 +234,6 @@ class Auth extends CI_Controller {
         $this->system->add_msg($this->lang->line('auth_message_new_password_failed'));
       }
     } else {
-      // Try to activate user by password key (if not activated yet)
-      if ($this->config->item('email_activation', 'tank_auth')) {
-        $this->tank_auth->activate_user($user_id, $new_pass_key, FALSE);
-      }
 
       if (!$this->tank_auth->can_reset_password($user_id, $new_pass_key)) {
         $this->_show_message($this->lang->line('auth_message_new_password_failed'));

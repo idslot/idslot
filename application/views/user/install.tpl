@@ -11,7 +11,7 @@ $data = $this->form_validation->_field_data;
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title><?php echo lang('Idslot'); ?></title>
-
+    <link rel="shortcut icon" href="<?php echo $base_url; ?>application/views/images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="<?php echo $base_url; ?>application/views/css/screen.css" type="text/css" media="screen, projection" />
     <link type="text/css" href="<?php echo $base_url; ?>application/views/css/jquery-ui.css" rel="Stylesheet" />	
     <!--[if lt IE 8]>
@@ -58,8 +58,7 @@ $data = $this->form_validation->_field_data;
 
   <body> 
     <div class="container prepend-top">
-      <div class="container1 span-24">
-
+      <div class="container0">
         <div class="header">
           <!-- START HEADER -->
           <div class="span-24 htop">
@@ -81,7 +80,8 @@ $data = $this->form_validation->_field_data;
           </div>
           <!-- END NAV MENU -->
         </div>
-
+      </div>
+      <div class="container1">
 
         <!-- START CONTENT -->
         <div class="span-17"><div class="rightpad mainbox">
@@ -119,9 +119,9 @@ $data = $this->form_validation->_field_data;
 
 
             <!-- start id-form -->
-<?php
-$this->load->view('user/install/' . strtolower($current_step) . '.tpl');
-?>
+            <?php
+            $this->load->view('user/install/' . strtolower($current_step) . '.tpl');
+            ?>
             <!-- end id-form  -->
           </div></div>
         <div class="span-7 last">
@@ -153,17 +153,20 @@ $this->load->view('user/install/' . strtolower($current_step) . '.tpl');
         </div>
         <!-- END CONTENT -->
       </div>
-      <!-- START FOOTER -->
-      <div class="span-24 footer quiet">
+      <div class="container2">
+        <!-- START FOOTER -->
+        <div class="footer quiet">
 
-        <div class="footer1">
-<?php echo lang('Copyright') . " " . date('Y'); ?>
-        </div>
+          <div class="footer1">
+            <?php echo lang('Idslot'); ?>
+          </div>
 
-        <div class="footer2">
-        </div>
-      </div> 
-      <!-- END FOOTER -->
+          <div class="footer2">
+            <a href="http://idslot.org/" target="_blank"><img src="<?php echo $base_url; ?>/application/views/images/footer.png" alt="<?php echo lang('Idslot'); ?>" /></a>
+          </div>
+        </div> 
+        <!-- END FOOTER -->
+      </div>
 
     </div>
 
