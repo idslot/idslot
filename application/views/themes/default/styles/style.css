@@ -42,8 +42,8 @@ a:enabled {color:#444444;}
 .panels .ptitle{font-weight:700; font-style:italic; margin-bottom:5px; font-size:18px;}
 .panels .content{font-size:13px; line-height:20px;}
 .panels .description{font-size:13px; line-height:20px;}
-.panel { display: table; }
-ul.photos{margin:10px 0 0 0;padding:0; list-style-type:none;display:inline-block; text-align: center;}
+.panel {width:100%; display: table;}
+ul.photos{width:465px; margin:10px auto 0;padding:0; list-style-type:none;}
 ul.photos li{list-style-type:none; display:inline; margin:0 5px 10px 0; height:80px;}
 .photos img{width:80px; height:80px; padding:2px; background:#ffffff; border:1px solid #ccc;}
 .photo img {padding:2px; background:#ffffff; border:1px solid #ccc;}
