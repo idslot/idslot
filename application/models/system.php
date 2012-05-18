@@ -223,4 +223,18 @@ class System extends CI_Model {
     $data[$field] = explode('|', $data[$field]['rules']);
     return in_array('required', $data[$field]) ? $css_class : '';
   }
+  
+  public function templates(){
+    $templates = array();
+    $ids_path = dirname($_SERVER['SCRIPT_FILENAME']);
+    $dirs = scandir($ids_path . '/application/views/templates');
+    
+    foreach($dirs as $dir){
+      if(is_dir($ids_path . '/application/views/templates/' . $dir) && strpos($dir, '.') !== 0 && file_exists($ids_path . '/application/views/templates/' . $dir . '/index.tpl')){
+        $templates[$dir] = $dir;
+      }
+    }
+    
+    return $templates;
+  }
 }

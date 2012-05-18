@@ -20,7 +20,7 @@ $data = $this->form_validation->_field_data;
   <div class="form <?php echo $this->system->is_required($data, 'details[template]'); ?>">
     <label><?php echo lang('Template'); ?>:</label>		<select id="details[template]" name="details[template]" onchange="change_template()">
 		<?php
-		$templates = $this->config->item('templates');
+		$templates = $this->system->templates();
 		foreach($templates as $tname=>$ttile){
 		?>
 		<option value="<?php echo $tname; ?>"<?php echo $tname==$template?' selected=selected':''; ?>><?php echo $ttile; ?></option>

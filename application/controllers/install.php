@@ -145,7 +145,7 @@ class Install extends CI_Controller {
     if ($this->form_validation->run()) {     // validation ok
       $this->load->library('tank_auth');
       $this->lang->load('tank_auth');
-      $template = key($this->config->item('templates'));
+      $template = key($this->system->templates());
       if (!is_null($udata = $this->tank_auth->create_user(
                       $this->form_validation->set_value('username'), $this->form_validation->set_value('email'), $this->form_validation->set_value('password'), $this->form_validation->set_value('title'), '', key($this->config->item('templates')), $this->config->item('language'), '', ''))) {    // success
         $this->load->model('system');
