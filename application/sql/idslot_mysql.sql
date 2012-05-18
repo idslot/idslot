@@ -430,6 +430,7 @@ CREATE TABLE IF NOT EXISTS `portfolio` (
 CREATE TABLE IF NOT EXISTS `portfolio_list` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL,
+  `sort` int(11) NOT NULL DEFAULT '0',
   `content` text COLLATE utf8_persian_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
@@ -516,6 +517,7 @@ CREATE TABLE IF NOT EXISTS `social` (
 CREATE TABLE IF NOT EXISTS `social_links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sid` int(11) NOT NULL,
+  `sort` int(11) NOT NULL DEFAULT '0',
   `name` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `url` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `icon` varchar(255) COLLATE utf8_persian_ci NOT NULL,
