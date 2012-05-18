@@ -49,7 +49,40 @@ $data = $this->form_validation->_field_data;
         });
       });
     </script>
-
+    <script>
+      $(document).ready(
+      function() {
+        $("#photos").sortable({
+          placeholder: "ui-state-highlight",
+          update : function () {
+            serial = $('#photos').sortable('serialize');
+            $.ajax({
+              url: "<?php echo site_url('plugins/idslot_photos/sort/') . ""; ?>",
+              type: "post",
+              data: serial,
+              error: function(){
+                alert("<?php echo lang('Error in connection'); ?>");
+              }
+            });
+          }
+        });
+        $("#links").sortable({
+          placeholder: "ui-state-highlight",
+          update : function () {
+            serial = $('#links').sortable('serialize');
+            $.ajax({
+              url: "<?php echo site_url('plugins/idslot_links/sort/') . ""; ?>",
+              type: "post",
+              data: serial,
+              error: function(){
+                alert("<?php echo lang('Error in connection'); ?>");
+              }
+            });
+          }
+        });
+      }
+    );
+    </script>
     <?php
     if (lang('direction') == 'rtl') {
       ?>

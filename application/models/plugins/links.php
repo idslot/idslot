@@ -41,7 +41,7 @@ class links extends CI_Model {
     $query = $this->db->query('SELECT * FROM social WHERE uid = ' . $this->db->escape($uid));
 
     $arr = $query->row_array();
-    $query = $this->db->query('SELECT * FROM social_links WHERE sid=' . $this->db->escape($arr['id']) . ' ORDER BY name');
+    $query = $this->db->query('SELECT * FROM social_links WHERE sid=' . $this->db->escape($arr['id']) . ' ORDER BY sort, id DESC');
     $arr['links'] = $query->result_array();
     return $arr;
   }
@@ -179,6 +179,22 @@ class links extends CI_Model {
     return $this->db->delete('social_links');
   }
   
+  public function sort($serial){
+    $this->load->database();
+    
+    $uid = $this->session->userdata('user_id');
+    
+    $query = $this->db->query('SELECT * FROM social WHERE uid = ' . $this->db->escape($uid));
+    $s = $query->row_array();
+    
+    $count = count($serial);
+    for($i=0; $i<$count; $i++){
+      $data['sort'] = $i+1;
+      $this->db->where(array('id' => $serial[$i], 'sid' => $s['id']));
+      $this->db->update('social_links', $data);
+    }
+    return true;
+  }  
   
   /**
    * Return image size

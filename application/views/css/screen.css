@@ -480,3 +480,15 @@ background: linear-gradient(top, #ffffff 0%,#f4f4f4 100%); /* W3C */
 .substart .form-submit{ color:#006699; padding: 5px 10px 5px 10px; background:#dff4ff; border:1px solid #c2e1ef; margin-left: 10px; font-size: 13px; font-weight: normal;}
 .substart .form-submit:hover{ background:#dff4ff; border:1px solid #6EAAC5; }
 .used {text-decoration: line-through; color: #bbb;}
+
+#photos { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+#photos li { margin: 0 5px 5px 5px; padding: 2px 5px 2px 5px; font-size: 1.2em; min-height: 40px; }
+html>body #photos li { min-height: 40px; line-height: 1.2em; }
+#photos .ui-state-default .ui-icon { float: right; margin-top: 12px;}
+.ui-state-highlight { height: 40px; line-height: 1.2em; }
+
+#links { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+#links li { margin: 0 5px 5px 5px; padding: 2px 5px 2px 5px; font-size: 1.2em; min-height: 20px; }
+html>body #links li { min-height: 20px; line-height: 1.2em; }
+#links .ui-state-default .ui-icon { float: right; }
+.ui-state-highlight { height: 20px; line-height: 1.2em; }

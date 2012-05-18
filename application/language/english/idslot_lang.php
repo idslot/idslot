@@ -269,3 +269,4 @@ $lang['auth_subject_send_password'] = 'Welcome to %s';
 
 // Links
 $lang['Home'] = 'Home';
+$lang['Error in connection'] = 'Error in connection';

@@ -16,19 +16,19 @@ $data = $this->form_validation->_field_data;
 
 <h3 class="title"><?php echo lang('List'); ?></h3><hr>
 <h3 class="subtitle"><?php echo lang('How to edit'); ?></h3>
-<table border="0" cellpadding="0" cellspacing="0" class="style1">
+<ul id="photos" class="style1 ui-sortable">
 <?php
 $web = base_url() . "application/views/idslot/files/photos/thumb_";
 foreach($photoss as $photos){
 ?>
-<tr style="margin-bottom: 5px;">
+
 	
-	<td>
+	<li id="photos_<?php echo $photos['id']; ?>" class="ui-state-default">
 <?php
-echo sprintf('<div id="%d-link" class="pli li"><a href="%s" onclick="$(\'#%d-link\').slideUp(); $(\'#%d-link-form\').slideDown();return false;"><div><img src="%s" class="photosimg"/></div>%s</a>', $photos['id'], site_url('plugins/idslot_photos/edit/' . $photos['id']), $photos['id'], $photos['id'], $web . $uid . '-' . $photos['id'] . '.png?' . rand(10, 99), $photos['content']);
+echo sprintf('<div id="%d-link" class="pli li"><a href="%s" onclick="$(\'#%d-link\').slideUp(); $(\'#%d-link-form\').slideDown();return false;"><div><img src="%s" class="photosimg"/></div>%s</a><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></div>', $photos['id'], site_url('plugins/idslot_photos/edit/' . $photos['id']), $photos['id'], $photos['id'], $web . $uid . '-' . $photos['id'] . '.png?' . rand(10, 99), $photos['content']);
 echo form_open_multipart('plugins/idslot_photos/edit/' . $photos['id']); 
 ?>
-	</div>
+
   <div class="subfieldset PhotosDiv" style="display:none;" id="<?php echo $photos['id'] . '-link-form'; ?>">
 	
 	<h2 class="delete"><a href="#" onclick="$('#<?php echo $photos['id'];?>-link').slideDown();$('#<?php echo $photos['id'];?>-link-form').slideUp(); return false;"></a></h2>
@@ -48,13 +48,13 @@ echo form_open_multipart('plugins/idslot_photos/edit/' . $photos['id']);
 	
   </div>
 </form>
-</td>
-</tr>
+</li>
+
 
 <?php
 }
 ?>
-</table>
+</ul>
 
 <?php  
 echo form_open_multipart('plugins/idslot_photos/add/' . $id); 

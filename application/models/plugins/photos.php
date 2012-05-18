@@ -40,7 +40,7 @@ class photos extends CI_Model {
     $this->load->database();
     $query = $this->db->query('SELECT * FROM portfolio WHERE uid = ' . $this->db->escape($uid));
     $arr = $query->row_array();
-    $query = $this->db->query('SELECT * FROM portfolio_list WHERE pid=' . $this->db->escape($arr['id']) . ' ORDER BY id DESC');
+    $query = $this->db->query('SELECT * FROM portfolio_list WHERE pid=' . $this->db->escape($arr['id']) . ' ORDER BY sort, id DESC');
     $arr['photoss'] = $query->result_array();
 
     return $arr;
@@ -166,7 +166,23 @@ class photos extends CI_Model {
     $this->db->where(array('id' => $id, 'pid' => $p['id']));
     return $this->db->delete('portfolio_list');
   }
-  
+
+  public function sort($serial){
+    $this->load->database();
+    
+    $uid = $this->session->userdata('user_id');
+    
+    $query = $this->db->query('SELECT * FROM portfolio WHERE uid = ' . $this->db->escape($uid));
+    $p = $query->row_array();
+    
+    $count = count($serial);
+    for($i=0; $i<$count; $i++){
+      $data['sort'] = $i+1;
+      $this->db->where(array('id' => $serial[$i], 'pid' => $p['id']));
+      $this->db->update('portfolio_list', $data);
+    }
+    return true;
+  }
     
   /**
    * Return image size

@@ -73,4 +73,9 @@ class idslot_links extends VC_Controller {
     }
     redirect('idslot/edit/links');
   }
+  
+  public function sort(){
+    $this->links->sort($this->input->post('links'));
+    $this->system->render($this->uid);
+  }
 }

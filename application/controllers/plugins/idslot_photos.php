@@ -80,4 +80,9 @@ class idslot_photos extends VC_Controller {
     }
     redirect('idslot/edit/photos');
   }
+  
+  public function sort(){
+    $this->photos->sort($this->input->post('photos'));
+    $this->system->render($this->uid);
+  }
 }

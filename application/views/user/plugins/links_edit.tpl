@@ -16,7 +16,7 @@ $data = $this->form_validation->_field_data;
 
 <h3 class="title"><?php echo lang('List of links'); ?></h3><hr>
 <h3 class="subtitle"><?php echo lang('How to edit links'); ?></h3>
-<table border="0" cellpadding="0" cellspacing="0" class="style1">
+<ul id="links" class="style1 ui-sortable">
 <?php
 $icons = array('aim', 'apple', 'blogger', 'delicious', 'digg', 'facebook', 'feedburner', 'flickr', 'friendfeed', 'google', 'hi5', 'identica', 'lastfm', 'linkedin', 'myspace', 'twitter', 'vimeo', 'wordpress', 'youtube', 'website');
 $web = base_url() . 'application/views/social_icons/';
@@ -24,10 +24,9 @@ $mask = false;
 foreach($links as $link){
 ?>
 
-<tr>
-	<td>
+<li id="links_<?php echo $link['id']; ?>" class="ui-state-default">
 <?php
-echo sprintf('<div id="%d-link" class="li"><a href="%s" class="show_hide" onclick="$(\'#%d-link\').slideUp(); $(\'#%d-link-form\').slideDown();return false;"><img src="%s" border="0" style="height:12px;" /> %s</a></div>', $link['id'], site_url('plugins/idslot_links/edit/' . $link['id']), $link['id'], $link['id'], $web . $link['icon'] . '.png', $link['name']);
+echo sprintf('<div id="%d-link" class="li"><a href="%s" class="show_hide" onclick="$(\'#%d-link\').slideUp(); $(\'#%d-link-form\').slideDown();return false;"><img src="%s" border="0" style="height:12px;" /> %s</a><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></div>', $link['id'], site_url('plugins/idslot_links/edit/' . $link['id']), $link['id'], $link['id'], $web . $link['icon'] . '.png', $link['name']);
 echo form_open_multipart('plugins/idslot_links/edit/' . $link['id']); 
 ?>
   <div class="subfieldset LinksDiv" style="display:none;" id="<?php echo $link['id'] . '-link-form'; ?>">
@@ -56,12 +55,11 @@ echo form_open_multipart('plugins/idslot_links/edit/' . $link['id']);
   </div>
 </form>
 
-</td>
-</tr>
+</li>
 <?php
 }
 ?>
-</table>
+</ul>
 
 <?php
 echo form_open_multipart('plugins/idslot_links/add/' . $id); 
