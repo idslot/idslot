@@ -12,7 +12,7 @@ class VC_Controller extends CI_Controller {
     $this->lang->load('idslot');
     $this->load->helper('language');
     if (!$this->tank_auth->is_logged_in()) {
-      redirect('idslot/login');
+      redirect('auth/login');
     }
   }
 }
