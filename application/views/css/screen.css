@@ -76,7 +76,7 @@ input[type=text]:focus, input[type=password]:focus, input.text:focus, input.titl
 
 input.text, input.title {width:400px;padding:5px;}
 input.title {font-size:11px;}
-textarea {width:400px;height:120px;padding:4px; font-size:11px;}
+textarea {width:400px;height:60px;padding:4px; font-size:11px;}
 textarea[name="about[content]"]{height: 300px;}
 form.inline {line-height:3;}
 form.inline p {margin-bottom:0;}
@@ -421,8 +421,8 @@ text-decoration: none;
 .EduDiv {height:281.5px;}
 .ExpDiv {height:349.5px;}
 .PubDiv {height:240.75px;}
-.LinksDiv {height:182.25px;}
-.PhotosDiv {height:305.25px;}
+.LinksDiv {height:183px;}
+.PhotosDiv {height:250px;}
 
 #navlist a:link#current, #navlist a:visited#current
 {
