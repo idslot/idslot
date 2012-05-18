@@ -4,7 +4,7 @@
 .defaultSkin table td {vertical-align:middle}
 
 /* Containers */
-.defaultSkin table {direction:ltr; background:#F0F0EE}
+.defaultSkin table {direction:ltr;background:transparent}
 .defaultSkin iframe {display:block;}
 .defaultSkin .mceToolbar {height:26px}
 .defaultSkin .mceLeft {text-align:left}
@@ -40,7 +40,7 @@
 .defaultSkin .mceButtonDisabled .mceIcon {opacity:0.3; -ms-filter:'alpha(opacity=30)'; filter:alpha(opacity=30)}
 .defaultSkin .mceButtonLabeled {width:auto}
 .defaultSkin .mceButtonLabeled span.mceIcon {float:left}
-.defaultSkin span.mceButtonLabel {display:block; font-size:11px; padding:4px 6px 0 22px; font-family:Verdana,Arial,Helvetica}
+.defaultSkin span.mceButtonLabel {display:block; font-size:10px; padding:4px 6px 0 22px; font-family:Tahoma,Verdana,Arial,Helvetica}
 .defaultSkin .mceButtonDisabled .mceButtonLabel {color:#888}
 
 /* Separator */
@@ -48,7 +48,7 @@
 
 /* ListBox */
 .defaultSkin .mceListBox, .defaultSkin .mceListBox a {display:block}
-.defaultSkin .mceListBox .mceText {padding-left:4px; width:70px; text-align:left; border:1px solid #CCC; border-right:0; background:#FFF; font-family:Verdana,Arial,Helvetica; font-size:11px; height:20px; line-height:20px; overflow:hidden}
+.defaultSkin .mceListBox .mceText {padding-left:4px; width:70px; text-align:left; border:1px solid #CCC; border-right:0; background:#FFF; font-family:Tahoma,Verdana,Arial,Helvetica; font-size:11px; height:20px; line-height:20px; overflow:hidden}
 .defaultSkin .mceListBox .mceOpen {width:9px; height:20px; background:url(../../img/icons.gif) -741px 0; margin-right:2px; border:1px solid #CCC;}
 .defaultSkin table.mceListBoxEnabled:hover .mceText, .defaultSkin .mceListBoxHover .mceText, .defaultSkin .mceListBoxSelected .mceText {border:1px solid #A2ABC0; border-right:0; background:#FFF}
 .defaultSkin table.mceListBoxEnabled:hover .mceOpen, .defaultSkin .mceListBoxHover .mceOpen, .defaultSkin .mceListBoxSelected .mceOpen {background-color:#FFF; border:1px solid #A2ABC0}
@@ -76,21 +76,21 @@
 .defaultSkin .mceColorSplitMenu td {padding:2px}
 .defaultSkin .mceColorSplitMenu a {display:block; width:9px; height:9px; overflow:hidden; border:1px solid #808080}
 .defaultSkin .mceColorSplitMenu td.mceMoreColors {padding:1px 3px 1px 1px}
-.defaultSkin .mceColorSplitMenu a.mceMoreColors {width:100%; height:auto; text-align:center; font-family:Verdana,Arial,Helvetica; font-size:11px; line-height:20px; border:1px solid #FFF}
+.defaultSkin .mceColorSplitMenu a.mceMoreColors {width:100%; height:auto; text-align:center; font-family:Tahoma,Verdana,Arial,Helvetica; font-size:11px; line-height:20px; border:1px solid #FFF}
 .defaultSkin .mceColorSplitMenu a.mceMoreColors:hover {border:1px solid #0A246A; background-color:#B6BDD2}
 .defaultSkin a.mceMoreColors:hover {border:1px solid #0A246A}
 .defaultSkin .mceColorPreview {margin-left:2px; width:16px; height:4px; overflow:hidden; background:#9a9b9a}
 .defaultSkin .mce_forecolor span.mceAction, .defaultSkin .mce_backcolor span.mceAction {overflow:hidden; height:16px}
 
 /* Menu */
-.defaultSkin .mceMenu {position:absolute; left:0; top:0; z-index:1000; border:1px solid #D4D0C8}
+.defaultSkin .mceMenu {position:absolute; left:0; top:0; z-index:1000; border:1px solid #D4D0C8; direction:ltr}
 .defaultSkin .mceNoIcons span.mceIcon {width:0;}
 .defaultSkin .mceNoIcons a .mceText {padding-left:10px}
 .defaultSkin .mceMenu table {background:#FFF}
 .defaultSkin .mceMenu a, .defaultSkin .mceMenu span, .defaultSkin .mceMenu {display:block}
 .defaultSkin .mceMenu td {height:20px}
 .defaultSkin .mceMenu a {position:relative;padding:3px 0 4px 0}
-.defaultSkin .mceMenu .mceText {position:relative; display:block; font-family:Verdana,Arial,Helvetica; color:#000; cursor:default; margin:0; padding:0 25px 0 25px; display:block}
+.defaultSkin .mceMenu .mceText {position:relative; display:block; font-family:Tahoma,Verdana,Arial,Helvetica; color:#000; cursor:default; margin:0; padding:0 25px 0 25px; display:block}
 .defaultSkin .mceMenu span.mceText, .defaultSkin .mceMenu .mcePreview {font-size:11px}
 .defaultSkin .mceMenu pre.mceText {font-family:Monospace}
 .defaultSkin .mceMenu .mceIcon {position:absolute; top:0; left:0; width:22px;}
@@ -103,13 +103,18 @@
 .defaultSkin .mceNoIcons .mceMenuItemSelected a {background:url(img/menu_arrow.gif) no-repeat -6px center}
 .defaultSkin .mceMenu span.mceMenuLine {display:none}
 .defaultSkin .mceMenuItemSub a {background:url(img/menu_arrow.gif) no-repeat top right;}
+.defaultSkin .mceMenuItem td, .defaultSkin .mceMenuItem th {line-height: normal}
 
 /* Progress,Resize */
 .defaultSkin .mceBlocker {position:absolute; left:0; top:0; z-index:1000; opacity:0.5; -ms-filter:'alpha(opacity=50)'; filter:alpha(opacity=50); background:#FFF}
 .defaultSkin .mceProgress {position:absolute; left:0; top:0; z-index:1001; background:url(img/progress.gif) no-repeat; width:32px; height:32px; margin:-16px 0 0 -16px}
 
+/* Rtl */
+.mceRtl .mceListBox .mceText {text-align: right; padding: 0 4px 0 0}
+.mceRtl .mceMenuItem .mceText {text-align: right}
+
 /* Formats */
-.defaultSkin .mce_formatPreview a {font-size:11px}
+.defaultSkin .mce_formatPreview a {font-size:10px}
 .defaultSkin .mce_p span.mceText {}
 .defaultSkin .mce_address span.mceText {font-style:italic}
 .defaultSkin .mce_pre span.mceText {font-family:monospace}
@@ -211,3 +216,4 @@
 .defaultSkin span.mce_pagebreak {background-position:0 -40px}
 .defaultSkin span.mce_restoredraft {background-position:-20px -40px}
 .defaultSkin span.mce_spellchecker {background-position:-540px -20px}
+.defaultSkin span.mce_visualblocks {background-position: -40px -40px}

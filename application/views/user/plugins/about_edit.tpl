@@ -29,7 +29,7 @@ if(is_file($dir)) { ?>
 
 <?php } ?>
 <div class="form <?php echo $this->system->is_required($data, 'about[content]'); ?>" title="<?php echo lang('About Content Description');?>">
-	<label><?php echo lang('About');?>:</label><textarea name="about[content]" cols="50" class="form-textarea"><?php echo $content; ?></textarea>
+	<label><?php echo lang('About');?>:</label><textarea name="about[content]" cols="50" class="form-textarea editor"><?php echo $content; ?></textarea>
 </div>	
 
 <div class="submit">

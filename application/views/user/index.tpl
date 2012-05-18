@@ -19,6 +19,7 @@ $data = $this->form_validation->_field_data;
 
     <script src="<?php echo $base_url; ?>application/views/js/jquery/jquery-1.6.2.min.js" type="text/javascript"></script>
     <script src="<?php echo $base_url; ?>application/views/js/jquery/jquery-ui-1.8.10.custom.min.js" type="text/javascript"></script>
+    <script src="<?php echo $base_url; ?>application/views/js/tiny_mce/tiny_mce.js" type="text/javascript"></script>
     <!--  styled file upload script --> 
     <script src="<?php echo $base_url; ?>application/views/js/jquery/jquery.filestyle.js" type="text/javascript"></script>
 
@@ -79,6 +80,18 @@ $data = $this->form_validation->_field_data;
         });
       }
     );
+    tinyMCE.init({
+        mode : "specific_textareas",
+        editor_selector : "editor",
+        theme : "advanced",
+        theme_advanced_toolbar_location : "top",
+        //theme_advanced_buttons1 : "justifyleft,justifycenter,justifyright,justifyfull,bold,italic,underline,fontselect,fontsizeselect,forecolor,backcolor",
+        //theme_advanced_buttons2 : "bullist,numlist,separator,outdent,indent,separator,sub,sup,separator,charmap,separator,link,unlink,separator,hr,seperator,image,separator,removeformat,separator,code",
+        theme_advanced_buttons1 : "code",
+        theme_advanced_buttons2 : "",
+        theme_advanced_buttons3 : ""
+
+    });
     </script>
     <?php
     if (lang('direction') == 'rtl') {

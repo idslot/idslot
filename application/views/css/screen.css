@@ -77,7 +77,7 @@ input[type=text]:focus, input[type=password]:focus, input.text:focus, input.titl
 input.text, input.title {width:400px;padding:5px;}
 input.title {font-size:11px;}
 textarea {width:400px;height:120px;padding:4px; font-size:11px;}
-textarea[name="about[content]"]{height: 240px;}
+textarea[name="about[content]"]{height: 300px;}
 form.inline {line-height:3;}
 form.inline p {margin-bottom:0;}
 .error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
@@ -498,3 +498,5 @@ html>body #links li { min-height: 20px; line-height: 1.2em; }
 #links input[type=text], #photos textarea { width: 382px; }
 
 #template_preview{border:1px solid #ccc; padding:3px; max-width: 400px;}
+
+.mceEditor { display: inline-block; width: 410px; }
