@@ -494,3 +494,5 @@ html>body #links li { min-height: 20px; line-height: 1.2em; }
 .ui-state-highlight { height: 20px; line-height: 1.2em; }
 
 #links .icon-list li{margin:0; padding: 0;}
+
+#links input[type=text], #photos textarea { width: 382px; }
