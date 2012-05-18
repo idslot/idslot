@@ -30,9 +30,6 @@ $data = $this->form_validation->_field_data;
       });
     </script>
 
-    <link type="text/css" href="<?php echo $base_url; ?>application/views/css/ui.datepicker.css" rel="stylesheet" />
-
-    <script type="text/javascript" src="<?php echo $base_url; ?>application/views/js/jquery/jquery.ui.datepicker-cc.js"></script>
     <script type="text/javascript" src="<?php echo $base_url; ?>application/views/js/jquery/custom_jquery.js"></script>
     <script type="text/javascript" src="<?php echo $base_url; ?>application/views/js/jquery/jquery.qtip-1.0.0-rc3.min.js"></script>
     <script type="text/javascript">

@@ -492,3 +492,5 @@ html>body #photos li { min-height: 40px; line-height: 1.2em; }
 html>body #links li { min-height: 20px; line-height: 1.2em; }
 #links .ui-state-default .ui-icon { float: right; }
 .ui-state-highlight { height: 20px; line-height: 1.2em; }
+
+#links .icon-list li{margin:0; padding: 0;}

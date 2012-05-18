@@ -109,26 +109,6 @@ $confirm_password = array(
       });
     </script>
 
-    <link type="text/css" href="<?php echo $base_url; ?>application/views/css/ui.datepicker.css" rel="stylesheet" />
-
-    <script type="text/javascript" src="<?php echo $base_url; ?>application/views/js/jquery/jquery.ui.datepicker-cc.js"></script>
-    <script type="text/javascript" src="<?php echo $base_url; ?>application/views/js/jquery/calendar.js"></script>
-    <script type="text/javascript" src="<?php echo $base_url; ?>application/views/js/jquery/jquery.ui.datepicker-cc-ar.js"></script>
-    <script type="text/javascript" src="<?php echo $base_url; ?>application/views/js/jquery/jquery.ui.datepicker-cc-fa.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.datepicker0').datepicker({
-          dateFormat: 'yy-mm-dd',
-          changeMonth: true,
-          changeYear: true,
-          regional: '<?php echo lang('lang'); ?>'
-        });
-        $( ".skill" ).autocomplete({
-          source: "<?php echo site_url('plugins/idslot_resume/suggest_skill/'); ?>",
-          minLength: 2
-        });
-      });
-    </script>
   </head>
 
   <body>
