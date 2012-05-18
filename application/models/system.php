@@ -77,7 +77,7 @@ class System extends CI_Model {
     
     // create symlink to template
     @unlink("{$ids_path}/application/views/idslot/theme");
-    symlink("{$ids_path}/application/views/themes/{$data['user']->template}/", "application/views/idslot/theme");
+    symlink("{$ids_path}/application/views/templates/{$data['user']->template}/theme/", "application/views/idslot/theme");
   }
   
   public function upload_images($uid, $sizes=false, $id=false)

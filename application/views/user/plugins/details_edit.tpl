@@ -33,7 +33,7 @@ $data = $this->form_validation->_field_data;
 			<script>
 			function change_template(){
 				var template = document.getElementById('details[template]').value;
-				var template = '<?php echo $base_url; ?>application/views/images/themes/' + template + '.jpg';
+				var template = '<?php echo $base_url; ?>application/views/templates/' + template + '/preview.jpg';
 				document.getElementById('template_preview').src = template;
 			}
 			change_template();
