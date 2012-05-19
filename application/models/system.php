@@ -49,6 +49,7 @@ class System extends CI_Model {
     umask(0);
     
     @mkdir("{$ids_path}/application/views/idslot/files/", $this->config->item('dir_perm'), true);
+    @file_put_contents("{$ids_path}/application/views/idslot/files/index.html", "");
     $plugins = $this->config->item('plugins');
 
     $this->load->model('plugins/photos');
@@ -107,6 +108,7 @@ class System extends CI_Model {
     
     foreach($plugins as $plugin => $ptitle){
       @mkdir($ids_path . "files/{$plugin}", $this->config->item('dir_perm'), true);
+      @file_put_contents($ids_path . "files/{$plugin}/index.html", "");
       
       $config['upload_path'] = $ids_path . "files/{$plugin}";
       $config['allowed_types'] = 'gif|jpg|jpeg|png';
