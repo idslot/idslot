@@ -18,7 +18,7 @@ $this->load->helper('language');
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php echo $user->title; ?></title>
     <!--styles-->
-    <link href="application/views/idslot/theme/styles/reset.css" type="text/css" rel="stylesheet" />
+    
     <link href="application/views/idslot/theme/styles/style.css" type="text/css" rel="stylesheet" />
     <?php
     if (lang('direction') == 'rtl')

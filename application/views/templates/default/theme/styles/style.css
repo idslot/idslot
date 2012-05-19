@@ -33,8 +33,8 @@ a:enabled {color:#444444;}
 .maincontent{ padding:0 5px;}
 
 .navigation {background:#ffffff; width:inherit; color:#c4c4c4; font-family:'Lato', sans-serif; font-size:14px; font-weight:700; padding:10px; line-height: 22px;}
-.navigation .item a{color:#999999; text-decoration:none;}
-.navigation .active a{color:#444444; text-decoration:none;}
+.navigation .item a{color:#999999; text-decoration:none; font-size:14px;}
+.navigation .active a{color:#444444; text-decoration:none;font-size:14px;}
 .navigation span{padding-right:20px;}
 
 .panels {overflow:hidden;	color:#444444; font-family:'Lato', sans-serif; margin:15px 15px 0 15px;}
