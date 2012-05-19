@@ -182,12 +182,18 @@ class System extends CI_Model {
   }
   
   public function choose_language(){
-    $this->load->library('tank_auth');
-    $this->lang->load('tank_auth');
-    
-    $user = $this->users->get_user_by_id($this->session->userdata('user_id'));
+    $uid = $this->session->userdata('user_id');
+    $lang = $this->users->get_user_by_id($uid);
     $languages = $this->system->languages();
-    $lang = $this->change_language($user->language);
+    
+    if($lang){
+      $lang = $lang->language;
+    }elseif($this->input->cookie('lang')){
+      $lang = $this->input->cookie('lang');
+    }else{
+      $lang = '';
+    }
+    $lang = $this->change_language($lang);
     
     $this->config->set_item('language', strtolower($languages[$lang]));
   }
