@@ -8,6 +8,13 @@ $data = $this->form_validation->_field_data;
   <div class="form <?php echo $this->system->is_required($data, 'links[description]'); ?>" title="<?php echo lang('Links Description Description'); ?>">
     <label><?php echo lang('Description'); ?>:</label><textarea name="links[description]" cols="50" class="form-textarea"><?php echo $description; ?></textarea>
   </div>
+  <div class="form <?php echo $this->system->is_required($data, 'links[visible]'); ?>" title="<?php echo lang('Visible Description');?>">
+    <label><?php echo lang('Visibility');?>:</label>
+    <select name="links[visible]">
+      <option value="1"<?php echo $visible==1?' selected':''; ?>><?php echo lang('Show'); ?></option>
+      <option value="0"<?php echo $visible==0?' selected':''; ?>><?php echo lang('Hide'); ?></option>
+    </select>
+  </div>
   <div class="submit">
     	<label></label><input type="submit" value="<?php echo lang('Submit');?>" class="form-submit" />
   </div>

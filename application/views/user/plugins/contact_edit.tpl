@@ -49,7 +49,14 @@ map_language = "<?php echo $language; ?>";
   </div>	    
   <div class="form <?php echo $this->system->is_required($data, 'contact[use_form]'); ?>" title="<?php echo lang('Use Form Description'); ?>">
     <label><?php echo lang('Use Form'); ?></label><input type="radio" name="contact[use_form]" value="1" <?php echo $use_form=='1'?'checked="checked"':'0'; ?> /><?php echo lang('Yes'); ?><input type="radio" name="contact[use_form]" value="0" <?php echo $use_form=='0'?'checked="checked"':'0'; ?> /><?php echo lang('No'); ?>
-  </div>	    
+  </div>	
+  <div class="form <?php echo $this->system->is_required($data, 'contact[visible]'); ?>" title="<?php echo lang('Visible Description');?>">
+    <label><?php echo lang('Visibility');?>:</label>
+    <select name="contact[visible]">
+      <option value="1"<?php echo $visible==1?' selected':''; ?>><?php echo lang('Show'); ?></option>
+      <option value="0"<?php echo $visible==0?' selected':''; ?>><?php echo lang('Hide'); ?></option>
+    </select>
+  </div>
   <div class="submit">
     <label></label><input type="submit" value="<?php echo lang('Submit');?>" class="form-submit" />
   </div>	    

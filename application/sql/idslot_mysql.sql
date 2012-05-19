@@ -13,6 +13,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE TABLE IF NOT EXISTS `biography` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uid` int(10) unsigned NOT NULL,
+  `visible` int(1) NOT NULL DEFAULT '1',
   `title` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `content` text COLLATE utf8_persian_ci NOT NULL,
   PRIMARY KEY (`id`)
@@ -42,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 CREATE TABLE IF NOT EXISTS `contact` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
+  `visible` int(1) NOT NULL DEFAULT '1',
   `title` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `description` text COLLATE utf8_persian_ci NOT NULL,
   `email` varchar(150) COLLATE utf8_persian_ci NOT NULL,
@@ -416,6 +418,7 @@ CREATE TABLE IF NOT EXISTS `login_attempts` (
 CREATE TABLE IF NOT EXISTS `portfolio` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
+  `visible` int(1) NOT NULL DEFAULT '1',
   `title` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `description` text COLLATE utf8_persian_ci NOT NULL,
   PRIMARY KEY (`id`)
@@ -503,6 +506,7 @@ CREATE TABLE IF NOT EXISTS `skills` (
 CREATE TABLE IF NOT EXISTS `social` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
+  `visible` int(1) NOT NULL DEFAULT '1',
   `title` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `description` text COLLATE utf8_persian_ci NOT NULL,
   PRIMARY KEY (`id`)

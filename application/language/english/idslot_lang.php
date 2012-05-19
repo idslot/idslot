@@ -270,3 +270,8 @@ $lang['auth_subject_send_password'] = 'Welcome to %s';
 // Links
 $lang['Home'] = 'Home';
 $lang['Error in connection'] = 'Error in connection';
+
+$lang["Visibility"] = 'Visibility';
+$lang["Visible Description"] = 'You can show/hide this section';
+$lang["Show"] = 'Show';
+$lang["Hide"] = 'Hide';
