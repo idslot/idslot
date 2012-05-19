@@ -1,5 +1,6 @@
 <?php
-$lang = $this->config->item('languages');
+$this->load->model('system');
+$lang = $this->system->languages();
 $this->load->helper('url');
 $this->lang->load('idslot', strtolower($lang[$user->language]));
 $base_url = base_url();

@@ -419,7 +419,8 @@ class resume extends CI_Model {
     
     $user = $this->users->get_user_by_id($uid);
     
-    $lang = $this->config->item('languages');
+    $this->load->model('system');
+    $lang = $this->system->languages();
     $this->lang->load('idslot', strtolower($lang[$user->language]));
     
     $data['user']    = $user;

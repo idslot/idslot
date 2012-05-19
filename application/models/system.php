@@ -177,17 +177,22 @@ class System extends CI_Model {
   }
   
   public function choose_language(){
-    $languages = $this->config->item('languages');
-    $lang = $this->change_language('');
+    $this->load->library('tank_auth');
+    $this->lang->load('tank_auth');
+    
+    $user = $this->users->get_user_by_id($this->session->userdata('user_id'));
+    $languages = $this->system->languages();
+    $lang = $this->change_language($user->language);
     
     $this->config->set_item('language', strtolower($languages[$lang]));
   }
   
   public function change_language($lang){
-    $languages = $this->config->item('languages');
+    $languages = $this->system->languages();
     if(!array_key_exists($lang, $languages)){
-      $lang = key($languages);
+      $lang = 'english';
     }
+    
     $cookie = array('name'=>'lang', 'value'=>$lang, 'expire'=>'86400');
     $this->input->set_cookie($cookie);
     return $lang;
@@ -236,5 +241,19 @@ class System extends CI_Model {
     }
     
     return $templates;
+  }
+  
+  public function languages(){
+    $languages = array();
+    $ids_path = dirname($_SERVER['SCRIPT_FILENAME']);
+    $dirs = scandir($ids_path . '/application/language');
+    
+    foreach($dirs as $dir){
+      if(is_dir($ids_path . '/application/language/' . $dir) && strpos($dir, '.') !== 0 && file_exists($ids_path . '/application/language/' . $dir . '/idslot_lang.php')){
+        $languages[$dir] = $dir;
+      }
+    }
+    
+    return $languages;
   }
 }

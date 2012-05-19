@@ -44,10 +44,10 @@ $data = $this->form_validation->_field_data;
     <label><?php echo lang('Language'); ?>:</label>
 	<select name="details[language]">
 	<?php
-	$languages = $this->config->item('languages');
+	$languages = $this->system->languages();
 	foreach($languages as $lname=>$ltitle){
 	?>
-	<option value="<?php echo $lname; ?>"<?php echo $lname==$language?' selected=selected':''; ?>><?php echo lang($ltitle); ?></option>
+	<option value="<?php echo $lname; ?>"<?php echo $lname==$language?' selected=selected':''; ?>><?php echo $ltitle; ?></option>
 	<?php
 	}
 	?>
