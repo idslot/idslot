@@ -553,7 +553,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `template` varchar(255) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `meta_description` varchar(255) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `meta_keywords` varchar(255) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
-  `language` char(2) COLLATE utf8_bin NOT NULL DEFAULT 'fa',
+  `language` char(255) COLLATE utf8_bin NOT NULL DEFAULT 'english',
   PRIMARY KEY (`id`),
   KEY `is_new` (`is_new`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
