@@ -15,7 +15,10 @@ $this->lang->load('event_categories');
     <label><?php echo lang('Summary'); ?>:</label><textarea name="resume[summary]" cols="50" class="form-textarea"><?php echo $summary; ?></textarea>
   </div>
   <div class="submit">
-	<label></label><input type="button" onclick="parent.location='<?php echo site_url('plugins/idslot_resume/build_pdf'); ?>'" value="<?php echo lang('Build pdf');?>" class="form-submit" /><input type="submit" value="<?php echo lang('Submit');?>" class="form-submit" />
+	<label></label>
+        <input type="submit" value="<?php echo lang('Submit');?>" class="form-submit" />
+        <input type="button" onclick="parent.location='<?php echo site_url('plugins/idslot_resume/build_pdf'); ?>'" value="<?php echo lang('Build pdf');?>" class="form-submit" />
+        <input type="button" onclick="parent.location='<?php echo site_url('plugins/idslot_resume/remove_pdf'); ?>'" value="<?php echo lang('Remove pdf');?>" class="form-delete" />
   </div>
 
 </form>

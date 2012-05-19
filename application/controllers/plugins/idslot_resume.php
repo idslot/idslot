@@ -246,11 +246,20 @@ class idslot_resume extends VC_Controller {
     redirect('idslot/edit/resume');
   }
   
-  public function build_pdf($uid = false){
+  public function build_pdf(){
     if(!$uid){
       $uid = $this->session->userdata('user_id');
     }
     $this->resume->build_pdf($uid);
+    $this->system->render($uid);
+    redirect('idslot/edit/resume');
+  }
+  
+  public function remove_pdf(){
+    if(!$uid){
+      $uid = $this->session->userdata('user_id');
+    }
+    $this->resume->remove_pdf($uid);
     $this->system->render($uid);
     redirect('idslot/edit/resume');
   }

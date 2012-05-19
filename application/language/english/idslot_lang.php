@@ -165,6 +165,7 @@ $lang['Subcategory'] = 'Subcategory';
 $lang['Start'] = 'Start';
 $lang['End'] = 'End';
 $lang['Build pdf'] = '(Re)Build HTML/PDF';
+$lang['Remove pdf'] = 'Remove HTML/PDF';
 
 // Skills
 $lang['Skills'] = 'Skills';

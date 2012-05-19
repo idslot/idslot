@@ -433,4 +433,12 @@ class resume extends CI_Model {
     $cmd = 'xvfb-run wkhtmltopdf -s A4 -B 0 -L 0 -R 0 -T 0 "' . $this->system->render_path('resume') . '/' . $uid . '.html" "' . $this->system->render_path('resume') . '/' . $uid . '.pdf"';
     exec($cmd);
   }
+  
+  public function remove_pdf($uid=false){
+    if(!$uid){
+      $uid = $this->session->userdata('user_id');
+    }
+    @unlink($this->system->render_path('resume') . '/' . $uid . '.html');
+    @unlink($this->system->render_path('resume') . '/' . $uid . '.pdf');
+  }
 }
