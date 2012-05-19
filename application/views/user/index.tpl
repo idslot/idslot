@@ -85,9 +85,7 @@ $data = $this->form_validation->_field_data;
         editor_selector : "editor",
         theme : "advanced",
         theme_advanced_toolbar_location : "top",
-        //theme_advanced_buttons1 : "justifyleft,justifycenter,justifyright,justifyfull,bold,italic,underline,fontselect,fontsizeselect,forecolor,backcolor",
-        //theme_advanced_buttons2 : "bullist,numlist,separator,outdent,indent,separator,sub,sup,separator,charmap,separator,link,unlink,separator,hr,seperator,image,separator,removeformat,separator,code",
-        theme_advanced_buttons1 : "code",
+        theme_advanced_buttons1 : "bold,italic,separator,sub,sup,separator,bullist,numlist,separator,link,unlink,separator,hr,seperator,charmap,separator,code",
         theme_advanced_buttons2 : "",
         theme_advanced_buttons3 : ""
 
