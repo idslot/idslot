@@ -49,7 +49,6 @@ class Install extends CI_Controller {
     $data['current_step'] = 'check';
 
     $data['compile_dir'] = is_writable(APPPATH . "views/idslot/");
-    $data['config_config'] = is_writable(APPPATH . "config/config.php");
     $data['database_config'] = is_writable(APPPATH . "config/database.php");
 
     $this->load->view('user/install.tpl', $data);
