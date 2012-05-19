@@ -42,6 +42,7 @@ class System extends CI_Model {
     $this->load->library('html_purifier');
     $this->load->model('tank_auth/users');
     
+    $data['uid'] = $uid;
     $data['user'] = $this->users->get_user_by_id($uid);
     $username = $data['user']->username;
     $ids_path = dirname($_SERVER['SCRIPT_FILENAME']);
@@ -57,12 +58,14 @@ class System extends CI_Model {
     $data['linkss'] = $this->links->fetch($uid);
     
     $data = $this->html_purifier->purify($data);
-    
+    $data['plugins'] = array();
     foreach($plugins as $pname=>$ptitle){
       $this->load->model("plugins/{$ptitle}");
       $subdata = $this->html_purifier->purify($plugin_data = $this->$ptitle->fetch($uid));
-      $data['plugins'][$pname]['title'] = $plugin_data['title'];
-      $data['plugins'][$pname]['view'] = $this->load->view('templates/' . $data['user']->template . '/plugins/' . $pname . '.tpl', $subdata, true);
+      if($plugin_data['visible'] == 1){
+        $data['plugins'][$pname]['title'] = $plugin_data['title'];
+        $data['plugins'][$pname]['view'] = $this->load->view('templates/' . $data['user']->template . '/plugins/' . $pname . '.tpl', $subdata, true);
+      }
     }
     
     if(is_file("{$ids_path}/application/views/idslot/files/resume/{$uid}.pdf")
