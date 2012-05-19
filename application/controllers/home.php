@@ -30,7 +30,8 @@ class Home extends CI_Controller {
       redirect('install');
       exit();
     }
-    $this->load->view('idslot/index.html');
+    $this->load->model('system');
+    return $this->system->view();
   }
 
 }

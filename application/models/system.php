@@ -224,6 +224,10 @@ class System extends CI_Model {
     return "{$ids_path}/application/views/idslot/files/" . $plugin;
   }
   
+  public function view(){
+    return $this->load->view('idslot/index.html');
+  }
+  
   public function is_required($data, $field, $css_class = 'required'){
     if(!isset($data[$field])){
       return '';
