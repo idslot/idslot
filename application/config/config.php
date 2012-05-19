@@ -398,12 +398,6 @@ $config['proxy_ips'] = '';
 // Plugins
 $config['plugins'] = array('about'=>'About', 'photos'=>'Photos', 'links'=>'Links', 'contact'=>'Contact');
 
-// Languages
-$config['languages'] = array('en' => 'English');
-
-// Templates
-$config['templates'] = array('default'=>'Default');
-
 // Permissions
 $config['dir_perm'] = 0777;    // 0777 for development phase, 0755 for productive phase
 $config['umask'] = 0;    // 0 for development phase, 0022 for productive phase
