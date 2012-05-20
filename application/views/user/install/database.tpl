@@ -20,6 +20,9 @@ $data = $this->form_validation->_field_data;
   <div class="form <?php echo $this->system->is_required($data, 'db_pass'); ?>" title="<?php echo lang('Database password description'); ?>">
     <label><?php echo lang('Database password'); ?>:</label><input type="password" class="inp-form" name="db_pass" />
   </div>
+  <div class="form <?php echo $this->system->is_required($data, 'db_prefix'); ?>" title="<?php echo lang('Database prefix description'); ?>">
+    <label><?php echo lang('Database prefix'); ?>:</label><input type="text" class="inp-form" name="db_prefix" value="<?php echo set_value('db_prefix'); ?>" />
+  </div>
   <div class="submit"><label></label>
     <input type="submit" name="submit" value="<?php echo lang('Next'); ?>" class="form-submit" />
   </div>

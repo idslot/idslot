@@ -78,6 +78,11 @@ class Install extends CI_Controller {
             'field' => 'db_pass',
             'label' => lang('Database password'),
             'rules' => 'required|alpha_dash|xss_clean'
+        ),
+        array(
+            'field' => 'db_prefix',
+            'label' => lang('Database prefix'),
+            'rules' => 'alpha_dash|xss_clean'
         )
     );
     $this->form_validation->set_rules($config);
@@ -85,16 +90,18 @@ class Install extends CI_Controller {
       $vars = array("\$db['default']['hostname']",
           "\$db['default']['username']",
           "\$db['default']['password']",
-          "\$db['default']['database']");
+          "\$db['default']['database']",
+          "\$db['default']['dbprefix']");
       $vals = array($this->input->post('db_host'),
           $this->input->post('db_user'),
           $this->input->post('db_pass'),
-          $this->input->post('db_name'));
+          $this->input->post('db_name'),
+          $this->input->post('db_prefix'));
       $link = @mysql_connect($this->input->post('db_host'), $this->input->post('db_user'), $this->input->post('db_pass'));
       if (@mysql_select_db($this->input->post('db_name'), $link)) {
 
         mysql_query('ALTER DATABASE `' . $this->input->post('db_name') . '` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci', $link);
-        $this->import_sql('sql/idslot_mysql.sql', $link);
+        $this->import_sql('sql/idslot_mysql.sql', $link, $this->input->post('db_prefix'));
         @mysql_close();
         $this->set_var('config/database.php', $vars, $vals);
         redirect('install/setup');
@@ -192,10 +199,11 @@ class Install extends CI_Controller {
     return true;
   }
 
-  private function import_sql($file, $link) {
+  private function import_sql($file, $link, $prefix='') {
     $query = '';
     $lines = file(APPPATH . $file);
     foreach ($lines as $line) {
+      $line = str_replace('#_', $prefix, $line);
       $line = trim($line);
       if (strpos($line, '-') !== 0 && strlen($line)) {
         $query .= $line;

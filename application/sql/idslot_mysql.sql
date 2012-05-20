@@ -10,7 +10,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `biography`
 --
 
-CREATE TABLE IF NOT EXISTS `biography` (
+CREATE TABLE IF NOT EXISTS `#_biography` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uid` int(10) unsigned NOT NULL,
   `visible` int(1) NOT NULL DEFAULT '1',
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `biography` (
 -- Table structure for table `ci_sessions`
 --
 
-CREATE TABLE IF NOT EXISTS `ci_sessions` (
+CREATE TABLE IF NOT EXISTS `#_ci_sessions` (
   `session_id` varchar(40) COLLATE utf8_bin NOT NULL DEFAULT '0',
   `ip_address` varchar(16) COLLATE utf8_bin NOT NULL DEFAULT '0',
   `user_agent` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 -- Table structure for table `contact`
 --
 
-CREATE TABLE IF NOT EXISTS `contact` (
+CREATE TABLE IF NOT EXISTS `#_contact` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
   `visible` int(1) NOT NULL DEFAULT '1',
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
 -- Table structure for table `events`
 --
 
-CREATE TABLE IF NOT EXISTS `events` (
+CREATE TABLE IF NOT EXISTS `#_events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) DEFAULT NULL,
   `resume_id` int(11) NOT NULL,
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `events` (
 -- Table structure for table `events_categories`
 --
 
-CREATE TABLE IF NOT EXISTS `events_categories` (
+CREATE TABLE IF NOT EXISTS `#_events_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8_persian_ci DEFAULT NULL,
   `pid` int(11) NOT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `events_categories` (
 -- Dumping data for table `events_categories`
 --
 
-INSERT INTO `events_categories` (`id`, `title`, `pid`) VALUES
+INSERT INTO `#_events_categories` (`id`, `title`, `pid`) VALUES
 (1, 'Agriculture', 0),
 (2, 'Agricultural Crops', 1),
 (3, 'Agricultural Services', 1),
@@ -401,7 +401,7 @@ INSERT INTO `events_categories` (`id`, `title`, `pid`) VALUES
 -- Table structure for table `login_attempts`
 --
 
-CREATE TABLE IF NOT EXISTS `login_attempts` (
+CREATE TABLE IF NOT EXISTS `#_login_attempts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ip_address` varchar(40) COLLATE utf8_bin NOT NULL,
   `login` varchar(50) COLLATE utf8_bin NOT NULL,
@@ -415,7 +415,7 @@ CREATE TABLE IF NOT EXISTS `login_attempts` (
 -- Table structure for table `portfolio`
 --
 
-CREATE TABLE IF NOT EXISTS `portfolio` (
+CREATE TABLE IF NOT EXISTS `#_portfolio` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
   `visible` int(1) NOT NULL DEFAULT '1',
@@ -430,7 +430,7 @@ CREATE TABLE IF NOT EXISTS `portfolio` (
 -- Table structure for table `portfolio_list`
 --
 
-CREATE TABLE IF NOT EXISTS `portfolio_list` (
+CREATE TABLE IF NOT EXISTS `#_portfolio_list` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
@@ -444,7 +444,7 @@ CREATE TABLE IF NOT EXISTS `portfolio_list` (
 -- Table structure for table `publications`
 --
 
-CREATE TABLE IF NOT EXISTS `publications` (
+CREATE TABLE IF NOT EXISTS `#_publications` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `resume_id` int(11) NOT NULL,
   `title` varchar(2000) COLLATE utf8_persian_ci DEFAULT NULL,
@@ -463,7 +463,7 @@ CREATE TABLE IF NOT EXISTS `publications` (
 -- Table structure for table `resume`
 --
 
-CREATE TABLE IF NOT EXISTS `resume` (
+CREATE TABLE IF NOT EXISTS `#_resume` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `summary` text COLLATE utf8_persian_ci,
@@ -477,7 +477,7 @@ CREATE TABLE IF NOT EXISTS `resume` (
 -- Table structure for table `resume_has_skill`
 --
 
-CREATE TABLE IF NOT EXISTS `resume_has_skill` (
+CREATE TABLE IF NOT EXISTS `#_resume_has_skill` (
   `resume_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
   PRIMARY KEY (`resume_id`,`skill_id`),
@@ -491,7 +491,7 @@ CREATE TABLE IF NOT EXISTS `resume_has_skill` (
 -- Table structure for table `skills`
 --
 
-CREATE TABLE IF NOT EXISTS `skills` (
+CREATE TABLE IF NOT EXISTS `#_skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8_persian_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -503,7 +503,7 @@ CREATE TABLE IF NOT EXISTS `skills` (
 -- Table structure for table `social`
 --
 
-CREATE TABLE IF NOT EXISTS `social` (
+CREATE TABLE IF NOT EXISTS `#_social` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
   `visible` int(1) NOT NULL DEFAULT '1',
@@ -518,7 +518,7 @@ CREATE TABLE IF NOT EXISTS `social` (
 -- Table structure for table `social_links`
 --
 
-CREATE TABLE IF NOT EXISTS `social_links` (
+CREATE TABLE IF NOT EXISTS `#_social_links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sid` int(11) NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
@@ -534,7 +534,7 @@ CREATE TABLE IF NOT EXISTS `social_links` (
 -- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE IF NOT EXISTS `#_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `is_new` enum('false','true') COLLATE utf8_bin NOT NULL,
   `username` varchar(50) COLLATE utf8_bin NOT NULL,
@@ -568,7 +568,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Table structure for table `user_autologin`
 --
 
-CREATE TABLE IF NOT EXISTS `user_autologin` (
+CREATE TABLE IF NOT EXISTS `#_user_autologin` (
   `key_id` char(32) COLLATE utf8_bin NOT NULL,
   `user_id` int(11) NOT NULL DEFAULT '0',
   `user_agent` varchar(150) COLLATE utf8_bin NOT NULL,
