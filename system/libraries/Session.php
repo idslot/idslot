@@ -2,7 +2,7 @@
 /**
  * CodeIgniter
  *
- * An open source application development framework for PHP 5.1.6 or newer
+ * An open source application development framework for PHP 5.2.4 or newer
  *
  * NOTICE OF LICENSE
  *
@@ -36,25 +36,151 @@
  */
 class CI_Session {
 
+	/**
+	 * Whether to encrypt the session cookie
+	 *
+	 * @var bool
+	 */
 	public $sess_encrypt_cookie		= FALSE;
+
+	/**
+	 * Whether to use to the database for session storage
+	 *
+	 * @var bool
+	 */
 	public $sess_use_database		= FALSE;
+
+	/**
+	 * Name of the database table in which to store sessions
+	 *
+	 * @var string
+	 */
 	public $sess_table_name			= '';
+
+	/**
+	 * Length of time (in seconds) for sessions to expire
+	 *
+	 * @var int
+	 */
 	public $sess_expiration			= 7200;
+
+	/**
+	 * Whether to kill session on close of browser window
+	 *
+	 * @var bool
+	 */
 	public $sess_expire_on_close		= FALSE;
+
+	/**
+	 * Whether to match session on ip address
+	 *
+	 * @var bool
+	 */
 	public $sess_match_ip			= FALSE;
+
+	/**
+	 * Whether to match session on user-agent
+	 *
+	 * @var bool
+	 */
 	public $sess_match_useragent		= TRUE;
+
+	/**
+	 * Name of session cookie
+	 *
+	 * @var string
+	 */
 	public $sess_cookie_name		= 'ci_session';
+
+	/**
+	 * Session cookie prefix
+	 *
+	 * @var string
+	 */
 	public $cookie_prefix			= '';
+
+	/**
+	 * Session cookie path
+	 *
+	 * @var string
+	 */
 	public $cookie_path			= '';
+
+	/**
+	 * Session cookie domain
+	 *
+	 * @var string
+	 */
 	public $cookie_domain			= '';
+
+	/**
+	 * Whether to set the cookie only on HTTPS connections
+	 *
+	 * @var bool
+	 */
 	public $cookie_secure			= FALSE;
+
+	/**
+	 * Whether cookie should be allowed only to be sent by the server
+	 *
+	 * @var bool
+	 */
+	public $cookie_httponly 		= FALSE;
+
+	/**
+	 * Interval at which to update session
+	 *
+	 * @var int
+	 */
 	public $sess_time_to_update		= 300;
+
+	/**
+	 * Key with which to encrypt the session cookie
+	 *
+	 * @var string
+	 */
 	public $encryption_key			= '';
+
+	/**
+	 * String to indicate flash data cookies
+	 *
+	 * @var string
+	 */
 	public $flashdata_key			= 'flash';
+
+	/**
+	 * Function to use to get the current time
+	 *
+	 * @var string
+	 */
 	public $time_reference			= 'time';
+
+	/**
+	 * Probablity level of garbage collection of old sessions
+	 *
+	 * @var int
+	 */
 	public $gc_probability			= 5;
+
+	/**
+	 * Session data
+	 *
+	 * @var array
+	 */
 	public $userdata			= array();
+
+	/**
+	 * Reference to CodeIgniter instance
+	 *
+	 * @var object
+	 */
 	public $CI;
+
+	/**
+	 * Current time
+	 *
+	 * @var int
+	 */
 	public $now;
 
 	/**
@@ -62,6 +188,9 @@ class CI_Session {
 	 *
 	 * The constructor runs the session routines automatically
 	 * whenever the class is instantiated.
+	 *
+	 * @param	array
+	 * @return	void
 	 */
 	public function __construct($params = array())
 	{
@@ -72,7 +201,7 @@ class CI_Session {
 
 		// Set all the session preferences, which can either be set
 		// manually via the $params array above or via the config file
-		foreach (array('sess_encrypt_cookie', 'sess_use_database', 'sess_table_name', 'sess_expiration', 'sess_expire_on_close', 'sess_match_ip', 'sess_match_useragent', 'sess_cookie_name', 'cookie_path', 'cookie_domain', 'cookie_secure', 'sess_time_to_update', 'time_reference', 'cookie_prefix', 'encryption_key') as $key)
+		foreach (array('sess_encrypt_cookie', 'sess_use_database', 'sess_table_name', 'sess_expiration', 'sess_expire_on_close', 'sess_match_ip', 'sess_match_useragent', 'sess_cookie_name', 'cookie_path', 'cookie_domain', 'cookie_secure', 'cookie_httponly', 'sess_time_to_update', 'time_reference', 'cookie_prefix', 'encryption_key') as $key)
 		{
 			$this->$key = (isset($params[$key])) ? $params[$key] : $this->CI->config->item($key);
 		}
@@ -219,7 +348,7 @@ class CI_Session {
 				$this->CI->db->where('user_agent', $session['user_agent']);
 			}
 
-			$query = $this->CI->db->get($this->sess_table_name);
+			$query = $this->CI->db->limit(1)->get($this->sess_table_name);
 
 			// No result? Kill it!
 			if ($query->num_rows() === 0)
@@ -442,6 +571,9 @@ class CI_Session {
 				$this->cookie_domain,
 				0
 			);
+
+		// Kill session data
+		$this->userdata = array();
 	}
 
 	// --------------------------------------------------------------------
@@ -454,7 +586,7 @@ class CI_Session {
 	 */
 	public function userdata($item)
 	{
-		return ( ! isset($this->userdata[$item])) ? FALSE : $this->userdata[$item];
+		return isset($this->userdata[$item]) ? $this->userdata[$item] : FALSE;
 	}
 
 	// --------------------------------------------------------------------
@@ -467,6 +599,29 @@ class CI_Session {
 	public function all_userdata()
 	{
 		return $this->userdata;
+	}
+
+	// --------------------------------------------------------------------------
+
+	/**
+	 * Fetch all flashdata
+	 *
+	 * @return	array
+	 */
+	public function all_flashdata()
+	{
+		$out = array();
+
+		// loop through all userdata
+		foreach ($this->all_userdata() as $key => $val)
+		{
+			// if it contains flashdata, add it
+			if (strpos($key, 'flash:old:') !== FALSE)
+			{
+				$out[$key] = $val;
+			}
+		}
+		return $out;
 	}
 
 	// --------------------------------------------------------------------
@@ -501,6 +656,7 @@ class CI_Session {
 	/**
 	 * Delete a session variable from the "userdata" array
 	 *
+	 * @param	array
 	 * @return	void
 	 */
 	public function unset_userdata($newdata = array())
@@ -640,6 +796,7 @@ class CI_Session {
 	/**
 	 * Write the session cookie
 	 *
+	 * @param	mixed
 	 * @return	void
 	 */
 	protected function _set_cookie($cookie_data = NULL)
@@ -666,13 +823,14 @@ class CI_Session {
 
 		// Set the cookie
 		setcookie(
-				$this->sess_cookie_name,
-				$cookie_data,
-				$expire,
-				$this->cookie_path,
-				$this->cookie_domain,
-				$this->cookie_secure
-			);
+			$this->sess_cookie_name,
+			$cookie_data,
+			$expire,
+			$this->cookie_path,
+			$this->cookie_domain,
+			$this->cookie_secure,
+			$this->cookie_httponly
+		);
 	}
 
 	// --------------------------------------------------------------------
@@ -729,7 +887,7 @@ class CI_Session {
 	 */
 	protected function _unserialize($data)
 	{
-		$data = @unserialize(strip_slashes($data));
+		$data = @unserialize(strip_slashes(trim($data)));
 
 		if (is_array($data))
 		{
@@ -737,8 +895,10 @@ class CI_Session {
 			return $data;
 		}
 
-		return (is_string($data)) ? str_replace('{{slash}}', '\\', $data) : $data;
+		return is_string($data) ? str_replace('{{slash}}', '\\', $data) : $data;
 	}
+
+	// --------------------------------------------------------------------
 
 	/**
 	 * Unescape slashes
@@ -779,7 +939,7 @@ class CI_Session {
 		{
 			$expire = $this->now - $this->sess_expiration;
 
-			$this->CI->db->where("last_activity < {$expire}");
+			$this->CI->db->where('last_activity < '.$expire);
 			$this->CI->db->delete($this->sess_table_name);
 
 			log_message('debug', 'Session garbage collection performed.');
