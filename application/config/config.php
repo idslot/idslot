@@ -1,13 +1,13 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * CodeIgniter
  *
- * An open source application development framework for PHP 5.1.6 or newer
+ * An open source application development framework for PHP 5.2.4 or newer
  *
  * NOTICE OF LICENSE
- * 
+ *
  * Licensed under the Academic Free License version 3.0
- * 
+ *
  * This source file is subject to the Academic Free License (AFL 3.0) that is
  * bundled with this package in the files license_afl.txt / license_afl.rst.
  * It is also available through the world wide web at this URL:
@@ -133,7 +133,7 @@ $config['enable_hooks'] = FALSE;
 | http://codeigniter.com/user_guide/general/creating_libraries.html
 |
 */
-$config['subclass_prefix'] = 'VC_';
+$config['subclass_prefix'] = 'MY_';
 
 
 /*
@@ -258,7 +258,7 @@ $config['cache_path'] = '';
 | http://codeigniter.com/user_guide/libraries/sessions.html
 |
 */
-$config['encryption_key'] = 'w#72F8?k';
+$config['encryption_key'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -297,12 +297,14 @@ $config['sess_time_to_update']	= 300;
 | 'cookie_domain' = Set to .your-domain.com for site-wide cookies
 | 'cookie_path'   =  Typically will be a forward slash
 | 'cookie_secure' =  Cookies will only be set if a secure HTTPS connection exists.
+| 'cookie_httponly' = Cookie will only be accessible via HTTP(S) (no javascript) 
 |
 */
 $config['cookie_prefix']	= "";
 $config['cookie_domain']	= "";
 $config['cookie_path']		= "/";
 $config['cookie_secure']	= FALSE;
+$config['cookie_httponly'] 	= FALSE;
 
 /*
 |--------------------------------------------------------------------------
@@ -394,16 +396,6 @@ $config['rewrite_short_tags'] = FALSE;
 |
 */
 $config['proxy_ips'] = '';
-
-// Plugins
-$config['plugins'] = array('about'=>'About', 'photos'=>'Photos', 'links'=>'Links', 'contact'=>'Contact');
-
-// Permissions
-$config['dir_perm'] = 0777;    // 0777 for development phase, 0755 for productive phase
-$config['umask'] = 0;    // 0 for development phase, 0022 for productive phase
-
-
-$config['email'] = 'info@idslot.org';
 
 
 /* End of file config.php */
