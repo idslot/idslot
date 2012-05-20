@@ -71,7 +71,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('user_agent');
+$autoload['libraries'] = array();
 
 
 /*
@@ -83,7 +83,7 @@ $autoload['libraries'] = array('user_agent');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('language');
+$autoload['helper'] = array();
 
 
 /*
