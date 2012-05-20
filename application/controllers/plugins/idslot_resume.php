@@ -25,6 +25,7 @@ class idslot_resume extends VC_Controller {
     parent::__construct();
     $this->load->helper('form');
     $this->load->library('form_validation');
+    $this->uid = $this->session->userdata('user_id');
     $this->load->model('plugins/resume');
     
     $this->load->helper('language');
@@ -247,20 +248,14 @@ class idslot_resume extends VC_Controller {
   }
   
   public function build_pdf(){
-    if(!$uid){
-      $uid = $this->session->userdata('user_id');
-    }
-    $this->resume->build_pdf($uid);
-    $this->system->render($uid);
+    $this->resume->build_pdf($this->uid);
+    $this->system->render($this->uid);
     redirect('idslot/edit/resume');
   }
   
   public function remove_pdf(){
-    if(!$uid){
-      $uid = $this->session->userdata('user_id');
-    }
-    $this->resume->remove_pdf($uid);
-    $this->system->render($uid);
+    $this->resume->remove_pdf($this->uid);
+    $this->system->render($this->uid);
     redirect('idslot/edit/resume');
   }
 }
