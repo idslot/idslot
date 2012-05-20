@@ -38,7 +38,8 @@ class settings extends CI_Model {
    **/
   public function fetch($uid){
     $this->load->database();
-    $query = $this->db->query('SELECT * FROM user WHERE id = ' . $this->db->escape($uid));
+    $this->db->where('id', $uid);
+    $query = $this->db->get('user');
 
     return $query->row_array();
   }

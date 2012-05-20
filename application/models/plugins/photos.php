@@ -38,9 +38,14 @@ class photos extends CI_Model {
    **/
   public function fetch($uid){
     $this->load->database();
-    $query = $this->db->query('SELECT * FROM portfolio WHERE uid = ' . $this->db->escape($uid));
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('portfolio');
+    
     $arr = $query->row_array();
-    $query = $this->db->query('SELECT * FROM portfolio_list WHERE pid=' . $this->db->escape($arr['id']) . ' ORDER BY sort, id DESC');
+    $this->db->where('pid', $arr['id']);
+    $this->db->order_by('sort');
+    $this->db->order_by('id', 'desc');
+    $query = $this->db->get('portfolio_list');
     $arr['photoss'] = $query->result_array();
 
     return $arr;
@@ -122,9 +127,13 @@ class photos extends CI_Model {
   public function fetch_row($id){
     $this->load->database();
     $uid = $this->session->userdata('user_id');
-    $query = $this->db->query('SELECT pl.* FROM portfolio_list pl, portfolio p
-                              WHERE pl.id = ' . $this->db->escape($id) . '
-                              AND pl.pid = p.id AND p.uid = ' . $this->db->escape($uid));
+    $this->db->select('portfolio_list.*');
+    $this->db->from('portfolio_list');
+    $this->db->join('portfolio', 'portfolio.id = portfolio_list.pid');
+    $this->db->where('portfolio_list.id', $id);
+    $this->db->where('uid', $uid);
+    $query = $this->db->get();
+    
     return $query->row_array();
   }
 
@@ -147,7 +156,8 @@ class photos extends CI_Model {
     
     $uid = $this->session->userdata('user_id');
     
-    $query = $this->db->query('SELECT * FROM portfolio WHERE uid = ' . $this->db->escape($uid));
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('portfolio');
     $p = $query->row_array();
     
     $data['content'] = $content;
@@ -160,7 +170,8 @@ class photos extends CI_Model {
     
     $uid = $this->session->userdata('user_id');
     
-    $query = $this->db->query('SELECT * FROM portfolio WHERE uid = ' . $this->db->escape($uid));
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('portfolio');
     $p = $query->row_array();
     
     $this->db->where(array('id' => $id, 'pid' => $p['id']));
@@ -172,7 +183,8 @@ class photos extends CI_Model {
     
     $uid = $this->session->userdata('user_id');
     
-    $query = $this->db->query('SELECT * FROM portfolio WHERE uid = ' . $this->db->escape($uid));
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('portfolio');
     $p = $query->row_array();
     
     $count = count($serial);

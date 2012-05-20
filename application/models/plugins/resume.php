@@ -43,7 +43,8 @@ class resume extends CI_Model {
       $uid = $this->session->userdata('user_id');
     }
     
-    $query = $this->db->query('SELECT * FROM resume WHERE user_id = ' . $this->db->escape($uid));
+    $this->db->where('user_id', $uid);
+    $query = $this->db->get('resume');
     $arr = $query->row_array();
     $rid = $arr['id'];
     $arr['skills'] = $this->fetch_skills($rid);
@@ -122,8 +123,8 @@ class resume extends CI_Model {
   
   public function fetch_skills_like($skill){
     $skill = str_replace(array('\\', '_', '%'), array('\\\\', '\\_', '\\%'), $skill);
-    $skill = "%{$skill}%";
-    $query = $this->db->query('SELECT * FROM skills WHERE title LIKE ' . $this->db->escape($skill));
+    $this->db->like('title', $skill); 
+    $query = $this->db->get('skills');
     return $query->result_array();
   }
   
@@ -131,7 +132,8 @@ class resume extends CI_Model {
     // if already we have this skill, just return its ID
     // make skill safe for LIKE!
     $temp = str_replace(array('\\', '_', '%'), array('\\\\', '\\_', '\\%'), $skill);
-    $query = $this->db->query('SELECT * FROM skills WHERE title LIKE ' . $this->db->escape($temp));
+    $this->db->like('title', $temp, 'none'); 
+    $query = $this->db->get('skills');
     if ($query->num_rows() > 0)
     {
       $row = $query->result();

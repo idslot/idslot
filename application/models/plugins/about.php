@@ -38,7 +38,9 @@ class about extends CI_Model {
    **/
   public function fetch($uid){
     $this->load->database();
-    $query = $this->db->query('SELECT * FROM biography WHERE uid = ' . $this->db->escape($uid));
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('biography');
+    
     return $query->row_array();
   }
 

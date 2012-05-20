@@ -38,8 +38,9 @@ class contact extends CI_Model {
    **/
   public function fetch($uid){
     $this->load->database();
-    $query = $this->db->query('SELECT * FROM contact WHERE uid = ' . $this->db->escape($uid));
-
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('contact');
+    
     return $query->row_array();
   }
 

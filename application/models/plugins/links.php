@@ -38,10 +38,14 @@ class links extends CI_Model {
    **/
   public function fetch($uid){
     $this->load->database();
-    $query = $this->db->query('SELECT * FROM social WHERE uid = ' . $this->db->escape($uid));
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('social');
 
     $arr = $query->row_array();
-    $query = $this->db->query('SELECT * FROM social_links WHERE sid=' . $this->db->escape($arr['id']) . ' ORDER BY sort, id DESC');
+    $this->db->where('sid', $arr['id']);
+    $this->db->order_by('sort');
+    $this->db->order_by('id', 'desc');
+    $query = $this->db->get('social_links');
     $arr['links'] = $query->result_array();
     return $arr;
   }
@@ -127,10 +131,13 @@ class links extends CI_Model {
   public function fetch_row($id){
     $this->load->database();
     $uid = $this->session->userdata('user_id');
-    $query = $this->db->query('SELECT sl.* FROM social_links sl, social s
-                              WHERE sl.id = ' . $this->db->escape($id) . '
-                              AND sl.sid = s.id AND s.uid = ' . $this->db->escape($uid));
-    
+    $this->db->select('social_links.*');
+    $this->db->from('social_links');
+    $this->db->join('social', 'social.id = social_links.sid');
+    $this->db->where('social_links.id', $id);
+    $this->db->where('uid', $uid);
+    $query = $this->db->get();
+
     return $query->row_array();
   }
 
@@ -156,7 +163,8 @@ class links extends CI_Model {
     
     $uid = $this->session->userdata('user_id');
     
-    $query = $this->db->query('SELECT * FROM social WHERE uid = ' . $this->db->escape($uid));
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('social');
     $s = $query->row_array();
     
     $data = array('name'=>$name,
@@ -172,7 +180,8 @@ class links extends CI_Model {
     
     $uid = $this->session->userdata('user_id');
     
-    $query = $this->db->query('SELECT * FROM social WHERE uid = ' . $this->db->escape($uid));
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('social');
     $s = $query->row_array();
     
     $this->db->where(array('id' => $id, 'sid' => $s['id']));
@@ -184,7 +193,8 @@ class links extends CI_Model {
     
     $uid = $this->session->userdata('user_id');
     
-    $query = $this->db->query('SELECT * FROM social WHERE uid = ' . $this->db->escape($uid));
+    $this->db->where('uid', $uid);
+    $query = $this->db->get('social');
     $s = $query->row_array();
     
     $count = count($serial);
