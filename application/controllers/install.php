@@ -49,6 +49,7 @@ class Install extends CI_Controller {
     $data['current_step'] = 'check';
 
     $data['compile_dir'] = is_writable(APPPATH . "views/idslot/");
+    $data['config_config'] = is_writable(APPPATH . "config/config.php");
     $data['database_config'] = is_writable(APPPATH . "config/database.php");
 
     $this->load->view('user/install.tpl', $data);
@@ -104,6 +105,9 @@ class Install extends CI_Controller {
         $this->import_sql('sql/idslot_mysql.sql', $link, $this->input->post('db_prefix'));
         @mysql_close();
         $this->set_var('config/database.php', $vars, $vals);
+        $this->set_var('config/config.php', "\$config['encryption_key']", $encryption_key = random_string('alnum', 10));
+        $this->session->encryption_key = $encryption_key;
+        $this->session->set_userdata(array('install' => true));
         redirect('install/setup');
       } else {
         $data['errors'][] = lang('Unable to connect to your database server');
@@ -193,6 +197,9 @@ class Install extends CI_Controller {
         $val[$i] = '$1\'' . $val[$i] . '\';';
         $var[$i] = '/(\s*' . $cvar[$i] . '\s*=\s*)[^;]+;/i';
       }
+    }else{
+      $val = '$1\'' . $val . '\';';
+      $var = '/(\s*' . $cvar . '\s*=\s*)[^;]+;/i';
     }
     $content = preg_replace($var, $val, $content);
     file_put_contents(APPPATH . $file, $content);
