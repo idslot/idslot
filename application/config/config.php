@@ -1,28 +1,21 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
- * CodeIgniter
+ * IDSlot
  *
- * An open source application development framework for PHP 5.2.4 or newer
+ * Orginal work by EllisLab Dev Team (CodeIgniter)
  *
- * NOTICE OF LICENSE
+ * Licensed under the Open Software License version 3.0
  *
- * Licensed under the Academic Free License version 3.0
+ * This source file is subject to the Open Software License (OSL 3.0) that is
+ * bundled with this package in the files license.txt / license.rst.  It is
+ * also available through the world wide web at this URL:
+ * http://opensource.org/licenses/OSL-3.0
  *
- * This source file is subject to the Academic Free License (AFL 3.0) that is
- * bundled with this package in the files license_afl.txt / license_afl.rst.
- * It is also available through the world wide web at this URL:
- * http://opensource.org/licenses/AFL-3.0
- * If you did not receive a copy of the license and are unable to obtain it
- * through the world wide web, please send an email to
- * licensing@ellislab.com so we can send you a copy immediately.
- *
- * @package		CodeIgniter
- * @author		EllisLab Dev Team
- * @copyright	Copyright (c) 2008 - 2012, EllisLab, Inc. (http://ellislab.com/)
- * @license		http://opensource.org/licenses/AFL-3.0 Academic Free License (AFL 3.0)
- * @link		http://codeigniter.com
- * @since		Version 1.0
- * @filesource
+ * @package	IDSlot
+ * @author	IDSlot Development Team
+ * @copyright	Copyright (c) 2012, IDSlot Development Team
+ * @license	http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * @link	http://idslot.org
  */
 
 /*
@@ -133,7 +126,7 @@ $config['enable_hooks'] = FALSE;
 | http://codeigniter.com/user_guide/general/creating_libraries.html
 |
 */
-$config['subclass_prefix'] = 'MY_';
+$config['subclass_prefix'] = 'IDS_';
 
 
 /*
@@ -258,7 +251,7 @@ $config['cache_path'] = '';
 | http://codeigniter.com/user_guide/libraries/sessions.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'w#72F8?k';
 
 /*
 |--------------------------------------------------------------------------
@@ -397,6 +390,12 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+// Plugins
+$config['plugins'] = array('about'=>'About', 'photos'=>'Photos', 'links'=>'Links', 'contact'=>'Contact');
+
+// Permissions
+$config['dir_perm'] = 0777;    // 0777 for development phase, 0755 for productive phase
+$config['umask'] = 0;    // 0 for development phase, 0022 for productive phase
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */

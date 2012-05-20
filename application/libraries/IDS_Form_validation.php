@@ -1,8 +1,9 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+
 /**
  * IDSlot
  *
- * Orginal work by EllisLab Dev Team (CodeIgniter)
+ * NOTICE OF LICENSE
  *
  * Licensed under the Open Software License version 3.0
  *
@@ -17,18 +18,12 @@
  * @license	http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * @link	http://idslot.org
  */
+class IDS_Form_validation extends CI_Form_validation {
 
-/*
-| -------------------------------------------------------------------------
-| Hooks
-| -------------------------------------------------------------------------
-| This file lets you define "hooks" to extend CI without hacking the core
-| files.  Please see the user guide for info:
-|
-|	http://codeigniter.com/user_guide/general/hooks.html
-|
-*/
+  public $_field_data = array();
 
+  public function __construct($rules = array()) {
+    return parent::__construct($rules);
+  }
 
-/* End of file hooks.php */
-/* Location: ./application/config/hooks.php */
+}

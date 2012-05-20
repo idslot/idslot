@@ -1,8 +1,8 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
 /**
  * IDSlot
  *
- * Orginal work by EllisLab Dev Team (CodeIgniter)
+ * NOTICE OF LICENSE
  *
  * Licensed under the Open Software License version 3.0
  *
@@ -18,17 +18,19 @@
  * @link	http://idslot.org
  */
 
-/*
-| -------------------------------------------------------------------------
-| Hooks
-| -------------------------------------------------------------------------
-| This file lets you define "hooks" to extend CI without hacking the core
-| files.  Please see the user guide for info:
-|
-|	http://codeigniter.com/user_guide/general/hooks.html
-|
-*/
-
-
-/* End of file hooks.php */
-/* Location: ./application/config/hooks.php */
+class IDS_Controller extends CI_Controller {
+  function __construct(){
+    parent::__construct();
+    $this->load->helper('url');
+    $this->load->library('session');
+    $this->load->library('security');
+    $this->load->library('tank_auth');
+    $this->load->model('system');
+    $this->lang->load('tank_auth');
+    $this->lang->load('idslot');
+    $this->load->helper('language');
+    if (!$this->tank_auth->is_logged_in()) {
+      redirect('auth/login');
+    }
+  }
+}
