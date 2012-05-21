@@ -17,7 +17,7 @@
  * @license	http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * @link	http://idslot.org
  */
-class idslot_resume extends VC_Controller {
+class idslot_resume extends IDS_Controller {
   
   private $rid; // Resume ID
   

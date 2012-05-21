@@ -17,7 +17,7 @@
  * @license	http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * @link	http://idslot.org
  */
-class idslot_links extends VC_Controller {
+class idslot_links extends IDS_Controller {
   public function __construct(){
     parent::__construct();
     $this->load->helper('form');

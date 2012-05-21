@@ -261,10 +261,10 @@ class System extends CI_Model {
   public function languages(){
     $languages = array();
     $ids_path = dirname($_SERVER['SCRIPT_FILENAME']);
-    $dirs = scandir($ids_path . '/application/language');
+    $dirs = scandir($ids_path . '/language');
     
     foreach($dirs as $dir){
-      if(is_dir($ids_path . '/application/language/' . $dir) && strpos($dir, '.') !== 0 && file_exists($ids_path . '/application/language/' . $dir . '/idslot_lang.php')){
+      if(is_dir($ids_path . '/language/' . $dir) && strpos($dir, '.') !== 0 && file_exists($ids_path . '/language/' . $dir . '/idslot_lang.php')){
         $languages[$dir] = $dir;
       }
     }
