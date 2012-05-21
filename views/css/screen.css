@@ -452,7 +452,7 @@ color: #000;
 
 .loginblock label{width:70px;display:inline-block;vertical-align:top;}
 .loginblock input[type=text], .loginblock input[type=password]{width:140px;}
-.map{width:308px; height:208px; display:inline-block; border: 1px solid #bbb; margin-left:-3px;}
+.map{width:408px; height:308px; display:inline-block; border: 1px solid #bbb; margin-left:-3px;}
 
 .intro {display: inline-block; width: 210px;vertical-align:top; padding-top: 10px;}
 .intro img {float:left; padding-right: 5px;}

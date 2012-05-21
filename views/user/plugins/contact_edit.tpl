@@ -5,7 +5,7 @@ $data = $this->form_validation->_field_data;
 ?>
 <h3 class="subtitle"><?php echo lang('Contact note'); ?></h3>
 <script>
-map_language = "<?php echo $language; ?>";
+map_language = "<?php echo substr($language, 0, 2); ?>";
 </script>
 <script src="http://maps.google.com/maps/api/js?sensor=false&language=<?php echo $language; ?>" type="text/javascript"></script>
 <script src="<?php echo $base_url; ?>views/js/google.map.js" type="text/javascript"></script>
