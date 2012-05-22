@@ -14,10 +14,10 @@ CREATE TABLE IF NOT EXISTS `#_biography` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uid` int(10) unsigned NOT NULL,
   `visible` int(1) NOT NULL DEFAULT '1',
-  `title` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `content` text COLLATE utf8_persian_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `content` text COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -44,20 +44,20 @@ CREATE TABLE IF NOT EXISTS `#_contact` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
   `visible` int(1) NOT NULL DEFAULT '1',
-  `title` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `description` text COLLATE utf8_persian_ci NOT NULL,
-  `email` varchar(150) COLLATE utf8_persian_ci NOT NULL,
-  `tel` varchar(100) COLLATE utf8_persian_ci NOT NULL,
-  `fax` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `mob` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `website` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `weblog` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `map` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `address` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `postcode` varchar(255) COLLATE utf8_persian_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `description` text COLLATE utf8_general_ci NOT NULL,
+  `email` varchar(150) COLLATE utf8_general_ci NOT NULL,
+  `tel` varchar(100) COLLATE utf8_general_ci NOT NULL,
+  `fax` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `mob` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `website` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `weblog` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `map` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `address` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `postcode` varchar(255) COLLATE utf8_general_ci NOT NULL,
   `use_form` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -69,14 +69,14 @@ CREATE TABLE IF NOT EXISTS `#_events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) DEFAULT NULL,
   `resume_id` int(11) NOT NULL,
-  `summary` varchar(255) COLLATE utf8_persian_ci DEFAULT NULL,
-  `description` text COLLATE utf8_persian_ci,
-  `type` enum('experience','education') COLLATE utf8_persian_ci DEFAULT NULL,
+  `summary` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `description` text COLLATE utf8_general_ci,
+  `type` enum('experience','education') COLLATE utf8_general_ci DEFAULT NULL,
   `start` date DEFAULT NULL,
   `end` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_events_resumes1` (`resume_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -86,10 +86,10 @@ CREATE TABLE IF NOT EXISTS `#_events` (
 
 CREATE TABLE IF NOT EXISTS `#_events_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8_persian_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
   `pid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -419,10 +419,10 @@ CREATE TABLE IF NOT EXISTS `#_portfolio` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
   `visible` int(1) NOT NULL DEFAULT '1',
-  `title` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `description` text COLLATE utf8_persian_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `description` text COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -434,9 +434,9 @@ CREATE TABLE IF NOT EXISTS `#_portfolio_list` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
-  `content` text COLLATE utf8_persian_ci NOT NULL,
+  `content` text COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -447,15 +447,15 @@ CREATE TABLE IF NOT EXISTS `#_portfolio_list` (
 CREATE TABLE IF NOT EXISTS `#_publications` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `resume_id` int(11) NOT NULL,
-  `title` varchar(2000) COLLATE utf8_persian_ci DEFAULT NULL,
-  `creators` varchar(2000) COLLATE utf8_persian_ci DEFAULT NULL,
+  `title` varchar(2000) COLLATE utf8_general_ci DEFAULT NULL,
+  `creators` varchar(2000) COLLATE utf8_general_ci DEFAULT NULL,
   `date` date DEFAULT NULL,
-  `urn` varchar(100) COLLATE utf8_persian_ci DEFAULT NULL,
-  `urn_type` varchar(20) COLLATE utf8_persian_ci DEFAULT NULL COMMENT 'List of URNs:http://www.iana.org/assignments/urn-namespaces/urn-namespaces.xml',
-  `publisher` varchar(45) COLLATE utf8_persian_ci DEFAULT NULL,
+  `urn` varchar(100) COLLATE utf8_general_ci DEFAULT NULL,
+  `urn_type` varchar(20) COLLATE utf8_general_ci DEFAULT NULL COMMENT 'List of URNs:http://www.iana.org/assignments/urn-namespaces/urn-namespaces.xml',
+  `publisher` varchar(45) COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_publications_resumes1` (`resume_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -466,10 +466,10 @@ CREATE TABLE IF NOT EXISTS `#_publications` (
 CREATE TABLE IF NOT EXISTS `#_resume` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
-  `summary` text COLLATE utf8_persian_ci,
+  `summary` text COLLATE utf8_general_ci,
   PRIMARY KEY (`id`),
   KEY `fk_resumes_users1` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -483,7 +483,7 @@ CREATE TABLE IF NOT EXISTS `#_resume_has_skill` (
   PRIMARY KEY (`resume_id`,`skill_id`),
   KEY `fk_resumes_has_skills_skills1` (`skill_id`),
   KEY `fk_resumes_has_skills_resumes1` (`resume_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -493,9 +493,9 @@ CREATE TABLE IF NOT EXISTS `#_resume_has_skill` (
 
 CREATE TABLE IF NOT EXISTS `#_skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8_persian_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -507,10 +507,10 @@ CREATE TABLE IF NOT EXISTS `#_social` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
   `visible` int(1) NOT NULL DEFAULT '1',
-  `title` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `description` text COLLATE utf8_persian_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `description` text COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -522,11 +522,11 @@ CREATE TABLE IF NOT EXISTS `#_social_links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sid` int(11) NOT NULL,
   `sort` int(11) NOT NULL DEFAULT '0',
-  `name` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `url` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `icon` varchar(255) COLLATE utf8_persian_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `icon` varchar(255) COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -552,11 +552,11 @@ CREATE TABLE IF NOT EXISTS `#_user` (
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `last_update` datetime NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `short_description` varchar(1000) COLLATE utf8_bin NOT NULL,
-  `template` varchar(255) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
-  `meta_description` varchar(255) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
-  `meta_keywords` varchar(255) CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
+  `template` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `meta_description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `meta_keywords` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `language` char(255) COLLATE utf8_bin NOT NULL DEFAULT 'english',
   PRIMARY KEY (`id`),
   KEY `is_new` (`is_new`)
