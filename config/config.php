@@ -397,6 +397,9 @@ $config['plugins'] = array('about'=>'About', 'photos'=>'Photos', 'links'=>'Links
 $config['dir_perm'] = 0777;    // 0777 for development phase, 0755 for productive phase
 $config['umask'] = 0;    // 0 for development phase, 0022 for productive phase
 
+// Default locale
+$config['locale'] = "en";
+
 $config['locales'] = array(
         "aa" => "Afar",
         "ab" => "Abkhazian",
