@@ -16,7 +16,7 @@ $username = $this->session->userdata('username');
 
 $web = base_url();
 $web = "{$web}views/idslot";
-$web = "{$web}/files/about/thumb_{$uid}.png";
+$web = "{$web}/files/about/thumb_{$uid}.png?" . rand(10, 99);
 
 $dir = dirname($_SERVER['SCRIPT_FILENAME']);
 $dir = "{$dir}/views/idslot/";
