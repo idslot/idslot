@@ -31,7 +31,6 @@ class Install extends CI_Controller {
     $this->load->helper(array('form', 'url'));
     $this->load->library(array('form_validation', 'security', 'session'));
     $this->load->model('system');
-    $this->system->choose_language();
     $this->lang->load('idslot');
     $this->lang->load('install');
 
