@@ -185,7 +185,6 @@ class System extends CI_Model {
     $this->load->library('tank_auth');
     $uid = $this->session->userdata('user_id');
     $lang = $this->users->get_user_by_id($uid);
-    $languages = $this->system->languages();
     
     if($lang){
       $lang = $lang->language;
@@ -200,7 +199,7 @@ class System extends CI_Model {
   public function change_language($lang){
     $languages = $this->system->languages();
     if(!array_key_exists($lang, $languages)){
-      $lang = 'en';
+      $lang = $this->config->item('locale');
     }
 
     _setlocale(LC_MESSAGES, $lang);
