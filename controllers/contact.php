@@ -25,8 +25,10 @@ class Contact extends CI_Controller {
     $this->load->helper(array('form', 'url'));
     $this->load->library(array('form_validation', 'security', 'session'));
     $this->load->database();
-    $this->lang->load('idslot');
     $this->lang->load('tank_auth');
+    $this->load->model('system');
+    $this->system->choose_language();
+    $this->lang->load('idslot');
   }
 
   public function index() {

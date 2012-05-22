@@ -83,7 +83,7 @@ $autoload['libraries'] = array('user_agent');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('language');
+$autoload['helper'] = array('gettext','language');
 
 
 /*

@@ -1,0 +1,2239 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IDSlot 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-22 11:53+0330\n"
+"PO-Revision-Date: 2012-05-22 11:54+0330\n"
+"Language-Team: IDSlot development team <info@idslot.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: language/english/event_categories_lang.php:3
+msgid "Agriculture"
+msgstr ""
+
+#: language/english/event_categories_lang.php:4
+msgid "Agricultural Crops"
+msgstr ""
+
+#: language/english/event_categories_lang.php:5
+msgid "Agricultural Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:6
+msgid "Animals"
+msgstr ""
+
+#: language/english/event_categories_lang.php:7
+msgid "Biotechnology"
+msgstr ""
+
+#: language/english/event_categories_lang.php:8
+msgid "Farm Equipment"
+msgstr ""
+
+#: language/english/event_categories_lang.php:9
+msgid "Farms"
+msgstr ""
+
+#: language/english/event_categories_lang.php:10
+msgid "Forestry & Logging"
+msgstr ""
+
+#: language/english/event_categories_lang.php:11
+msgid "Forestry & Lumbering"
+msgstr ""
+
+#: language/english/event_categories_lang.php:12
+msgid "Forestry Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:13
+msgid "Hunting Trapping & Game Propagation"
+msgstr ""
+
+#: language/english/event_categories_lang.php:14
+msgid "Landscaping"
+msgstr ""
+
+#: language/english/event_categories_lang.php:15
+msgid "Lawn & Garden Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:16
+msgid "Livestock"
+msgstr ""
+
+#: language/english/event_categories_lang.php:17
+msgid "Marketing"
+msgstr ""
+
+#: language/english/event_categories_lang.php:18
+msgid "Miscellaneous Agriculture"
+msgstr ""
+
+#: language/english/event_categories_lang.php:19
+msgid "Ornamental Nursery"
+msgstr ""
+
+#: language/english/event_categories_lang.php:20
+msgid "Business Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:21
+msgid "Advertising, Marketing & PR Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:22
+msgid "Business & Professional Associations"
+msgstr ""
+
+#: language/english/event_categories_lang.php:23
+msgid "Business Legal Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:24
+msgid "Business Networking"
+msgstr ""
+
+#: language/english/event_categories_lang.php:25
+msgid "Charitable & Non-Profit Organizations"
+msgstr ""
+
+#: language/english/event_categories_lang.php:26
+msgid "Communications Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:27
+msgid "Computer & Audio Visual Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:28
+msgid "Computer Data Base Service"
+msgstr ""
+
+#: language/english/event_categories_lang.php:29
+msgid "Computer Graphics"
+msgstr ""
+
+#: language/english/event_categories_lang.php:30
+msgid "Computer Networks"
+msgstr ""
+
+#: language/english/event_categories_lang.php:31
+msgid "Computer Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:32
+msgid "Computer System Design"
+msgstr ""
+
+#: language/english/event_categories_lang.php:33
+msgid "Consultants & Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:34
+msgid "Copying & Duplicating Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:35
+msgid "Decorating & Designing Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:36
+msgid "Engineer & Architect Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:37
+msgid "General Business Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:38
+msgid "Graphic Designer & Artist Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:39
+msgid "Internet Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:40
+msgid "Investigative Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:41
+msgid "Management Consultants & Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:42
+msgid "Misc Business Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:43
+msgid "Packaging, Shipping & Labeling Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:44
+msgid "Printing & Publishing Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:45
+msgid "Rental & Leasing Business Equipment"
+msgstr ""
+
+#: language/english/event_categories_lang.php:46
+msgid "Repair Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:47
+msgid "Research Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:48
+msgid "Security Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:49
+msgid "Small Business Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:50
+msgid "Staffing & Support Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:51
+msgid "Writing Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:52
+msgid "Community Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:53
+msgid "Arts & Culture"
+msgstr ""
+
+#: language/english/event_categories_lang.php:54
+msgid "Community & Recreational Facilities"
+msgstr ""
+
+#: language/english/event_categories_lang.php:55
+msgid "Foundations, Clubs, Associations, Etc."
+msgstr ""
+
+#: language/english/event_categories_lang.php:56
+msgid "Mentoring"
+msgstr ""
+
+#: language/english/event_categories_lang.php:57
+msgid "Political & Ideological Organizations"
+msgstr ""
+
+#: language/english/event_categories_lang.php:58
+msgid "Religious Organizations"
+msgstr ""
+
+#: language/english/event_categories_lang.php:59
+msgid "Links Services & Welfare"
+msgstr ""
+
+#: language/english/event_categories_lang.php:60
+msgid "Utilities"
+msgstr ""
+
+#: language/english/event_categories_lang.php:61
+msgid "Construction"
+msgstr ""
+
+#: language/english/event_categories_lang.php:62
+msgid "Builders & Contractors 1 Of 2"
+msgstr ""
+
+#: language/english/event_categories_lang.php:63
+msgid "Builders & Contractors 2 Of 2"
+msgstr ""
+
+#: language/english/event_categories_lang.php:64
+msgid "Building Supplies & Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:65
+msgid "Construction Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:66
+msgid "Education"
+msgstr ""
+
+#: language/english/event_categories_lang.php:67
+msgid "Additional Educational Opportunities"
+msgstr ""
+
+#: language/english/event_categories_lang.php:68
+msgid "Administrative Organizations"
+msgstr ""
+
+#: language/english/event_categories_lang.php:69
+msgid "Administrative Professionals"
+msgstr ""
+
+#: language/english/event_categories_lang.php:70
+msgid "Colleges & Universities"
+msgstr ""
+
+#: language/english/event_categories_lang.php:71
+msgid "Education Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:72
+msgid "Educational Aids & Electronic Training Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:73
+msgid "Educational Facilities"
+msgstr ""
+
+#: language/english/event_categories_lang.php:74
+msgid "Elementary Schools"
+msgstr ""
+
+#: language/english/event_categories_lang.php:75
+msgid "Preschools"
+msgstr ""
+
+#: language/english/event_categories_lang.php:76
+msgid "Religious Education"
+msgstr ""
+
+#: language/english/event_categories_lang.php:77
+msgid "Secondary Schools"
+msgstr ""
+
+#: language/english/event_categories_lang.php:78
+msgid "Finance"
+msgstr ""
+
+#: language/english/event_categories_lang.php:79
+msgid "Accounting, Auditing & Bookkeeping Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:80
+msgid "Financial Institutions"
+msgstr ""
+
+#: language/english/event_categories_lang.php:81
+msgid "Financial Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:82
+msgid "Insurance Carriers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:83
+msgid "Insurance Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:84
+msgid "Investment Services & Advisors"
+msgstr ""
+
+#: language/english/event_categories_lang.php:85
+msgid "Government"
+msgstr ""
+
+#: language/english/event_categories_lang.php:86
+msgid "City & County Government"
+msgstr ""
+
+#: language/english/event_categories_lang.php:87
+msgid "Federal Government"
+msgstr ""
+
+#: language/english/event_categories_lang.php:88
+msgid "Foreign Government"
+msgstr ""
+
+#: language/english/event_categories_lang.php:89
+msgid "Misc Government"
+msgstr ""
+
+#: language/english/event_categories_lang.php:90
+msgid "National Government"
+msgstr ""
+
+#: language/english/event_categories_lang.php:91
+msgid "Political Organizations"
+msgstr ""
+
+#: language/english/event_categories_lang.php:92
+msgid "State Government"
+msgstr ""
+
+#: language/english/event_categories_lang.php:93
+msgid "Tribal Government"
+msgstr ""
+
+#: language/english/event_categories_lang.php:94
+msgid "Health & Medical"
+msgstr ""
+
+#: language/english/event_categories_lang.php:95
+msgid "Health And Medical Centers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:96
+msgid "Health Care Information & Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:97
+msgid "Healthcare Consultants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:98
+msgid "Healthcare Professionals"
+msgstr ""
+
+#: language/english/event_categories_lang.php:99
+msgid "Medical Equipment & Supplies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:100
+msgid "Industry"
+msgstr ""
+
+#: language/english/event_categories_lang.php:101
+msgid "Aerospace Industry"
+msgstr ""
+
+#: language/english/event_categories_lang.php:102
+msgid "Aviation & Aerospace Equipment & Supplies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:103
+msgid "Business Wholesale"
+msgstr ""
+
+#: language/english/event_categories_lang.php:104
+msgid "Electrical Goods"
+msgstr ""
+
+#: language/english/event_categories_lang.php:105
+msgid "Environmental Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:106
+msgid "Exporters"
+msgstr ""
+
+#: language/english/event_categories_lang.php:107
+msgid "Farm Products Raw Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:108
+msgid "Fuel"
+msgstr ""
+
+#: language/english/event_categories_lang.php:109
+msgid "Hauling And Shipping"
+msgstr ""
+
+#: language/english/event_categories_lang.php:110
+msgid "Health & Safety Industrial"
+msgstr ""
+
+#: language/english/event_categories_lang.php:111
+msgid "Importers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:112
+msgid "Industrial Contractors"
+msgstr ""
+
+#: language/english/event_categories_lang.php:113
+msgid "Industrial Goods & Products - Hard Goods - Large"
+msgstr ""
+
+#: language/english/event_categories_lang.php:114
+msgid "Industrial Goods & Products - Hard Goods - Small"
+msgstr ""
+
+#: language/english/event_categories_lang.php:115
+msgid "Industrial Goods & Products - Soft - Large & Small"
+msgstr ""
+
+#: language/english/event_categories_lang.php:116
+msgid "Industrial Machinery & Equipment"
+msgstr ""
+
+#: language/english/event_categories_lang.php:117
+msgid "Industrial Machinery Equipment & Supplies Rental & Leasing"
+msgstr ""
+
+#: language/english/event_categories_lang.php:118
+msgid "Machinery, Equipment & Supplies - Business Production Related"
+msgstr ""
+
+#: language/english/event_categories_lang.php:119
+msgid "Machinery, Equipment & Supplies - Business Supplies Related"
+msgstr ""
+
+#: language/english/event_categories_lang.php:120
+msgid "Machinery, Equipment & Supplies - Construction/Contractor Related"
+msgstr ""
+
+#: language/english/event_categories_lang.php:121
+msgid "Marine Products And Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:122
+msgid "Metal Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:123
+msgid "Mining"
+msgstr ""
+
+#: language/english/event_categories_lang.php:124
+msgid "Miscellaneous Industry"
+msgstr ""
+
+#: language/english/event_categories_lang.php:125
+msgid "Refuse Systems"
+msgstr ""
+
+#: language/english/event_categories_lang.php:126
+msgid "Scientific Equipment & Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:127
+msgid "Scrap & Waste Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:128
+msgid "Storage And Warehousing"
+msgstr ""
+
+#: language/english/event_categories_lang.php:129
+msgid "Transportation Equipment"
+msgstr ""
+
+#: language/english/event_categories_lang.php:130
+msgid "Manufacturing"
+msgstr ""
+
+#: language/english/event_categories_lang.php:131
+msgid "Apparel Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:132
+msgid "Audio & Visual Equipment Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:133
+msgid "Bottling Manufacturing"
+msgstr ""
+
+#: language/english/event_categories_lang.php:134
+msgid "Building & Homes Manufactures"
+msgstr ""
+
+#: language/english/event_categories_lang.php:135
+msgid "Building Hardware & Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:136
+msgid "Chemical Product Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:137
+msgid "Computer Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:138
+msgid "Electronics Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:139
+msgid "Finished Textiles Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:140
+msgid "Fitness & Beauty"
+msgstr ""
+
+#: language/english/event_categories_lang.php:141
+msgid "Food Product Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:142
+msgid "Furniture Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:143
+msgid "Instrument Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:144
+msgid "Lawn & Yard"
+msgstr ""
+
+#: language/english/event_categories_lang.php:145
+msgid "Leather Goods"
+msgstr ""
+
+#: language/english/event_categories_lang.php:146
+msgid "Machinery And Equipment Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:147
+msgid "Manufacturing Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:148
+msgid "Medical Equipment Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:149
+msgid "Miscellaneous Manufacturing"
+msgstr ""
+
+#: language/english/event_categories_lang.php:150
+msgid "Musical Instrument Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:151
+msgid "Oil And Petroleum Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:152
+msgid "Paper & Cardboard Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:153
+msgid "Plastic Products Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:154
+msgid "Publishing & Printing Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:155
+msgid "Recreational Good Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:156
+msgid "Rubber Products - Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:157
+msgid "Sporting Goods Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:158
+msgid "Stone And Glass Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:159
+msgid "Tobacco Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:160
+msgid "Transportation Equipment Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:161
+msgid "Waste Treatment Plants Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:162
+msgid "Wood Products Manufacturers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:163
+msgid "Motorized Vehicle"
+msgstr ""
+
+#: language/english/event_categories_lang.php:164
+msgid "All-Terrain & Recreational Vehicle Dealers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:165
+msgid "Auto Maintenance & Repair Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:166
+msgid "Auto Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:167
+msgid "Automotive Parts, Equipment & Supplies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:168
+msgid "Aviation & Avionics Sales"
+msgstr ""
+
+#: language/english/event_categories_lang.php:169
+msgid "Heavy & Industrial Vehicle Dealers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:170
+msgid "Heavy & Industrial Vehicle Parts & Accessories"
+msgstr ""
+
+#: language/english/event_categories_lang.php:171
+msgid "Motorized Vehicle Rental & Leasing"
+msgstr ""
+
+#: language/english/event_categories_lang.php:172
+msgid "Passenger Vehicle Dealers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:173
+msgid "Personal Watercraft Dealers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:174
+msgid "Work, Utility & Commercial Vehicle Dealers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:175
+msgid "Personal Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:176
+msgid "Art"
+msgstr ""
+
+#: language/english/event_categories_lang.php:177
+msgid "Cleaning & Maintenance Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:178
+msgid "Employment Assistance"
+msgstr ""
+
+#: language/english/event_categories_lang.php:179
+msgid "Entertainment Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:180
+msgid "Family Services & Care"
+msgstr ""
+
+#: language/english/event_categories_lang.php:181
+msgid "Fitness"
+msgstr ""
+
+#: language/english/event_categories_lang.php:182
+msgid "Garment & Linen Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:183
+msgid "Household Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:184
+msgid "Misc Personal Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:185
+msgid "Party & Event Planning"
+msgstr ""
+
+#: language/english/event_categories_lang.php:186
+msgid "Personal Care"
+msgstr ""
+
+#: language/english/event_categories_lang.php:187
+msgid "Personal Document & Information Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:188
+msgid "Personal Financial Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:189
+msgid "Personal Legal Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:190
+msgid "Professional"
+msgstr ""
+
+#: language/english/event_categories_lang.php:191
+msgid "Law Enforcement Professional"
+msgstr ""
+
+#: language/english/event_categories_lang.php:192
+msgid "Legal Professionals"
+msgstr ""
+
+#: language/english/event_categories_lang.php:193
+msgid "Miscellaneous Professional"
+msgstr ""
+
+#: language/english/event_categories_lang.php:194
+msgid "Photography"
+msgstr ""
+
+#: language/english/event_categories_lang.php:195
+msgid "Professionals Equipment & Supplies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:196
+msgid "Public Administration"
+msgstr ""
+
+#: language/english/event_categories_lang.php:197
+msgid "Religious Practitioners"
+msgstr ""
+
+#: language/english/event_categories_lang.php:198
+msgid "Science & Research"
+msgstr ""
+
+#: language/english/event_categories_lang.php:199
+msgid "Video, Television And Movies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:200
+msgid "Real Estate"
+msgstr ""
+
+#: language/english/event_categories_lang.php:201
+msgid "Commercial & Industrial"
+msgstr ""
+
+#: language/english/event_categories_lang.php:202
+msgid "Real Estate Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:203
+msgid "Residential"
+msgstr ""
+
+#: language/english/event_categories_lang.php:204
+msgid "Restaurants/Food & Dining"
+msgstr ""
+
+#: language/english/event_categories_lang.php:205
+msgid "African Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:206
+msgid "Asian Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:207
+msgid "Bakeries"
+msgstr ""
+
+#: language/english/event_categories_lang.php:208
+msgid "Breakfast Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:209
+msgid "Casual Dining Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:210
+msgid "Central American Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:211
+msgid "Drinking Establishments"
+msgstr ""
+
+#: language/english/event_categories_lang.php:212
+msgid "Ethnic Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:213
+msgid "European Cuisine"
+msgstr ""
+
+#: language/english/event_categories_lang.php:214
+msgid "Fine Dining Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:215
+msgid "Fish & Seafood Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:216
+msgid "Food Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:217
+msgid "Middle Eastern Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:218
+msgid "North American Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:219
+msgid "Restaurant Information & Referral Service"
+msgstr ""
+
+#: language/english/event_categories_lang.php:220
+msgid "Snacks & Desserts"
+msgstr ""
+
+#: language/english/event_categories_lang.php:221
+msgid "South American Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:222
+msgid "Theme & Entertainment Restaurants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:223
+msgid "Shopping & Shopping Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:224
+msgid "Air Conditioning & Heating Equipment & Supplies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:225
+msgid "Air Purification Systems"
+msgstr ""
+
+#: language/english/event_categories_lang.php:226
+msgid "Appliances Household & Commercial"
+msgstr ""
+
+#: language/english/event_categories_lang.php:227
+msgid "Arts & Crafts"
+msgstr ""
+
+#: language/english/event_categories_lang.php:228
+msgid "Building Restoration Equipment"
+msgstr ""
+
+#: language/english/event_categories_lang.php:229
+msgid "Cards Stationery & Giftwrap"
+msgstr ""
+
+#: language/english/event_categories_lang.php:230
+msgid "Catalog, Mail-Order, & Electronic Shopping"
+msgstr ""
+
+#: language/english/event_categories_lang.php:231
+msgid "Chemicals & Related Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:232
+msgid "Commercial Equipment"
+msgstr ""
+
+#: language/english/event_categories_lang.php:233
+msgid "Computers Electronics"
+msgstr ""
+
+#: language/english/event_categories_lang.php:234
+msgid "Direct Selling Businesses"
+msgstr ""
+
+#: language/english/event_categories_lang.php:235
+msgid "Drains, Pipes & Sewage Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:236
+msgid "Durable & Non Durable Goods & Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:237
+msgid "Electric Equipment & Supplies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:238
+msgid "Electronics"
+msgstr ""
+
+#: language/english/event_categories_lang.php:239
+msgid "Entertainment & Recreation"
+msgstr ""
+
+#: language/english/event_categories_lang.php:240
+msgid "Fencing & Gate Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:241
+msgid "Flooring Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:242
+msgid "Flowers & Plants"
+msgstr ""
+
+#: language/english/event_categories_lang.php:243
+msgid "Food & Beverage Stores & Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:244
+msgid "Food & Beverages Wholesale & Retail"
+msgstr ""
+
+#: language/english/event_categories_lang.php:245
+msgid "Fuel Dealers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:246
+msgid "Games & Hobbies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:247
+msgid "Garage, Door & Window Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:248
+msgid "General Merchandise Stores"
+msgstr ""
+
+#: language/english/event_categories_lang.php:249
+msgid "Glass & Glass Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:250
+msgid "Hardware Stores"
+msgstr ""
+
+#: language/english/event_categories_lang.php:251
+msgid "Home Improvement Centers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:252
+msgid "Insulation & Energy Conservation Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:253
+msgid "Kitchen & Bath Products & Supplies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:254
+msgid "Lacquers Stains & Wood Finishes"
+msgstr ""
+
+#: language/english/event_categories_lang.php:255
+msgid "Lumber & Lumber Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:256
+msgid "Masonry Materials & Supplies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:257
+msgid "Merchandise Sales Events"
+msgstr ""
+
+#: language/english/event_categories_lang.php:258
+msgid "Moldings Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:259
+msgid "Music"
+msgstr ""
+
+#: language/english/event_categories_lang.php:260
+msgid "Nurseries & Garden Centers"
+msgstr ""
+
+#: language/english/event_categories_lang.php:261
+msgid "Other Building Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:262
+msgid "Outdoor Equipment & Accessories"
+msgstr ""
+
+#: language/english/event_categories_lang.php:263
+msgid "Paint & Painting Supplies"
+msgstr ""
+
+#: language/english/event_categories_lang.php:264
+msgid "Paneling Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:265
+msgid "Paper & Paper Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:266
+msgid "Pets"
+msgstr ""
+
+#: language/english/event_categories_lang.php:267
+msgid "Plastering Stucco Caulking & Grouting Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:268
+msgid "Prefabricated Buildings"
+msgstr ""
+
+#: language/english/event_categories_lang.php:269
+msgid "Product Rental & Leasing"
+msgstr ""
+
+#: language/english/event_categories_lang.php:270
+msgid "Product Repair Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:271
+msgid "Roofing Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:272
+msgid "Siding Materials"
+msgstr ""
+
+#: language/english/event_categories_lang.php:273
+msgid "Solar Products & Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:274
+msgid "Specialty Stores"
+msgstr ""
+
+#: language/english/event_categories_lang.php:275
+msgid "Steel Products"
+msgstr ""
+
+#: language/english/event_categories_lang.php:276
+msgid "Telecommunications"
+msgstr ""
+
+#: language/english/event_categories_lang.php:277
+msgid "Wallpaper & Wallcoverings"
+msgstr ""
+
+#: language/english/event_categories_lang.php:278
+msgid "Transportation"
+msgstr ""
+
+#: language/english/event_categories_lang.php:279
+msgid "Air Transportation, Except Passenger"
+msgstr ""
+
+#: language/english/event_categories_lang.php:280
+msgid "Ground Transportation, Except Passenger"
+msgstr ""
+
+#: language/english/event_categories_lang.php:281
+msgid "Passenger Air Transportation"
+msgstr ""
+
+#: language/english/event_categories_lang.php:282
+msgid "Passenger Ground Transportation"
+msgstr ""
+
+#: language/english/event_categories_lang.php:283
+msgid "Passenger Water Transportation"
+msgstr ""
+
+#: language/english/event_categories_lang.php:284
+msgid "Transportation Equipment And Supplies (Except Motor Vehicle)"
+msgstr ""
+
+#: language/english/event_categories_lang.php:285
+msgid "Transportation Facilities & Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:286
+msgid "Transportation Inspection Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:287
+msgid "Transportation Rental & Leasing"
+msgstr ""
+
+#: language/english/event_categories_lang.php:288
+msgid "Transportation Repair & Maintenance"
+msgstr ""
+
+#: language/english/event_categories_lang.php:289
+msgid "Water Transportation, Except Passenger"
+msgstr ""
+
+#: language/english/event_categories_lang.php:290
+msgid "Travel & Tourism"
+msgstr ""
+
+#: language/english/event_categories_lang.php:291
+msgid "Historical Places & Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:292
+msgid "Lodging"
+msgstr ""
+
+#: language/english/event_categories_lang.php:293
+msgid "Recreational Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:294
+msgid "Tourist Attractions"
+msgstr ""
+
+#: language/english/event_categories_lang.php:295
+msgid "Travel Arrangement & Services"
+msgstr ""
+
+#: language/english/event_categories_lang.php:296
+msgid "Unknown"
+msgstr ""
+
+#: language/english/idslot_lang.php:4
+msgid "en"
+msgstr ""
+
+#: language/english/idslot_lang.php:5
+msgid "ltr"
+msgstr ""
+
+#: language/english/idslot_lang.php:6
+msgid "gregorian"
+msgstr ""
+
+#: language/english/idslot_lang.php:7
+msgid "yy-mm-dd"
+msgstr ""
+
+#: language/english/idslot_lang.php:8
+msgid "IDSlot, Online identity management system"
+msgstr ""
+
+#: language/english/idslot_lang.php:9
+msgid "IDSlot is an open source online identity management system.<br />Use IDSlot to present everything about you, any information such as your identity, photos, resume, skills, links, contact information, location map, ..."
+msgstr ""
+
+#: language/english/idslot_lang.php:10
+msgid "Update IDSlot"
+msgstr ""
+
+#: language/english/idslot_lang.php:11
+msgid "enter your desired content then click 'submit' / 'add' button."
+msgstr ""
+
+#: language/english/idslot_lang.php:12
+msgid "This field is required"
+msgstr ""
+
+#: language/english/idslot_lang.php:15
+msgid "Under Construction"
+msgstr ""
+
+#: language/english/idslot_lang.php:16
+#, php-format
+msgid "Error in updating %s"
+msgstr ""
+
+#: language/english/idslot_lang.php:17
+#, php-format
+msgid "%s updated."
+msgstr ""
+
+#: language/english/idslot_lang.php:18
+msgid "IDslot"
+msgstr ""
+
+#: language/english/idslot_lang.php:19
+#: language/english/idslot_lang.php:61
+#: language/english/idslot_lang.php:109
+#: language/english/idslot_lang.php:151
+msgid "Title"
+msgstr ""
+
+#: language/english/idslot_lang.php:20
+msgid "Image"
+msgstr ""
+
+#: language/english/idslot_lang.php:21
+msgid "Preview"
+msgstr ""
+
+#: language/english/idslot_lang.php:22
+msgid "remove"
+msgstr ""
+
+#: language/english/idslot_lang.php:23
+msgid "Yes"
+msgstr ""
+
+#: language/english/idslot_lang.php:24
+msgid "No"
+msgstr ""
+
+#: language/english/idslot_lang.php:25
+msgid "Next"
+msgstr ""
+
+#: language/english/idslot_lang.php:26
+msgid "Prev"
+msgstr ""
+
+#: language/english/idslot_lang.php:27
+msgid "Submit"
+msgstr ""
+
+#: language/english/idslot_lang.php:28
+msgid "Reset"
+msgstr ""
+
+#: language/english/idslot_lang.php:29
+msgid "Are you sure to remove this image?"
+msgstr ""
+
+#: language/english/idslot_lang.php:30
+msgid "View"
+msgstr ""
+
+#: language/english/idslot_lang.php:31
+msgid "My Account"
+msgstr ""
+
+#: language/english/idslot_lang.php:32
+msgid "Logout"
+msgstr ""
+
+#: language/english/idslot_lang.php:33
+msgid "Add"
+msgstr ""
+
+#: language/english/idslot_lang.php:34
+msgid "Edit"
+msgstr ""
+
+#: language/english/idslot_lang.php:35
+msgid "Remove"
+msgstr ""
+
+#: language/english/idslot_lang.php:36
+msgid "Close"
+msgstr ""
+
+#: language/english/idslot_lang.php:37
+msgid "From"
+msgstr ""
+
+#: language/english/idslot_lang.php:38
+msgid "To"
+msgstr ""
+
+#: language/english/idslot_lang.php:41
+msgid "This field defines the title of your IDSlot."
+msgstr ""
+
+#: language/english/idslot_lang.php:42
+msgid "Some search engines will use the content of the meta elements to index your pages. the meta keywords element defines keywords for your IDSlot."
+msgstr ""
+
+#: language/english/idslot_lang.php:43
+msgid "Some search engines will use the content of the meta elements to index your pages. this field used to describe the content of your IDSlot."
+msgstr ""
+
+#: language/english/idslot_lang.php:44
+msgid "Details"
+msgstr ""
+
+#: language/english/idslot_lang.php:45
+msgid "Meta Keywords"
+msgstr ""
+
+#: language/english/idslot_lang.php:46
+msgid "Meta Description"
+msgstr ""
+
+#: language/english/idslot_lang.php:47
+msgid "Short Description"
+msgstr ""
+
+#: language/english/idslot_lang.php:48
+msgid "Template"
+msgstr ""
+
+#: language/english/idslot_lang.php:49
+msgid "comma separated"
+msgstr ""
+
+#: language/english/idslot_lang.php:50
+msgid "Language"
+msgstr ""
+
+#: language/english/idslot_lang.php:51
+msgid "English"
+msgstr ""
+
+#: language/english/idslot_lang.php:52
+msgid "Here you can change your IDSlot settings."
+msgstr ""
+
+#: language/english/idslot_lang.php:55
+msgid "Statistics"
+msgstr ""
+
+#: language/english/idslot_lang.php:59
+#: language/english/idslot_lang.php:65
+msgid "Links"
+msgstr ""
+
+#: language/english/idslot_lang.php:60
+msgid "There are numerous links networks. if you are a member of any of the networks or you have another links, Here you can introduce your own page on there."
+msgstr ""
+
+#: language/english/idslot_lang.php:62
+msgid "Links section Title"
+msgstr ""
+
+#: language/english/idslot_lang.php:63
+msgid "Descriptions about links section"
+msgstr ""
+
+#: language/english/idslot_lang.php:64
+msgid "Add a new link"
+msgstr ""
+
+#: language/english/idslot_lang.php:66
+msgid "Edit link"
+msgstr ""
+
+#: language/english/idslot_lang.php:67
+msgid "Link title"
+msgstr ""
+
+#: language/english/idslot_lang.php:68
+msgid "Link URL"
+msgstr ""
+
+#: language/english/idslot_lang.php:69
+msgid "Link icons"
+msgstr ""
+
+#: language/english/idslot_lang.php:70
+msgid "URL"
+msgstr ""
+
+#: language/english/idslot_lang.php:71
+msgid "Icon"
+msgstr ""
+
+#: language/english/idslot_lang.php:72
+msgid "Are you sure to delete this link?"
+msgstr ""
+
+#: language/english/idslot_lang.php:73
+msgid "Error in remove link!"
+msgstr ""
+
+#: language/english/idslot_lang.php:74
+msgid "Link removed."
+msgstr ""
+
+#: language/english/idslot_lang.php:75
+msgid "Error in edit link!"
+msgstr ""
+
+#: language/english/idslot_lang.php:76
+msgid "Link edited."
+msgstr ""
+
+#: language/english/idslot_lang.php:77
+msgid "Error in add link!"
+msgstr ""
+
+#: language/english/idslot_lang.php:78
+msgid "Link added."
+msgstr ""
+
+#: language/english/idslot_lang.php:79
+msgid "List of links"
+msgstr ""
+
+#: language/english/idslot_lang.php:80
+msgid "To edit or delete your desired link, click on it."
+msgstr ""
+
+#: language/english/idslot_lang.php:83
+#: language/english/idslot_lang.php:89
+msgid "Portfolio"
+msgstr ""
+
+#: language/english/idslot_lang.php:84
+msgid "Here you can make your portfolio."
+msgstr ""
+
+#: language/english/idslot_lang.php:85
+msgid "Portfolio Title"
+msgstr ""
+
+#: language/english/idslot_lang.php:86
+msgid "Portfolio section Title"
+msgstr ""
+
+#: language/english/idslot_lang.php:87
+msgid "Description about portfolio section"
+msgstr ""
+
+#: language/english/idslot_lang.php:88
+msgid "A portfolio"
+msgstr ""
+
+#: language/english/idslot_lang.php:90
+msgid "Add a new portfolio"
+msgstr ""
+
+#: language/english/idslot_lang.php:91
+msgid "Edit portfolio"
+msgstr ""
+
+#: language/english/idslot_lang.php:92
+msgid "Portfolio list"
+msgstr ""
+
+#: language/english/idslot_lang.php:93
+#: language/english/idslot_lang.php:155
+msgid "Content"
+msgstr ""
+
+#: language/english/idslot_lang.php:94
+msgid "Are you sure to delete this portfolio?"
+msgstr ""
+
+#: language/english/idslot_lang.php:95
+msgid "Error in remove portfolio!"
+msgstr ""
+
+#: language/english/idslot_lang.php:96
+msgid "Portfolio removed."
+msgstr ""
+
+#: language/english/idslot_lang.php:97
+msgid "Error in edit portfolio!"
+msgstr ""
+
+#: language/english/idslot_lang.php:98
+msgid "Portfolio edited."
+msgstr ""
+
+#: language/english/idslot_lang.php:99
+msgid "Error in add portfolio!"
+msgstr ""
+
+#: language/english/idslot_lang.php:100
+msgid "Portfolio added."
+msgstr ""
+
+#: language/english/idslot_lang.php:101
+msgid "Delete portfolio"
+msgstr ""
+
+#: language/english/idslot_lang.php:102
+msgid "Delete"
+msgstr ""
+
+#: language/english/idslot_lang.php:103
+msgid "To edit or delete your desired portfolio, click on it."
+msgstr ""
+
+#: language/english/idslot_lang.php:104
+msgid "Describe portfolio here."
+msgstr ""
+
+#: language/english/idslot_lang.php:107
+msgid "Contact"
+msgstr ""
+
+#: language/english/idslot_lang.php:108
+msgid "Here you can collect all of your contact information. telephone numbers, location map, links network links and etc."
+msgstr ""
+
+#: language/english/idslot_lang.php:110
+msgid "Contact section title"
+msgstr ""
+
+#: language/english/idslot_lang.php:111
+msgid "Description about Contact section"
+msgstr ""
+
+#: language/english/idslot_lang.php:112
+msgid "Contact Email"
+msgstr ""
+
+#: language/english/idslot_lang.php:113
+msgid "This address will be shown to anyone<br>Sample: Info@YourName.com"
+msgstr ""
+
+#: language/english/idslot_lang.php:114
+#: language/english/idslot_lang.php:133
+msgid "Telephone"
+msgstr ""
+
+#: language/english/idslot_lang.php:115
+msgid "Telephone number"
+msgstr ""
+
+#: language/english/idslot_lang.php:116
+#: language/english/idslot_lang.php:134
+msgid "Fax"
+msgstr ""
+
+#: language/english/idslot_lang.php:117
+msgid "Fax number"
+msgstr ""
+
+#: language/english/idslot_lang.php:118
+#: language/english/idslot_lang.php:135
+msgid "Cellphone"
+msgstr ""
+
+#: language/english/idslot_lang.php:119
+msgid "Cellphone number"
+msgstr ""
+
+#: language/english/idslot_lang.php:120
+#: language/english/idslot_lang.php:136
+msgid "Website"
+msgstr ""
+
+#: language/english/idslot_lang.php:121
+msgid "Enter your website address here"
+msgstr ""
+
+#: language/english/idslot_lang.php:122
+#: language/english/idslot_lang.php:137
+msgid "Weblog"
+msgstr ""
+
+#: language/english/idslot_lang.php:123
+msgid "Enter your weblog address here"
+msgstr ""
+
+#: language/english/idslot_lang.php:124
+#: language/english/idslot_lang.php:138
+msgid "Map"
+msgstr ""
+
+#: language/english/idslot_lang.php:125
+msgid "Mark your location on the map"
+msgstr ""
+
+#: language/english/idslot_lang.php:126
+#: language/english/idslot_lang.php:139
+msgid "Address"
+msgstr ""
+
+#: language/english/idslot_lang.php:127
+msgid "Enter your location postal address"
+msgstr ""
+
+#: language/english/idslot_lang.php:128
+#: language/english/idslot_lang.php:140
+msgid "Postcode"
+msgstr ""
+
+#: language/english/idslot_lang.php:129
+msgid "Enter your postal code here"
+msgstr ""
+
+#: language/english/idslot_lang.php:130
+msgid "Active contact form"
+msgstr ""
+
+#: language/english/idslot_lang.php:132
+msgid "Description"
+msgstr ""
+
+#: language/english/idslot_lang.php:141
+msgid "Name"
+msgstr ""
+
+#: language/english/idslot_lang.php:142
+msgid "Message"
+msgstr ""
+
+#: language/english/idslot_lang.php:143
+msgid "Send"
+msgstr ""
+
+#: language/english/idslot_lang.php:145
+msgid "Your message send."
+msgstr ""
+
+#: language/english/idslot_lang.php:146
+msgid "New message from your page"
+msgstr ""
+
+#: language/english/idslot_lang.php:149
+msgid "About"
+msgstr ""
+
+#: language/english/idslot_lang.php:150
+msgid "You can describe yourself here."
+msgstr ""
+
+#: language/english/idslot_lang.php:152
+msgid "About section title"
+msgstr ""
+
+#: language/english/idslot_lang.php:153
+msgid "Photo"
+msgstr ""
+
+#: language/english/idslot_lang.php:154
+msgid "Upload your photo"
+msgstr ""
+
+#: language/english/idslot_lang.php:156
+msgid "Enter about yourself here."
+msgstr ""
+
+#: language/english/idslot_lang.php:159
+msgid "Resume"
+msgstr ""
+
+#: language/english/idslot_lang.php:160
+msgid "A resume is a document used by individuals to present their background and skillsets. "
+msgstr ""
+
+#: language/english/idslot_lang.php:161
+msgid "Summary"
+msgstr ""
+
+#: language/english/idslot_lang.php:162
+msgid "Resume summary"
+msgstr ""
+
+#: language/english/idslot_lang.php:163
+msgid "Category"
+msgstr ""
+
+#: language/english/idslot_lang.php:164
+msgid "Subcategory"
+msgstr ""
+
+#: language/english/idslot_lang.php:165
+msgid "Start"
+msgstr ""
+
+#: language/english/idslot_lang.php:166
+msgid "End"
+msgstr ""
+
+#: language/english/idslot_lang.php:167
+msgid "(Re)Build HTML/PDF"
+msgstr ""
+
+#: language/english/idslot_lang.php:168
+msgid "Remove HTML/PDF"
+msgstr ""
+
+#: language/english/idslot_lang.php:171
+msgid "Skills"
+msgstr ""
+
+#: language/english/idslot_lang.php:172
+msgid "Skill"
+msgstr ""
+
+#: language/english/idslot_lang.php:173
+msgid "Add new skill"
+msgstr ""
+
+#: language/english/idslot_lang.php:174
+msgid "Skill added"
+msgstr ""
+
+#: language/english/idslot_lang.php:175
+msgid "Error in adding skill"
+msgstr ""
+
+#: language/english/idslot_lang.php:176
+msgid "Are you sure to delete this skill?"
+msgstr ""
+
+#: language/english/idslot_lang.php:177
+msgid "Skill removed"
+msgstr ""
+
+#: language/english/idslot_lang.php:178
+msgid "Skill edited"
+msgstr ""
+
+#: language/english/idslot_lang.php:179
+msgid "Error in editing skill"
+msgstr ""
+
+#: language/english/idslot_lang.php:182
+msgid "Experiences"
+msgstr ""
+
+#: language/english/idslot_lang.php:189
+msgid "Add experience"
+msgstr ""
+
+#: language/english/idslot_lang.php:190
+msgid "Experience added"
+msgstr ""
+
+#: language/english/idslot_lang.php:191
+msgid "Error in adding experience"
+msgstr ""
+
+#: language/english/idslot_lang.php:192
+msgid "Are you sure to delete this experience?"
+msgstr ""
+
+#: language/english/idslot_lang.php:193
+msgid "Experience removed"
+msgstr ""
+
+#: language/english/idslot_lang.php:194
+msgid "Experience edited"
+msgstr ""
+
+#: language/english/idslot_lang.php:195
+msgid "Error in editing experience"
+msgstr ""
+
+#: language/english/idslot_lang.php:198
+msgid "Educations"
+msgstr ""
+
+#: language/english/idslot_lang.php:203
+msgid "Add education"
+msgstr ""
+
+#: language/english/idslot_lang.php:204
+msgid "Education added"
+msgstr ""
+
+#: language/english/idslot_lang.php:205
+msgid "Error in adding education"
+msgstr ""
+
+#: language/english/idslot_lang.php:206
+msgid "Are you sure to delete this education?"
+msgstr ""
+
+#: language/english/idslot_lang.php:207
+msgid "Education removed"
+msgstr ""
+
+#: language/english/idslot_lang.php:208
+msgid "Education edited"
+msgstr ""
+
+#: language/english/idslot_lang.php:209
+msgid "Error in editing education"
+msgstr ""
+
+#: language/english/idslot_lang.php:212
+msgid "Publications"
+msgstr ""
+
+#: language/english/idslot_lang.php:219
+msgid "Add publication"
+msgstr ""
+
+#: language/english/idslot_lang.php:220
+msgid "Publication added"
+msgstr ""
+
+#: language/english/idslot_lang.php:221
+msgid "Error in adding publication"
+msgstr ""
+
+#: language/english/idslot_lang.php:222
+msgid "Are you sure to delete this publication?"
+msgstr ""
+
+#: language/english/idslot_lang.php:223
+msgid "Publication removed"
+msgstr ""
+
+#: language/english/idslot_lang.php:224
+msgid "Publication edited"
+msgstr ""
+
+#: language/english/idslot_lang.php:225
+msgid "Error in editing publication"
+msgstr ""
+
+#: language/english/idslot_lang.php:226
+msgid "Creators"
+msgstr ""
+
+#: language/english/idslot_lang.php:227
+msgid "Publisher"
+msgstr ""
+
+#: language/english/idslot_lang.php:228
+msgid "Date"
+msgstr ""
+
+#: language/english/idslot_lang.php:229
+msgid "URN"
+msgstr ""
+
+#: language/english/idslot_lang.php:230
+msgid "URN type"
+msgstr ""
+
+#: language/english/idslot_lang.php:233
+msgid "Account settings"
+msgstr ""
+
+#: language/english/idslot_lang.php:234
+msgid "Old Password"
+msgstr ""
+
+#: language/english/idslot_lang.php:235
+msgid "New Password"
+msgstr ""
+
+#: language/english/idslot_lang.php:236
+msgid "New Password Confirm"
+msgstr ""
+
+#: language/english/idslot_lang.php:238
+msgid "Change Password"
+msgstr ""
+
+#: language/english/idslot_lang.php:239
+msgid "Fill email or new password fields. You must fill old password field in both situations."
+msgstr ""
+
+#: language/english/idslot_lang.php:240
+msgid "To change your email address, you must enter old password too. Changing email address needs validation."
+msgstr ""
+
+#: language/english/idslot_lang.php:241
+msgid "To change your password, you must enter old password too."
+msgstr ""
+
+#: language/english/idslot_lang.php:244
+msgid "Please send us your email and we'll reset your password."
+msgstr ""
+
+#: language/english/idslot_lang.php:245
+msgid "Back to login"
+msgstr ""
+
+#: language/english/idslot_lang.php:246
+msgid "Get a new password"
+msgstr ""
+
+#: language/english/idslot_lang.php:247
+msgid "Forgot Password?"
+msgstr ""
+
+#: language/english/idslot_lang.php:248
+msgid "Forgot Password"
+msgstr ""
+
+#: language/english/idslot_lang.php:249
+msgid "Let me in"
+msgstr ""
+
+#: language/english/idslot_lang.php:250
+msgid "Login"
+msgstr ""
+
+#: language/english/idslot_lang.php:251
+msgid "Email or Login:"
+msgstr ""
+
+#: language/english/idslot_lang.php:252
+msgid "Email"
+msgstr ""
+
+#: language/english/idslot_lang.php:253
+msgid "Email Confirm"
+msgstr ""
+
+#: language/english/idslot_lang.php:254
+msgid "Get another CAPTCHA"
+msgstr ""
+
+#: language/english/idslot_lang.php:255
+msgid "Get an audio CAPTCHA"
+msgstr ""
+
+#: language/english/idslot_lang.php:256
+msgid "Get an image CAPTCHA"
+msgstr ""
+
+#: language/english/idslot_lang.php:257
+msgid "Enter the words above"
+msgstr ""
+
+#: language/english/idslot_lang.php:258
+msgid "Enter the numbers you hear"
+msgstr ""
+
+#: language/english/idslot_lang.php:259
+msgid "Enter the code exactly as it appears:"
+msgstr ""
+
+#: language/english/idslot_lang.php:260
+msgid "Username"
+msgstr ""
+
+#: language/english/idslot_lang.php:262
+msgid "Password"
+msgstr ""
+
+#: language/english/idslot_lang.php:263
+msgid "Password Confirm"
+msgstr ""
+
+#: language/english/idslot_lang.php:264
+msgid "Remember me"
+msgstr ""
+
+#: language/english/idslot_lang.php:265
+msgid "Confirmation Code"
+msgstr ""
+
+#: language/english/idslot_lang.php:269
+#, php-format
+msgid "Welcome to %s"
+msgstr ""
+
+#: language/english/idslot_lang.php:272
+msgid "Home"
+msgstr ""
+
+#: language/english/idslot_lang.php:273
+msgid "Error in connection"
+msgstr ""
+
+#: language/english/idslot_lang.php:275
+msgid "Visibility"
+msgstr ""
+
+#: language/english/idslot_lang.php:276
+msgid "You can show/hide this section"
+msgstr ""
+
+#: language/english/idslot_lang.php:277
+msgid "Show"
+msgstr ""
+
+#: language/english/idslot_lang.php:278
+msgid "Hide"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:4
+msgid "Incorrect password"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:5
+msgid "Incorrect login"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:6
+msgid "Login or email doesn't exist"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:7
+msgid "Email is already used by another user. Please choose another email."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:8
+msgid "Username already exists. Please choose another username."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:9
+msgid "This is your current email"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:10
+msgid "Your confirmation code does not match the one in the image."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:11
+msgid "Your confirmation code has expired. Please try again."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:14
+msgid "You have been successfully logged out."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:15
+msgid "Registration is disabled."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:16
+msgid "You have successfully registered. Check your email address to activate your account."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:17
+msgid "You have successfully registered."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:18
+#, php-format
+msgid "A new activation email has been sent to %s. Follow the instructions in the email to activate your account."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:19
+msgid "Your account has been successfully activated."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:20
+msgid "The activation code you entered is incorrect or expired."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:21
+msgid "Your password has been successfully changed."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:22
+msgid "An email with instructions for creating a new password has been sent to you."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:23
+msgid "You have successfully reset your password"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:24
+#: language/english/tank_auth_lang.php:27
+msgid "Your activation key is incorrect or expired. Please check your email again and follow the instructions."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:25
+#, php-format
+msgid "A confirmation email has been sent to %s. Follow the instructions in the email to complete this change of email address."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:26
+msgid "You have successfully changed your email"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:28
+msgid "You are banned."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:29
+msgid "Your account has been deleted..."
+msgstr ""
+
+#: language/english/tank_auth_lang.php:32
+#: language/english/tank_auth_lang.php:33
+#, php-format
+msgid "Welcome to %s!"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:34
+#, php-format
+msgid "Forgot your password on %s?"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:35
+#, php-format
+msgid "Your new password on %s"
+msgstr ""
+
+#: language/english/tank_auth_lang.php:36
+#, php-format
+msgid "Your new email address on %s"
+msgstr ""
+
+#: language/english/install_lang.php:3
+#: language/english/install_lang.php:14
+msgid "Install idslot"
+msgstr ""
+
+#: language/english/install_lang.php:4
+msgid "Follow steps to install idslot"
+msgstr ""
+
+#: language/english/install_lang.php:6
+msgid "Idslot already installed!"
+msgstr ""
+
+#: language/english/install_lang.php:8
+msgid "Install steps"
+msgstr ""
+
+#: language/english/install_lang.php:10
+msgid "Check requirements"
+msgstr ""
+
+#: language/english/install_lang.php:11
+msgid "Prior to install IDSlot, you must set some permissions. You must make the config files and the compile folder writeable, so that the installer can edit it."
+msgstr ""
+
+#: language/english/install_lang.php:12
+msgid "must be writable"
+msgstr ""
+
+#: language/english/install_lang.php:13
+msgid "Refresh"
+msgstr ""
+
+#: language/english/install_lang.php:15
+msgid "You must create a database. You must also add a user who has full access to this newly created database.<br />Please enter your database details."
+msgstr ""
+
+#: language/english/install_lang.php:16
+msgid "Database host"
+msgstr ""
+
+#: language/english/install_lang.php:17
+msgid "The hostname of your database server"
+msgstr ""
+
+#: language/english/install_lang.php:18
+msgid "Database name"
+msgstr ""
+
+#: language/english/install_lang.php:19
+msgid "The name of the database you want to install to"
+msgstr ""
+
+#: language/english/install_lang.php:20
+msgid "Database username"
+msgstr ""
+
+#: language/english/install_lang.php:21
+msgid "The username used to connect to the database"
+msgstr ""
+
+#: language/english/install_lang.php:22
+msgid "Database password"
+msgstr ""
+
+#: language/english/install_lang.php:23
+msgid "The password used to connect to the database"
+msgstr ""
+
+#: language/english/install_lang.php:24
+msgid "Table Prefix"
+msgstr ""
+
+#: language/english/install_lang.php:25
+msgid "You can add an optional prefix, which will be added to the table name"
+msgstr ""
+
+#: language/english/install_lang.php:26
+msgid "Unable to connect to your database server"
+msgstr ""
+
+#: language/english/install_lang.php:27
+msgid "Setup idslot"
+msgstr ""
+
+#: language/english/install_lang.php:29
+msgid "Idslot installed"
+msgstr ""
+
+#: language/english/install_lang.php:30
+#, php-format
+msgid "Idslot successfully installed.<br /><br />Follow <a href=\"%s\">this link</a> to login on the panel."
+msgstr ""
+

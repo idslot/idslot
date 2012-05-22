@@ -2,7 +2,7 @@
 $this->load->model('system');
 $lang = $this->system->languages();
 $this->load->helper('url');
-$this->lang->load('idslot', strtolower($lang[$user->language]));
+$this->lang->load('idslot');
 $base_url = base_url();
 $this->load->helper('language');
 ?>

@@ -31,6 +31,7 @@ class Install extends CI_Controller {
     $this->load->helper(array('form', 'url'));
     $this->load->library(array('form_validation', 'security', 'session'));
     $this->load->model('system');
+    $this->system->choose_language();
     $this->lang->load('idslot');
     $this->lang->load('install');
 
@@ -156,7 +157,7 @@ class Install extends CI_Controller {
       $this->load->library('tank_auth');
       $this->lang->load('tank_auth');
       if (!is_null($udata = $this->tank_auth->create_user(
-                      $this->form_validation->set_value('username'), $this->form_validation->set_value('email'), $this->form_validation->set_value('password'), $this->form_validation->set_value('title'), '', 'default', 'english', '', ''))) {    // success
+                      $this->form_validation->set_value('username'), $this->form_validation->set_value('email'), $this->form_validation->set_value('password'), $this->form_validation->set_value('title'), '', 'default', 'en', '', ''))) {    // success
         $this->load->model('system');
 
         $plugins = $this->config->item('plugins');

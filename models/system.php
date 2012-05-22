@@ -182,6 +182,7 @@ class System extends CI_Model {
   }
   
   public function choose_language(){
+    $this->load->library('tank_auth');
     $uid = $this->session->userdata('user_id');
     $lang = $this->users->get_user_by_id($uid);
     $languages = $this->system->languages();
@@ -193,16 +194,20 @@ class System extends CI_Model {
     }else{
       $lang = '';
     }
-    $lang = $this->change_language($lang);
-    
-    $this->config->set_item('language', strtolower($languages[$lang]));
+    return $this->change_language($lang);
   }
   
   public function change_language($lang){
     $languages = $this->system->languages();
     if(!array_key_exists($lang, $languages)){
-      $lang = 'english';
+      $lang = 'en';
     }
+
+    _setlocale(LC_MESSAGES, $lang);
+    $domain = 'idslot';
+    _bindtextdomain($domain, FCPATH . APPPATH . 'language/locale');
+    _bind_textdomain_codeset($domain, "UTF-8");
+    _textdomain($domain);
     
     $cookie = array('name'=>'lang', 'value'=>$lang, 'expire'=>'86400');
     $this->input->set_cookie($cookie);
@@ -260,12 +265,13 @@ class System extends CI_Model {
   
   public function languages(){
     $languages = array();
+    $locales = $this->config->item('locales');
     $ids_path = dirname($_SERVER['SCRIPT_FILENAME']);
-    $dirs = scandir($ids_path . '/language');
+    $dirs = scandir($ids_path . '/language/locale');
     
     foreach($dirs as $dir){
-      if(is_dir($ids_path . '/language/' . $dir) && strpos($dir, '.') !== 0 && file_exists($ids_path . '/language/' . $dir . '/idslot_lang.php')){
-        $languages[$dir] = $dir;
+      if(is_dir($ids_path . '/language/locale/' . $dir) && strpos($dir, '.') !== 0 && file_exists($ids_path . '/language/locale/' . $dir . '/LC_MESSAGES/idslot.mo') && array_key_exists($dir, $locales)){
+        $languages[$dir] = $locales[$dir];
       }
     }
     
