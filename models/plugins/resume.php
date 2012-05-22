@@ -430,7 +430,7 @@ class resume extends CI_Model {
     $data['contact'] = $this->contact->fetch($uid);
     $data['resume']  = $this->fetch($uid);
     
-    $resume = $this->load->view('user/plugins/resume_pdf.tpl', $data, true);
+    $resume = $this->load->view('user/plugins/resume_pdf', $data, true);
     file_put_contents($this->system->render_path('resume') . '/' . $uid . '.html', $resume);
     $cmd = 'xvfb-run wkhtmltopdf -s A4 -B 0 -L 0 -R 0 -T 0 "' . $this->system->render_path('resume') . '/' . $uid . '.html" "' . $this->system->render_path('resume') . '/' . $uid . '.pdf"';
     exec($cmd);

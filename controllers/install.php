@@ -52,7 +52,7 @@ class Install extends CI_Controller {
     $data['config_config'] = is_writable(APPPATH . "config/config.php");
     $data['database_config'] = is_writable(APPPATH . "config/database.php");
 
-    $this->load->view('user/install.tpl', $data);
+    $this->load->view('user/install', $data);
   }
 
   public function database() {
@@ -116,7 +116,7 @@ class Install extends CI_Controller {
       $this->form_validation->set_error_delimiters('', '<br />');
       $data['errors'][] = validation_errors();
     }
-    $this->load->view('user/install.tpl', $data);
+    $this->load->view('user/install', $data);
   }
 
   public function setup() {
@@ -182,7 +182,7 @@ class Install extends CI_Controller {
       $data['errors'][] = validation_errors();
     }
 
-    $this->load->view('user/install.tpl', $data);
+    $this->load->view('user/install', $data);
   }
 
   private function set_var($file, $var, $val) {

@@ -63,7 +63,7 @@ class Idslot extends CI_Controller {
     $this->system->add_msg(lang('Under Construction'));
     
     $data['page_title'] = lang('Statistics');
-    $this->load->view('user/index.tpl', $data);
+    $this->load->view('user/index', $data);
   }
   
   /**
@@ -148,7 +148,7 @@ class Idslot extends CI_Controller {
     $data['username'] = $user->username;
     $data['language'] = $user->language;
     
-    $this->load->view('user/index.tpl', $data);
+    $this->load->view('user/index', $data);
   }
 
   public function run($plugin, $command, $param=false){

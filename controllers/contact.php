@@ -48,7 +48,7 @@ class Contact extends CI_Controller {
         $msg = str_replace("\n", "\\n", validation_errors());
       }
     }
-    $this->load->view('user/contact.tpl', array('msg' => '"' . $msg . '"'));
+    $this->load->view('user/contact', array('msg' => '"' . $msg . '"'));
   }
   
   public function check_captcha($code) {

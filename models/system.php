@@ -65,7 +65,7 @@ class System extends CI_Model {
       $subdata = $this->html_purifier->purify($plugin_data = $this->$ptitle->fetch($uid));
       if($plugin_data['visible'] == 1){
         $data['plugins'][$pname]['title'] = $plugin_data['title'];
-        $data['plugins'][$pname]['view'] = $this->load->view('templates/' . $data['user']->template . '/plugins/' . $pname . '.tpl', $subdata, true);
+        $data['plugins'][$pname]['view'] = $this->load->view('templates/' . $data['user']->template . '/plugins/' . $pname, $subdata, true);
       }
     }
     
@@ -76,7 +76,7 @@ class System extends CI_Model {
       $data['has_resume'] = false;
     }
     
-    $idslot = $this->load->view('templates/' . $data['user']->template . '/index.tpl', $data, true);
+    $idslot = $this->load->view('templates/' . $data['user']->template . '/index', $data, true);
     write_file("{$ids_path}/views/idslot/index.html", $idslot);
     
     // create symlink to template
@@ -250,7 +250,7 @@ class System extends CI_Model {
     $dirs = scandir($ids_path . '/views/templates');
     
     foreach($dirs as $dir){
-      if(is_dir($ids_path . '/views/templates/' . $dir) && strpos($dir, '.') !== 0 && file_exists($ids_path . '/views/templates/' . $dir . '/index.tpl')){
+      if(is_dir($ids_path . '/views/templates/' . $dir) && strpos($dir, '.') !== 0 && file_exists($ids_path . '/views/templates/' . $dir . '/index.php')){
         $templates[$dir] = $dir;
       }
     }

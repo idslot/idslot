@@ -2,6 +2,7 @@
 $this->load->helper('url');
 $base_url = base_url();
 $this->lang->load('idslot');
+$this->lang->load('install');
 $this->load->helper('language');
 $data = $this->form_validation->_field_data;
 ?>
@@ -9,7 +10,7 @@ $data = $this->form_validation->_field_data;
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title><?php echo lang('Idslot') . ' - ' . lang($page_title); ?></title>
+    <title><?php echo lang('Idslot'); ?></title>
     <link rel="shortcut icon" href="<?php echo $base_url; ?>views/images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="<?php echo $base_url; ?>views/css/screen.css" type="text/css" media="screen, projection" />
     <link type="text/css" href="<?php echo $base_url; ?>views/css/jquery-ui.css" rel="Stylesheet" />	
@@ -19,7 +20,6 @@ $data = $this->form_validation->_field_data;
 
     <script src="<?php echo $base_url; ?>views/js/jquery/jquery-1.6.2.min.js" type="text/javascript"></script>
     <script src="<?php echo $base_url; ?>views/js/jquery/jquery-ui-1.8.10.custom.min.js" type="text/javascript"></script>
-    <script src="<?php echo $base_url; ?>views/js/tiny_mce/tiny_mce.js" type="text/javascript"></script>
     <!--  styled file upload script --> 
     <script src="<?php echo $base_url; ?>views/js/jquery/jquery.filestyle.js" type="text/javascript"></script>
 
@@ -28,69 +28,17 @@ $data = $this->form_validation->_field_data;
     <script type="text/javascript">
       $(document).ready(function(){
         $(document).pngFix( );
+        $('#refresh').click(function() {
+          location.reload();
+        });
       });
+
+
     </script>
 
     <script type="text/javascript" src="<?php echo $base_url; ?>views/js/jquery/custom_jquery.js"></script>
     <script type="text/javascript" src="<?php echo $base_url; ?>views/js/jquery/jquery.qtip-1.0.0-rc3.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.datepicker0').datepicker({
-          dateFormat: '<?php echo lang('Date Format'); ?>',
-          changeMonth: true,
-          changeYear: true,
-          regional: '<?php echo lang('lang'); ?>'
-        });
-        $( ".skill" ).autocomplete({
-          source: "<?php echo site_url('plugins/idslot_resume/suggest_skill/'); ?>",
-          minLength: 2
-        });
-      });
-    </script>
-    <script>
-      $(document).ready(
-      function() {
-        $("#photos").sortable({
-          placeholder: "ui-state-highlight",
-          update : function () {
-            serial = $('#photos').sortable('serialize');
-            $.ajax({
-              url: "<?php echo site_url('plugins/idslot_photos/sort/') . ""; ?>",
-              type: "post",
-              data: serial,
-              error: function(){
-                alert("<?php echo lang('Error in connection'); ?>");
-              }
-            });
-          }
-        });
-        $("#links").sortable({
-          placeholder: "ui-state-highlight",
-          update : function () {
-            serial = $('#links').sortable('serialize');
-            $.ajax({
-              url: "<?php echo site_url('plugins/idslot_links/sort/') . ""; ?>",
-              type: "post",
-              data: serial,
-              error: function(){
-                alert("<?php echo lang('Error in connection'); ?>");
-              }
-            });
-          }
-        });
-      }
-    );
-    tinyMCE.init({
-        mode : "specific_textareas",
-        editor_selector : "editor",
-        theme : "advanced",
-        theme_advanced_toolbar_location : "top",
-        theme_advanced_buttons1 : "bold,italic,separator,sub,sup,separator,bullist,numlist,separator,link,unlink,separator,hr,seperator,charmap,separator,code",
-        theme_advanced_buttons2 : "",
-        theme_advanced_buttons3 : ""
 
-    });
-    </script>
     <?php
     if (lang('direction') == 'rtl') {
       ?>
@@ -119,7 +67,7 @@ $data = $this->form_validation->_field_data;
               <h2 class="logo rightpad"><a href=""></a></h2>
             </div>
             <div class="span-12 last">
-              <div class="reverse-float leftpad toplinks" style="margin-top: 7px;"><a<?php echo ($page_title == 'Settings') ? ' id="current"' : ''; ?> href="<?php echo site_url('idslot/settings'); ?>"><?php echo lang('Settings'); ?></a>&nbsp;&nbsp;&nbsp;<a href="<?php echo site_url('auth/logout'); ?>" id="logout"><?php echo lang('Logout'); ?></a></div>
+
             </div>
           </div>
           <!-- END HEADER -->
@@ -127,18 +75,7 @@ $data = $this->form_validation->_field_data;
           <!-- START NAV MENU -->
           <div class="span-24">
             <div class="span-24">
-              <ul id="navlist">
-                <?php
-                foreach ($plugins as $pname => $ptitle) {
-                  ?>
-                  <li><a<?php echo ($page_title == $ptitle) ? ' id="current"' : ''; ?> href="<?php echo site_url("idslot/edit/" . $pname); ?>"><?php echo lang($ptitle); ?></a></li>
-                  <?php
-                }
-                ?>
-                <li><a<?php echo ($page_title == 'Resume') ? ' id="current"' : ''; ?> href="<?php echo site_url('idslot/resume'); ?>"><?php echo lang('Resume'); ?></a></li>
-                <li><a<?php echo ($page_title == 'Details') ? ' id="current"' : ''; ?> href="<?php echo site_url('idslot/details'); ?>"><?php echo lang('Details'); ?></a></li>
-                <li><a href="<?php echo $base_url; ?>" target="_blank"><?php echo lang('View Card'); ?></a></li>
-              </ul>
+
             </div>
           </div>
           <!-- END NAV MENU -->
@@ -146,16 +83,11 @@ $data = $this->form_validation->_field_data;
       </div>
       <div class="container1">
 
-
         <!-- START CONTENT -->
         <div class="span-17"><div class="rightpad mainbox">
             <div id="page-heading"><h3 class="title"><?php
-                if (in_array($page_title, $plugins)) {
-                  echo lang('Edit') . ' ' . lang($page_title);
-                } else {
-                  echo lang($page_title);
-                }
-                ?></h3><hr></div>
+    echo lang($current_step);
+    ?></h3><hr></div>
 
 
             <?php
@@ -188,29 +120,35 @@ $data = $this->form_validation->_field_data;
 
             <!-- start id-form -->
             <?php
-            $other_plugins = array('Details', 'Settings', 'Feedback', 'Resume', 'Inviter', 'Services');
-            if (in_array($page_title, $plugins) || in_array($page_title, $other_plugins)) {
-              $this->load->view('user/plugins/' . strtolower($page_title) . '_edit.tpl', $plugin);
-            } else {
-              $this->load->view('user/' . strtolower($page_title) . '.tpl');
-            }
+            $this->load->view('user/install/' . strtolower($current_step));
             ?>
             <!-- end id-form  -->
           </div></div>
         <div class="span-7 last">
+
           <div class="span-7 last"><div class="leftpad">
               <div class="block">
-                <div class="block-title"><?php echo lang($page_title); ?></div>
-                <div class="block-content"><?php echo lang($page_title . ' Description'); ?></div>
+                <div class="block-title"><?php echo lang('Install idslot'); ?></div>
+                <div class="block-content"><?php echo lang('How to install idslot'); ?></div>
               </div>
             </div></div>
 
           <div class="span-7 last"><div class="leftpad">
               <div class="block">
-                <div class="block-title"><?php echo lang('Update idslot'); ?></div>
-                <div class="block-content"><?php echo lang('How to update idslot'); ?></div>
-              </div>
+                <div class="block-title"><?php echo lang('Install steps'); ?></div>
+                <div class="block-content">
+                  <ul>
+                    <?php
+                    foreach ($steps as $step) {
+                      ?>
+                      <li><a<?php echo ($current_step == $step) ? ' style="font-weight: bold;"' : ''; ?>><?php echo lang($step); ?></a></li>
+                      <?php
+                    }
+                    ?>
+                  </ul>
+                </div></div>
             </div></div>
+
 
         </div>
         <!-- END CONTENT -->
@@ -229,6 +167,7 @@ $data = $this->form_validation->_field_data;
         </div> 
         <!-- END FOOTER -->
       </div>
+
     </div>
 
   </body>
