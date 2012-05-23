@@ -19,10 +19,10 @@ $this->load->helper('language');
     <title><?php echo $user->title; ?></title>
     <!--styles-->
     
-    <link href="views/idslot/theme/styles/style.css" type="text/css" rel="stylesheet" />
+    <link href="views/idslot/theme/styles/default.css" type="text/css" rel="stylesheet" />
     <?php
     if (lang('direction') == 'rtl')
-      echo '<link href="views/idslot/theme/styles/rtl.css" type="text/css" rel="stylesheet" />';
+      echo '<link href="views/idslot/theme/styles/default-rtl.css" type="text/css" rel="stylesheet" />';
     ?>
     <link href="views/idslot/theme/styles/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" />
     <!--javascript-->

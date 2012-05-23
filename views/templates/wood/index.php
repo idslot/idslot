@@ -19,7 +19,7 @@ $this->load->helper('language');
     <title><?php echo $user->title; ?></title>
     
     <!--styles-->
-    <link href="views/idslot/theme/styles/style.css" type="text/css" rel="stylesheet" />
+    <link href="views/idslot/theme/styles/wood.css" type="text/css" rel="stylesheet" />
     
     <link href="views/idslot/theme/styles/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" />
     <!--javascript-->
