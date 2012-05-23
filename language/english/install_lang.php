@@ -25,6 +25,6 @@ $lang['Database prefix'] = __("Table Prefix");
 $lang['Database prefix description'] = __("You can add an optional prefix, which will be added to the table name");
 $lang['Unable to connect to your database server'] = __("Unable to connect to your database server");
 $lang['setup'] = __("Setup idslot");
-$lang['setup info'] = __("");
+$lang['setup info'] = "";
 $lang['success'] = __("Idslot installed");
 $lang['success info'] = __("Idslot successfully installed.<br /><br />Follow <a href=\"%s\">this link</a> to login on the panel.");

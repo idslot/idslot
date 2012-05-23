@@ -53,11 +53,11 @@ $lang['Details Description'] = __("Here you can change your IDSlot settings.");
 
 // Statistics
 $lang['Statistics'] = __("Statistics");
-$lang['Statistics Description'] = __("");
+$lang['Statistics Description'] = "";
 
 // Links Links
 $lang['Links'] = __("Links");
-$lang['Links Description'] = __("There are numerous links networks. if you are a member of any of the networks or you have another links, Here you can introduce your own page on there.");
+$lang['Links Description'] = __("There are numerous links networks. if you are a member of any of the networks or you have another links, here you can introduce them.");
 $lang['Links Title'] = __("Title");
 $lang['Links Title Description'] = __("Links section Title");
 $lang['Links Description Description'] = __("Descriptions about links section");
@@ -77,7 +77,7 @@ $lang['Link edited.'] = __("Link edited.");
 $lang['Error in add link!'] = __("Error in add link!");
 $lang['Link added.'] = __("Link added.");
 $lang['List of links'] = __("List of links");
-$lang['How to edit links'] = __("To edit or delete your desired link, click on it.");
+$lang['How to edit links'] = __("To edit or delete your desired link, click on it. You can use 'drag and drop' for sorting.");
 
 // Photos
 $lang['Photos'] = __("Portfolio");
@@ -100,12 +100,12 @@ $lang['Error in add photos!'] = __("Error in add portfolio!");
 $lang['Photos added.'] = __("Portfolio added.");
 $lang['Delete image'] = __("Delete portfolio");
 $lang['Delete'] = __("Delete");
-$lang['How to edit'] = __("To edit or delete your desired portfolio, click on it.");
+$lang['How to edit'] = __("To edit or delete your desired portfolio, click on it. You can use 'drag and drop' for sorting.");
 $lang['Photos text description'] = __("Describe portfolio here.");
 
 // Contact
 $lang['Contact'] = __("Contact");
-$lang['Contact Description'] = __("Here you can collect all of your contact information. telephone numbers, location map, links network links and etc.");
+$lang['Contact Description'] = __("Here you can collect all of your contact information. telephone numbers, location map, links and etc.");
 $lang['Contact Title'] = __("Title");
 $lang['Contact Title Description'] = __("Contact section title");
 $lang['Contact Description Description'] = __("Description about Contact section");
@@ -128,7 +128,7 @@ $lang['Contact Address Description'] = __("Enter your location postal address");
 $lang['Contact Postcode'] = __("Postcode");
 $lang['Contact Postcode Description'] = __("Enter your postal code here");
 $lang['Use Form'] = __("Active contact form");
-$lang['Use Form Description'] = __("");
+$lang['Use Form Description'] = "";
 $lang['Description'] = __("Description");
 $lang['Telephone'] = __("Telephone");
 $lang['Fax'] = __("Fax");
@@ -141,7 +141,7 @@ $lang['Postcode'] = __("Postcode");
 $lang['Name'] = __("Name");
 $lang['Message'] = __("Message");
 $lang['Send'] = __("Send");
-$lang['Contact note'] = __("");
+$lang['Contact note'] = "";
 $lang['Your message send.'] = __("Your message send.");
 $lang['New message from your page'] = __("New message from your page");
 
@@ -180,12 +180,12 @@ $lang['Error in editing skill'] = __("Error in editing skill");
 
 // Experiences
 $lang['Experiences'] = __("Experiences");
-$lang['Experience Summary Description'] = __("");
-$lang['Experience Category Description'] = __("");
-$lang['Experience Subcategory Description'] = __("");
-$lang['Experience Description Description'] = __("");
-$lang['Experience Start Description'] = __("");
-$lang['Experience End Description'] = __("");
+$lang['Experience Summary Description'] = "";
+$lang['Experience Category Description'] = "";
+$lang['Experience Subcategory Description'] = "";
+$lang['Experience Description Description'] = "";
+$lang['Experience Start Description'] = "";
+$lang['Experience End Description'] = "";
 $lang['Add experience'] = __("Add experience");
 $lang['Experience added'] = __("Experience added");
 $lang['Error in adding experience'] = __("Error in adding experience");
@@ -196,10 +196,10 @@ $lang['Error in editing experience'] = __("Error in editing experience");
 
 // Educations
 $lang['Educations'] = __("Educations");
-$lang['Education Summary Description'] = __("");
-$lang['Education Description Description'] = __("");
-$lang['Education Start Description'] = __("");
-$lang['Education End Description'] = __("");
+$lang['Education Summary Description'] = "";
+$lang['Education Description Description'] = "";
+$lang['Education Start Description'] = "";
+$lang['Education End Description'] = "";
 $lang['Add education'] = __("Add education");
 $lang['Education added'] = __("Education added");
 $lang['Error in adding education'] = __("Error in adding education");
@@ -210,12 +210,12 @@ $lang['Error in editing education'] = __("Error in editing education");
 
 // Publications
 $lang['Publications'] = __("Publications");
-$lang['Publication Title Description'] = __("");
-$lang['Publication Creators Description'] = __("");
-$lang['Publication Publisher Description'] = __("");
-$lang['Publication Date Description'] = __("");
-$lang['Publication URN Description'] = __("");
-$lang['Publication URN type Description'] = __("");
+$lang['Publication Title Description'] = "";
+$lang['Publication Creators Description'] = "";
+$lang['Publication Publisher Description'] = "";
+$lang['Publication Date Description'] = "";
+$lang['Publication URN Description'] = "";
+$lang['Publication URN type Description'] = "";
 $lang['Add publication'] = __("Add publication");
 $lang['Publication added'] = __("Publication added");
 $lang['Error in adding publication'] = __("Error in adding publication");
@@ -234,7 +234,7 @@ $lang['Settings'] = __("Account settings");
 $lang['Old Password'] = __("Old Password");
 $lang['New Password'] = __("New Password");
 $lang['New Password Confirm'] = __("New Password Confirm");
-$lang['Settings Description'] = __("");
+$lang['Settings Description'] = "";
 $lang['Change Password'] = __("Change Password");
 $lang['Fill email or new password fields'] = __("Fill email or new password fields. You must fill old password field in both situations.");
 $lang['Email Desc'] = __("To change your email address, you must enter old password too. Changing email address needs validation.");
@@ -258,7 +258,7 @@ $lang['Enter the words above'] = __("Enter the words above");
 $lang['Enter the numbers you hear'] = __("Enter the numbers you hear");
 $lang['Enter the code exactly as it appears:'] = __("Enter the code exactly as it appears:");
 $lang['Username'] = __("Username");
-$lang['Username Description'] = __("");
+$lang['Username Description'] = "";
 $lang['Password'] = __("Password");
 $lang['Password Confirm'] = __("Password Confirm");
 $lang['Remember me'] = __("Remember me");
