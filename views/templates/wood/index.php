@@ -19,14 +19,14 @@ $this->load->helper('language');
     <title><?php echo $user->title; ?></title>
     
     <!--styles-->
-    <link href="views/idslot/theme/styles/wood.css" type="text/css" rel="stylesheet" />
+    <link href="<!--theme_url-->styles/wood.css" type="text/css" rel="stylesheet" />
     
-    <link href="views/idslot/theme/styles/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" />
+    <link href="<!--theme_url-->styles/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" />
     <!--javascript-->
-    <script type="text/javascript" src="views/idslot/theme/js/jquery-1.6.2.min.js"></script>
-    <script type="text/javascript" src="views/idslot/theme/js/jquery.fancybox-1.3.4.pack.js"></script>
-    <script type="text/javascript" src="views/idslot/theme/js/jquery.infieldlabel.min.js"></script>
-    <script type="text/javascript" src="views/idslot/theme/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="<!--theme_url-->js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="<!--theme_url-->js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="<!--theme_url-->js/jquery.infieldlabel.min.js"></script>
+    <script type="text/javascript" src="<!--theme_url-->js/jquery.easing.1.3.js"></script>
     <script type="text/javascript">
       var title = "<?php echo $user->title; ?>";
     </script>
@@ -127,6 +127,6 @@ $this->load->helper('language');
     </div>
     <div class="footer">Powered by <a href="http://idslot.org" title="<?php echo lang('Idslot'); ?>"><img src="views/images/footer.png" alt="<?php echo lang('Idslot'); ?>" /></a></div>
 
-    <script src="views/idslot/theme/js/init.js" type="text/javascript"></script>
+    <script src="<!--theme_url-->js/init.js" type="text/javascript"></script>
   </body>
 </html>

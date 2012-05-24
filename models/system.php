@@ -41,6 +41,7 @@ class System extends CI_Model {
   public function render($uid) {
     $this->load->helper('path');
     $this->load->helper('file');
+    $this->load->helper('url');
     $this->load->library('html_purifier');
     $this->load->model('tank_auth/users');
     $this->load->model('plugin');
@@ -68,9 +69,9 @@ class System extends CI_Model {
       $subdata = $this->html_purifier->purify($plugin_data = $this->$ptitle->fetch($uid));
       if ($plugin_data['visible'] == 1) {
         $data['plugins'][$pname]['title'] = $plugin_data['title'];
-        if(file_exists(FCPATH . APPPATH . 'views/templates/' . $data['user']->template . '/plugins/' . $pname . '.php')){
+        if (file_exists(FCPATH . APPPATH . 'views/templates/' . $data['user']->template . '/plugins/' . $pname . '.php')) {
           $data['plugins'][$pname]['view'] = $this->load->view('templates/' . $data['user']->template . '/plugins/' . $pname, $subdata, true);
-        }else{
+        } else {
           $data['plugins'][$pname]['view'] = $this->plugin->view($pname, $pname, $subdata, true);
         }
       }
@@ -82,17 +83,12 @@ class System extends CI_Model {
     } else {
       $data['has_resume'] = false;
     }
-
+    $base_url = base_url();
     $idslot = $this->load->view('templates/' . $data['user']->template . '/index', $data, true);
+    $idslot = str_replace(array("<!--theme_url-->", "<!--base_url-->")
+            , array("{$base_url}views/templates/{$data['user']->template}/theme/", $base_url)
+            , $idslot);
     @write_file("{$ids_path}/views/idslot/index.html", $idslot);
-
-    // create symlink to template
-    if (!@unlink("{$ids_path}/views/idslot/theme")) {
-      @$this->rmdir("{$ids_path}/views/idslot/theme");
-    }
-    if (!@symlink("{$ids_path}/views/templates/{$data['user']->template}/theme/", "{$ids_path}/views/idslot/theme")) {
-      @$this->cpdir("{$ids_path}/views/templates/{$data['user']->template}/theme/", "{$ids_path}/views/idslot/theme", $this->config->item('dir_perm'));
-    }
   }
 
   public function upload_images($uid, $sizes=false, $id=false) {
