@@ -279,8 +279,12 @@ function _gettext($msgid) {
 /**
  * Alias for gettext.
  */
-function __($msgid) {
+function __($msgid, $domain=false) {
+  if($domain){
+    return _dgettext($domain, $msgid);
+  }else{
     return _gettext($msgid);
+  }
 }
 
 /**
