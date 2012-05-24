@@ -108,7 +108,7 @@ class Resume_Model extends CI_Model {
       array(
         'field'   => 'resume[summary]',
         'label'   => lang('Summary'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       )
     );
   }
@@ -193,7 +193,7 @@ class Resume_Model extends CI_Model {
       array(
         'field'   => 'title',
         'label'   => lang('Title'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       ),
     );
   }
@@ -256,27 +256,27 @@ class Resume_Model extends CI_Model {
       array(
         'field'   => 'summary',
         'label'   => lang('Summary'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'description',
         'label'   => lang('Description'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'category',
         'label'   => lang('Category'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'start',
         'label'   => lang('Start'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'end',
         'label'   => lang('End'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       )
     );
   }
@@ -336,32 +336,32 @@ class Resume_Model extends CI_Model {
       array(
         'field'   => 'title',
         'label'   => lang('Title'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'creators',
         'label'   => lang('Creators'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'publisher',
         'label'   => lang('Publisher'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'date',
         'label'   => lang('Date'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'urn',
         'label'   => lang('URN'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'urn_type',
         'label'   => lang('URN type'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       )
     );
   }

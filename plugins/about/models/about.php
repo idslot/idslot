@@ -94,12 +94,12 @@ class About_Model extends CI_Model {
       array(
         'field'   => 'about[title]',
         'label'   => lang('About Title'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'about[content]',
         'label'   => lang('About Content'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|encode_php_tags'
       )
     );
   }

@@ -94,57 +94,57 @@ class Contact_Model extends CI_Model {
       array(
         'field'   => 'contact[title]',
         'label'   => lang('Contact Title'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'contact[description]',
         'label'   => lang('Contact Description'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'contact[email]',
         'label'   => lang('Contact Email'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'contact[tel]',
         'label'   => lang('Contact Telephone'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'contact[fax]',
         'label'   => lang('Contact Fax'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'contact[mob]',
         'label'   => lang('Contact Cellphone'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'contact[website]',
         'label'   => lang('Contact Website'),
-        'rules'   => 'xss_clean|prep_url'
+        'rules'   => 'xss_clean|prep_url|prep_for_form'
       ),
       array(
         'field'   => 'contact[weblog]',
         'label'   => lang('Contact Weblog'),
-        'rules'   => 'xss_clean|prep_url'
+        'rules'   => 'xss_clean|prep_url|prep_for_form'
       ),
       array(
         'field'   => 'contact[map]',
         'label'   => lang('Contact Map'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'contact[address]',
         'label'   => lang('Contact Address'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'contact[postcode]',
         'label'   => lang('Contact Postcode'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       )
     );
   }

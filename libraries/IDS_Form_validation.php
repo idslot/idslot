@@ -26,4 +26,20 @@ class IDS_Form_validation extends CI_Form_validation {
     return parent::__construct($rules);
   }
 
+  public function prep_for_form($data = '') {
+    if (is_array($data)) {
+      foreach ($data as $key => $val) {
+        $data[$key] = $this->prep_for_form($val);
+      }
+
+      return $data;
+    }
+
+    if ($data === '') {
+      return $data;
+    }
+
+    return str_replace(array("'", '"', '<', '>'), array('&#39;', '&quot;', '&lt;', '&gt;'), stripslashes($data));
+  }
+
 }

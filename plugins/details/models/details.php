@@ -91,42 +91,32 @@ class Details_Model extends CI_Model {
       array(
         'field'   => 'details[title]',
         'label'   => lang('Title'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'details[short_description]',
         'label'   => lang('Short Description'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'details[meta_keywords]',
         'label'   => lang('Meta Keywords'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'details[meta_description]',
         'label'   => lang('Meta Description'),
-        'rules'   => 'xss_clean'
-      ),
-      array(
-        'field'   => 'details[local_email]',
-        'label'   => lang('Local Email'),
-        'rules'   => 'alpha_dash|xss_clean'
-      ),
-      array(
-        'field'   => 'details[email_password]',
-        'label'   => lang('Email Password'),
-        'rules'   => 'xss_clean'
+        'rules'   => 'xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'details[template]',
         'label'   => lang('Template'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       ),
       array(
         'field'   => 'details[language]',
         'label'   => lang('Language'),
-        'rules'   => 'required|xss_clean'
+        'rules'   => 'required|xss_clean|prep_for_form'
       ),
     );
   }
