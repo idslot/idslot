@@ -77,7 +77,7 @@
 		}
 		
                 if($use_form){ ?>
-          <form action="<?php echo site_url('contact'); ?>" method="post">
+          <form action="<?php echo site_url('plugins/contact/form'); ?>" method="post">
 			<span class="block"><label for="name"><?php echo lang('Name'); ?></label><input type="text" name="name" id="name" /></span>
 			<span class="block"><label for="email"><?php echo lang('Email'); ?></label><input type="text" name="email" id="email" /></span>
 			<span class="block"><label for="msg"><?php echo lang('Message'); ?></label><textarea name="message" id="msg"></textarea></span>

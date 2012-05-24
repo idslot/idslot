@@ -18,7 +18,7 @@
  * @license	http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * @link	http://idslot.org
  */
-class Contact extends CI_Controller {
+class Contact_Form_Controller extends CI_Controller {
 
   public function __construct() {
     parent::__construct();
@@ -27,6 +27,7 @@ class Contact extends CI_Controller {
     $this->load->database();
     $this->lang->load('tank_auth');
     $this->load->model('system');
+    $this->load->model('plugin');
     $this->system->choose_language();
     $this->lang->load('idslot');
   }
@@ -50,7 +51,8 @@ class Contact extends CI_Controller {
         $msg = str_replace("\n", "\\n", validation_errors());
       }
     }
-    $this->load->view('user/contact', array('msg' => '"' . $msg . '"'));
+
+    $this->plugin->view('contact', 'contact_form', array('msg' => '"' . $msg . '"'));
   }
   
   public function check_captcha($code) {
