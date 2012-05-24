@@ -61,7 +61,7 @@ class System extends CI_Model {
     $this->plugin->model('links');
     $data['linkss'] = $this->links->fetch($uid);
 
-    $data = $this->html_purifier->purify($data);
+    //$data = $this->html_purifier->purify($data);
     $data['plugins'] = array();
     foreach ($plugins as $pname => $ptitle) {
       $this->plugin->model($ptitle);
