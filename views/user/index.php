@@ -1,6 +1,7 @@
 <?php
 $this->load->helper('url');
 $base_url = base_url();
+$this->load->model('plugin');
 $this->lang->load('idslot');
 $this->load->helper('language');
 $data = $this->form_validation->_field_data;
@@ -42,7 +43,7 @@ $data = $this->form_validation->_field_data;
           regional: '<?php echo lang('lang'); ?>'
         });
         $( ".skill" ).autocomplete({
-          source: "<?php echo site_url('plugins/idslot_resume/suggest_skill/'); ?>",
+          source: "<?php echo site_url('plugins/resume/suggest_skill/'); ?>",
           minLength: 2
         });
       });
@@ -55,7 +56,7 @@ $data = $this->form_validation->_field_data;
           update : function () {
             serial = $('#photos').sortable('serialize');
             $.ajax({
-              url: "<?php echo site_url('plugins/idslot_photos/sort/') . ""; ?>",
+              url: "<?php echo site_url('plugins/photos/sort/') . ""; ?>",
               type: "post",
               data: serial,
               error: function(){
@@ -69,7 +70,7 @@ $data = $this->form_validation->_field_data;
           update : function () {
             serial = $('#links').sortable('serialize');
             $.ajax({
-              url: "<?php echo site_url('plugins/idslot_links/sort/') . ""; ?>",
+              url: "<?php echo site_url('plugins/links/sort/') . ""; ?>",
               type: "post",
               data: serial,
               error: function(){
@@ -190,7 +191,7 @@ $data = $this->form_validation->_field_data;
             <?php
             $other_plugins = array('Details', 'Settings', 'Feedback', 'Resume', 'Inviter', 'Services');
             if (in_array($page_title, $plugins) || in_array($page_title, $other_plugins)) {
-              $this->load->view('user/plugins/' . strtolower($page_title) . '_edit', $plugin);
+              $this->plugin->view(strtolower($page_title), strtolower($page_title) . '_edit', $plugin);
             } else {
               $this->load->view('user/' . strtolower($page_title));
             }

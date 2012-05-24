@@ -43,6 +43,7 @@ class System extends CI_Model {
     $this->load->helper('file');
     $this->load->library('html_purifier');
     $this->load->model('tank_auth/users');
+    $this->load->model('plugin');
 
     $data['uid'] = $uid;
     $data['user'] = $this->users->get_user_by_id($uid);
@@ -54,16 +55,16 @@ class System extends CI_Model {
     @file_put_contents("{$ids_path}/views/idslot/files/index.html", "");
     $plugins = $this->config->item('plugins');
 
-    $this->load->model('plugins/photos');
+    $this->plugin->model('photos');
     $data['photoss'] = $this->photos->fetch($uid);
 
-    $this->load->model('plugins/links');
+    $this->plugin->model('links');
     $data['linkss'] = $this->links->fetch($uid);
 
     $data = $this->html_purifier->purify($data);
     $data['plugins'] = array();
     foreach ($plugins as $pname => $ptitle) {
-      $this->load->model("plugins/{$ptitle}");
+      $this->plugin->model($ptitle);
       $subdata = $this->html_purifier->purify($plugin_data = $this->$ptitle->fetch($uid));
       if ($plugin_data['visible'] == 1) {
         $data['plugins'][$pname]['title'] = $plugin_data['title'];

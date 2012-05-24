@@ -38,6 +38,7 @@ class Idslot extends CI_Controller {
     $this->load->library('security');
     $this->load->library('tank_auth');
     $this->load->model('system');
+    $this->load->model('plugin');
     $this->system->choose_language();
     
     if (!$this->tank_auth->is_logged_in()) {
@@ -55,18 +56,6 @@ class Idslot extends CI_Controller {
   }
   
   /**
-   * Stats method
-   **/
-  public function statistics(){
-    $data['plugins'] = $this->config->item('plugins');
-    $this->load->model('system');
-    $this->system->add_msg(lang('Under Construction'));
-    
-    $data['page_title'] = lang('Statistics');
-    $this->load->view('user/index', $data);
-  }
-  
-  /**
    * Settings method
    **/
   public function settings(){
@@ -80,20 +69,8 @@ class Idslot extends CI_Controller {
     $this->edit('details');
   }
   
-  public function feedback(){
-    $this->edit('feedback');
-  }
-  
   public function resume(){
     $this->edit('resume');
-  }
-  
-  public function inviter(){
-    $this->edit('inviter');
-  }
-  
-  public function services(){
-    $this->edit('services');
   }
   
   /**
@@ -114,7 +91,7 @@ class Idslot extends CI_Controller {
     }
     
     $this->load->model('system');
-    $this->load->model('plugins/' . $plugin);
+    $this->plugin->model($plugin);
     $config = $this->$plugin->form_rules();
     $this->form_validation->set_rules($config);
 
@@ -152,7 +129,7 @@ class Idslot extends CI_Controller {
   }
 
   public function run($plugin, $command, $param=false){
-    $this->load->model('plugins/' . $plugin);
+    $this->plugin->model($plugin);
     $this->$plugin->$command($param);
   }
   
@@ -173,7 +150,7 @@ class Idslot extends CI_Controller {
     $username = $this->session->userdata('username');
     $this->load->helper('file');
     $this->load->helper('path');
-    $this->load->model('plugins/' . $plugin);
+    $this->plugin->model($plugin);
     $images = $this->$plugin->image_size();
     $ids_path = dirname($_SERVER['SCRIPT_FILENAME']);
     $ids_path = "{$ids_path}/views/idslot/";

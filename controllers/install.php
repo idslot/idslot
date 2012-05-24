@@ -155,6 +155,7 @@ class Install extends CI_Controller {
     if ($this->form_validation->run()) {     // validation ok
       $this->load->library('tank_auth');
       $this->lang->load('tank_auth');
+      $this->load->model('plugin');
       if (!is_null($udata = $this->tank_auth->create_user(
                       $this->form_validation->set_value('username'), $this->form_validation->set_value('email'), $this->form_validation->set_value('password'), $this->form_validation->set_value('title'), '', 'default', 'en', '', ''))) {    // success
         $this->load->model('system');
@@ -166,7 +167,7 @@ class Install extends CI_Controller {
 
         //Create plugins
         foreach ($plugins as $pname => $pmodel) {
-          $this->load->model('plugins/' . $pmodel);
+          $this->plugin->model($pmodel);
           $this->$pmodel->create($udata['user_id'], false);
         }
         $this->system->render($udata['user_id']);
