@@ -29,7 +29,7 @@ class Plugins extends CI_Controller {
     $segments = $URI->rsegments;
     if (count($segments) < 2) {
       show_error('Unable to load your controller.');
-    } elseif (count($segments) > 2 && file_exists(APPPATH . 'plugins/' . $segments[2] . '/controllers/' . $segments[3] . '.php')){
+    } elseif (count($segments) > 2 && file_exists(APPPATH . 'plugins/' . $segments[2] . '/controllers/' . $segments[2] . '_' . $segments[3] . '.php')){
       $plugin = $segments[2];
       $controller = $plugin . '_' . $segments[3];
       if (isset($segments[4])) {
@@ -50,7 +50,7 @@ class Plugins extends CI_Controller {
     }
     $plugin = strtolower($plugin);
     $controller = strtolower($controller);
-      
+
     if (!file_exists(APPPATH . 'plugins/' . $plugin . '/controllers/' . $controller . '.php')) {
       show_error('Unable to load your controller.');
     }
