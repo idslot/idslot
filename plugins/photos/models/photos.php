@@ -99,12 +99,12 @@ class Photos_Model extends CI_Model {
                    array(
                          'field'   => 'photos[title]',
                          'label'   => lang('Photos Title'),
-                         'rules'   => 'xss_clean|prep_for_form'
+                         'rules'   => 'xss_clean|specialchars'
                       ),
                    array(
                          'field'   => 'photos[description]',
                          'label'   => lang('Photos Content'),
-                         'rules'   => 'xss_clean|prep_for_form'
+                         'rules'   => 'xss_clean|specialchars'
                       )
                 );
   }
@@ -114,12 +114,12 @@ class Photos_Model extends CI_Model {
                    array(
                          'field'   => 'content',
                          'label'   => lang('Content'),
-                         'rules'   => 'required|xss_clean|prep_for_form'
+                         'rules'   => 'required|xss_clean|specialchars'
                       ),
                    array(
                          'field'   => 'photos_file',
                          'label'   => lang('Image'),
-                         'rules'   => 'xss_clean|prep_for_form'
+                         'rules'   => 'xss_clean|specialchars'
                       )
                 );    
   }

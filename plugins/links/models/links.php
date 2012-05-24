@@ -98,12 +98,12 @@ class Links_Model extends CI_Model {
                    array(
                          'field'   => 'links[title]',
                          'label'   => lang('Links Title'),
-                         'rules'   => 'xss_clean|prep_for_form'
+                         'rules'   => 'xss_clean|specialchars'
                       ),
                    array(
                          'field'   => 'links[description]',
                          'label'   => lang('Links Description'),
-                         'rules'   => 'xss_clean|prep_for_form'
+                         'rules'   => 'xss_clean|specialchars'
                       )
                 );
   }
@@ -113,17 +113,17 @@ class Links_Model extends CI_Model {
       array(
         'field'   => 'name', 
         'label'   => lang('Title'), 
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
       array(
         'field'   => 'url', 
         'label'   => lang('Url'), 
-        'rules'   => 'required|xss_clean|prep_url|prep_for_form'
+        'rules'   => 'required|xss_clean|prep_url|specialchars'
       ),
       array(
         'field'   => 'icon', 
         'label'   => 'Icon', 
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       )
     );
   }

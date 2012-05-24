@@ -108,7 +108,7 @@ class Resume_Model extends CI_Model {
       array(
         'field'   => 'resume[summary]',
         'label'   => lang('Summary'),
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       )
     );
   }
@@ -193,7 +193,7 @@ class Resume_Model extends CI_Model {
       array(
         'field'   => 'title',
         'label'   => lang('Title'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
     );
   }
@@ -256,27 +256,27 @@ class Resume_Model extends CI_Model {
       array(
         'field'   => 'summary',
         'label'   => lang('Summary'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
       array(
         'field'   => 'description',
         'label'   => lang('Description'),
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       ),
       array(
         'field'   => 'category',
         'label'   => lang('Category'),
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       ),
       array(
         'field'   => 'start',
         'label'   => lang('Start'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
       array(
         'field'   => 'end',
         'label'   => lang('End'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       )
     );
   }
@@ -336,32 +336,32 @@ class Resume_Model extends CI_Model {
       array(
         'field'   => 'title',
         'label'   => lang('Title'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
       array(
         'field'   => 'creators',
         'label'   => lang('Creators'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
       array(
         'field'   => 'publisher',
         'label'   => lang('Publisher'),
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       ),
       array(
         'field'   => 'date',
         'label'   => lang('Date'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
       array(
         'field'   => 'urn',
         'label'   => lang('URN'),
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       ),
       array(
         'field'   => 'urn_type',
         'label'   => lang('URN type'),
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       )
     );
   }

@@ -91,32 +91,32 @@ class Details_Model extends CI_Model {
       array(
         'field'   => 'details[title]',
         'label'   => lang('Title'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
       array(
         'field'   => 'details[short_description]',
         'label'   => lang('Short Description'),
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       ),
       array(
         'field'   => 'details[meta_keywords]',
         'label'   => lang('Meta Keywords'),
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       ),
       array(
         'field'   => 'details[meta_description]',
         'label'   => lang('Meta Description'),
-        'rules'   => 'xss_clean|prep_for_form'
+        'rules'   => 'xss_clean|specialchars'
       ),
       array(
         'field'   => 'details[template]',
         'label'   => lang('Template'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
       array(
         'field'   => 'details[language]',
         'label'   => lang('Language'),
-        'rules'   => 'required|xss_clean|prep_for_form'
+        'rules'   => 'required|xss_clean|specialchars'
       ),
     );
   }
