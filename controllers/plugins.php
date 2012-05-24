@@ -23,7 +23,7 @@ if (!defined('BASEPATH'))
  */
 class Plugins extends CI_Controller {
 
-  public function __construct() {
+  public function _remap() {
     $RTR = & load_class('Router', 'core');
     $URI = & load_class('URI', 'core');
     $segments = $URI->rsegments;
@@ -75,21 +75,13 @@ class Plugins extends CI_Controller {
           $IDS = new $class();
         }
       } else {
-        show_404($class . '/' . $method);
+        show_404($controller . '/' . $method);
       }
     }
 
     // Call the requested method.
     // Any URI segments present (besides the class/function) will be passed to the method for convenience
     call_user_func_array(array(&$IDS, $method), $request);
-    self::$instance = &$IDS;
-    
-    foreach (is_loaded() as $var => $lclass) {
-      $this->$var = & load_class($lclass);
-    }
-
-    $this->load = & load_class('Loader', 'core');
-    $this->load->initialize();
   }
 
 }
