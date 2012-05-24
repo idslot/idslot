@@ -25,6 +25,13 @@ class Plugin extends CI_Model {
 
   public function __construct() {
     self::$instance = & $this;
+    $plugins = $this->config->item('plugins');
+    foreach ($plugins as $pname => $pmodel){
+      $this->lang($pname);
+    }
+    $this->lang('resume');
+    $this->lang('details');
+    $this->lang('settings');
   }
 
   public static function &get_instance() {
@@ -55,7 +62,7 @@ class Plugin extends CI_Model {
     if (isset($CI->$name)) {
       show_error('The model name you are loading is the name of a resource that is already being used: ' . $name);
     }
-    
+
     $plugin = strtolower($plugin);
     $model = strtolower($model);
 
@@ -65,6 +72,13 @@ class Plugin extends CI_Model {
     $CI->$name = new $model();
     $this->models[] = $name;
     return;
+  }
+
+  public function lang($plugin) {
+    _bindtextdomain($plugin, FCPATH . APPPATH . 'plugins/' . $plugin . '/language/locale');
+    _bind_textdomain_codeset($plugin, "UTF-8");
+    $CI = &get_instance();
+    return $CI->lang->load($plugin, '', false, true, FCPATH . APPPATH . 'plugins/' . $plugin . '/');
   }
 
   public function view($plugin, $view, $vars = array(), $return = FALSE) {

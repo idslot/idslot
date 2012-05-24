@@ -1,0 +1,101 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IDSlot 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-25 02:14+0330\n"
+"PO-Revision-Date: 2012-05-25 02:14+0330\n"
+"Last-Translator: Armin Borumand <armin390@gmail.com>\n"
+"Language-Team: IDSlot development team <info@idslot.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: ../english\n"
+"X-Poedit-SearchPath-0: ../english\n"
+
+#: ../english/links_lang.php:4
+#: ../english/links_lang.php:10
+msgid "Links"
+msgstr ""
+
+#: ../english/links_lang.php:5
+msgid "There are numerous links networks. if you are a member of any of the networks or you have another links, here you can introduce them."
+msgstr ""
+
+#: ../english/links_lang.php:6
+msgid "Title"
+msgstr ""
+
+#: ../english/links_lang.php:7
+msgid "Links section Title"
+msgstr ""
+
+#: ../english/links_lang.php:8
+msgid "Descriptions about links section"
+msgstr ""
+
+#: ../english/links_lang.php:9
+msgid "Add a new link"
+msgstr ""
+
+#: ../english/links_lang.php:11
+msgid "Edit link"
+msgstr ""
+
+#: ../english/links_lang.php:12
+msgid "Link title"
+msgstr ""
+
+#: ../english/links_lang.php:13
+msgid "Link URL"
+msgstr ""
+
+#: ../english/links_lang.php:14
+msgid "Link icons"
+msgstr ""
+
+#: ../english/links_lang.php:15
+msgid "URL"
+msgstr ""
+
+#: ../english/links_lang.php:16
+msgid "Icon"
+msgstr ""
+
+#: ../english/links_lang.php:17
+msgid "Are you sure to delete this link?"
+msgstr ""
+
+#: ../english/links_lang.php:18
+msgid "Error in remove link!"
+msgstr ""
+
+#: ../english/links_lang.php:19
+msgid "Link removed."
+msgstr ""
+
+#: ../english/links_lang.php:20
+msgid "Error in edit link!"
+msgstr ""
+
+#: ../english/links_lang.php:21
+msgid "Link edited."
+msgstr ""
+
+#: ../english/links_lang.php:22
+msgid "Error in add link!"
+msgstr ""
+
+#: ../english/links_lang.php:23
+msgid "Link added."
+msgstr ""
+
+#: ../english/links_lang.php:24
+msgid "List of links"
+msgstr ""
+
+#: ../english/links_lang.php:25
+msgid "To edit or delete your desired link, click on it. You can use 'drag and drop' for sorting."
+msgstr ""
+

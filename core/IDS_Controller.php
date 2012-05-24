@@ -27,6 +27,7 @@ class IDS_Controller extends CI_Controller {
     $this->load->library('tank_auth');
     $this->load->model('system');
     $this->system->choose_language();
+    $this->load->model('plugin');
     $this->lang->load('tank_auth');
     $this->lang->load('idslot');
     $this->load->helper('language');

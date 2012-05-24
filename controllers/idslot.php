@@ -38,8 +38,8 @@ class Idslot extends CI_Controller {
     $this->load->library('security');
     $this->load->library('tank_auth');
     $this->load->model('system');
-    $this->load->model('plugin');
     $this->system->choose_language();
+    $this->load->model('plugin');
     
     if (!$this->tank_auth->is_logged_in()) {
       redirect('auth/login');

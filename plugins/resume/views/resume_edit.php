@@ -8,7 +8,6 @@ $urn_types = array(
 	'ISSN' => 'ISSN'
 );
 $data = $this->form_validation->_field_data;
-$this->lang->load('event_categories');
 ?>
 <form id="mainform" action="" method="post">
 

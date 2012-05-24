@@ -1,0 +1,43 @@
+<?php
+
+// Contact
+$lang['Contact'] = __("Contact", "contact");
+$lang['Contact Description'] = __("Here you can collect all of your contact information. telephone numbers, location map, links and etc.", "contact");
+$lang['Contact Title'] = __("Title", "contact");
+$lang['Contact Title Description'] = __("Contact section title", "contact");
+$lang['Contact Description Description'] = __("Description about Contact section", "contact");
+$lang['Contact Email'] = __("Contact Email", "contact");
+$lang['Contact Email Description'] = __("This address will be shown to anyone<br>Sample: Info@YourName.com", "contact");
+$lang['Contact Telephone'] = __("Telephone", "contact");
+$lang['Contact Telephone Description'] = __("Telephone number", "contact");
+$lang['Contact Fax'] = __("Fax", "contact");
+$lang['Contact Fax Description'] = __("Fax number", "contact");
+$lang['Contact Cellphone'] = __("Cellphone", "contact");
+$lang['Contact Cellphone Description'] = __("Cellphone number", "contact");
+$lang['Contact Website'] = __("Website", "contact");
+$lang['Contact Website Description'] = __("Enter your website address here", "contact");
+$lang['Contact Weblog'] = __("Weblog", "contact");
+$lang['Contact Weblog Description'] = __("Enter your weblog address here", "contact");
+$lang['Contact Map'] = __("Map", "contact");
+$lang['Contact Map Description'] = __("Mark your location on the map", "contact");
+$lang['Contact Address'] = __("Address", "contact");
+$lang['Contact Address Description'] = __("Enter your location postal address", "contact");
+$lang['Contact Postcode'] = __("Postcode", "contact");
+$lang['Contact Postcode Description'] = __("Enter your postal code here", "contact");
+$lang['Use Form'] = __("Active contact form", "contact");
+$lang['Use Form Description'] = "";
+$lang['Description'] = __("Description", "contact");
+$lang['Telephone'] = __("Telephone", "contact");
+$lang['Fax'] = __("Fax", "contact");
+$lang['Cellphone'] = __("Cellphone", "contact");
+$lang['Web Site'] = __("Website", "contact");
+$lang['Weblog'] = __("Weblog", "contact");
+$lang['Map'] = __("Map", "contact");
+$lang['Address'] = __("Address", "contact");
+$lang['Postcode'] = __("Postcode", "contact");
+$lang['Name'] = __("Name", "contact");
+$lang['Message'] = __("Message", "contact");
+$lang['Send'] = __("Send", "contact");
+$lang['Contact note'] = "";
+$lang['Your message send.'] = __("Your message send.", "contact");
+$lang['New message from your page'] = __("New message from your page", "contact");

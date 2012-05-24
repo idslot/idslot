@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IDSlot 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-25 02:12+0330\n"
+"PO-Revision-Date: 2012-05-25 02:13+0330\n"
+"Last-Translator: Armin Borumand <armin390@gmail.com>\n"
+"Language-Team: IDSlot development team <info@idslot.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../english/details_lang.php:4
+msgid "This field defines the title of your IDSlot."
+msgstr ""
+
+#: ../english/details_lang.php:5
+msgid "Some search engines will use the content of the meta elements to index your pages. the meta keywords element defines keywords for your IDSlot."
+msgstr ""
+
+#: ../english/details_lang.php:6
+msgid "Some search engines will use the content of the meta elements to index your pages. this field used to describe the content of your IDSlot."
+msgstr ""
+
+#: ../english/details_lang.php:7
+msgid "Details"
+msgstr ""
+
+#: ../english/details_lang.php:8
+msgid "Meta Keywords"
+msgstr ""
+
+#: ../english/details_lang.php:9
+msgid "Meta Description"
+msgstr ""
+
+#: ../english/details_lang.php:10
+msgid "Short Description"
+msgstr ""
+
+#: ../english/details_lang.php:11
+msgid "Template"
+msgstr ""
+
+#: ../english/details_lang.php:12
+msgid "comma separated"
+msgstr ""
+
+#: ../english/details_lang.php:13
+msgid "Language"
+msgstr ""
+
+#: ../english/details_lang.php:14
+msgid "English"
+msgstr ""
+
+#: ../english/details_lang.php:15
+msgid "Here you can change your IDSlot settings."
+msgstr ""
+

@@ -1,0 +1,1381 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IDSlot 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-25 02:16+0330\n"
+"PO-Revision-Date: 2012-05-25 02:22+0330\n"
+"Last-Translator: Armin Borumand <armin390@gmail.com>\n"
+"Language-Team: IDSlot development team <info@idslot.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../english/resume_lang.php:4
+msgid "Resume"
+msgstr ""
+
+#: ../english/resume_lang.php:5
+msgid "A resume is a document used by individuals to present their background and skillsets. "
+msgstr ""
+
+#: ../english/resume_lang.php:6
+msgid "Summary"
+msgstr ""
+
+#: ../english/resume_lang.php:7
+msgid "Resume summary"
+msgstr ""
+
+#: ../english/resume_lang.php:8
+msgid "Category"
+msgstr ""
+
+#: ../english/resume_lang.php:9
+msgid "Subcategory"
+msgstr ""
+
+#: ../english/resume_lang.php:10
+msgid "Start"
+msgstr ""
+
+#: ../english/resume_lang.php:11
+msgid "End"
+msgstr ""
+
+#: ../english/resume_lang.php:12
+msgid "(Re)Build HTML/PDF"
+msgstr ""
+
+#: ../english/resume_lang.php:13
+msgid "Remove HTML/PDF"
+msgstr ""
+
+#: ../english/resume_lang.php:16
+msgid "Skills"
+msgstr ""
+
+#: ../english/resume_lang.php:17
+msgid "Skill"
+msgstr ""
+
+#: ../english/resume_lang.php:18
+msgid "Add new skill"
+msgstr ""
+
+#: ../english/resume_lang.php:19
+msgid "Skill added"
+msgstr ""
+
+#: ../english/resume_lang.php:20
+msgid "Error in adding skill"
+msgstr ""
+
+#: ../english/resume_lang.php:21
+msgid "Are you sure to delete this skill?"
+msgstr ""
+
+#: ../english/resume_lang.php:22
+msgid "Skill removed"
+msgstr ""
+
+#: ../english/resume_lang.php:23
+msgid "Skill edited"
+msgstr ""
+
+#: ../english/resume_lang.php:24
+msgid "Error in editing skill"
+msgstr ""
+
+#: ../english/resume_lang.php:27
+msgid "Experiences"
+msgstr ""
+
+#: ../english/resume_lang.php:34
+msgid "Add experience"
+msgstr ""
+
+#: ../english/resume_lang.php:35
+msgid "Experience added"
+msgstr ""
+
+#: ../english/resume_lang.php:36
+msgid "Error in adding experience"
+msgstr ""
+
+#: ../english/resume_lang.php:37
+msgid "Are you sure to delete this experience?"
+msgstr ""
+
+#: ../english/resume_lang.php:38
+msgid "Experience removed"
+msgstr ""
+
+#: ../english/resume_lang.php:39
+msgid "Experience edited"
+msgstr ""
+
+#: ../english/resume_lang.php:40
+msgid "Error in editing experience"
+msgstr ""
+
+#: ../english/resume_lang.php:43
+msgid "Educations"
+msgstr ""
+
+#: ../english/resume_lang.php:48
+msgid "Add education"
+msgstr ""
+
+#: ../english/resume_lang.php:49
+msgid "Education added"
+msgstr ""
+
+#: ../english/resume_lang.php:50
+msgid "Error in adding education"
+msgstr ""
+
+#: ../english/resume_lang.php:51
+msgid "Are you sure to delete this education?"
+msgstr ""
+
+#: ../english/resume_lang.php:52
+msgid "Education removed"
+msgstr ""
+
+#: ../english/resume_lang.php:53
+msgid "Education edited"
+msgstr ""
+
+#: ../english/resume_lang.php:54
+msgid "Error in editing education"
+msgstr ""
+
+#: ../english/resume_lang.php:57
+msgid "Publications"
+msgstr ""
+
+#: ../english/resume_lang.php:64
+msgid "Add publication"
+msgstr ""
+
+#: ../english/resume_lang.php:65
+msgid "Publication added"
+msgstr ""
+
+#: ../english/resume_lang.php:66
+msgid "Error in adding publication"
+msgstr ""
+
+#: ../english/resume_lang.php:67
+msgid "Are you sure to delete this publication?"
+msgstr ""
+
+#: ../english/resume_lang.php:68
+msgid "Publication removed"
+msgstr ""
+
+#: ../english/resume_lang.php:69
+msgid "Publication edited"
+msgstr ""
+
+#: ../english/resume_lang.php:70
+msgid "Error in editing publication"
+msgstr ""
+
+#: ../english/resume_lang.php:71
+msgid "Creators"
+msgstr ""
+
+#: ../english/resume_lang.php:72
+msgid "Publisher"
+msgstr ""
+
+#: ../english/resume_lang.php:73
+msgid "Date"
+msgstr ""
+
+#: ../english/resume_lang.php:74
+msgid "URN"
+msgstr ""
+
+#: ../english/resume_lang.php:75
+msgid "URN type"
+msgstr ""
+
+#: ../english/resume_lang.php:78
+msgid "Agriculture"
+msgstr ""
+
+#: ../english/resume_lang.php:79
+msgid "Agricultural Crops"
+msgstr ""
+
+#: ../english/resume_lang.php:80
+msgid "Agricultural Services"
+msgstr ""
+
+#: ../english/resume_lang.php:81
+msgid "Animals"
+msgstr ""
+
+#: ../english/resume_lang.php:82
+msgid "Biotechnology"
+msgstr ""
+
+#: ../english/resume_lang.php:83
+msgid "Farm Equipment"
+msgstr ""
+
+#: ../english/resume_lang.php:84
+msgid "Farms"
+msgstr ""
+
+#: ../english/resume_lang.php:85
+msgid "Forestry & Logging"
+msgstr ""
+
+#: ../english/resume_lang.php:86
+msgid "Forestry & Lumbering"
+msgstr ""
+
+#: ../english/resume_lang.php:87
+msgid "Forestry Services"
+msgstr ""
+
+#: ../english/resume_lang.php:88
+msgid "Hunting Trapping & Game Propagation"
+msgstr ""
+
+#: ../english/resume_lang.php:89
+msgid "Landscaping"
+msgstr ""
+
+#: ../english/resume_lang.php:90
+msgid "Lawn & Garden Services"
+msgstr ""
+
+#: ../english/resume_lang.php:91
+msgid "Livestock"
+msgstr ""
+
+#: ../english/resume_lang.php:92
+msgid "Marketing"
+msgstr ""
+
+#: ../english/resume_lang.php:93
+msgid "Miscellaneous Agriculture"
+msgstr ""
+
+#: ../english/resume_lang.php:94
+msgid "Ornamental Nursery"
+msgstr ""
+
+#: ../english/resume_lang.php:95
+msgid "Business Services"
+msgstr ""
+
+#: ../english/resume_lang.php:96
+msgid "Advertising, Marketing & PR Services"
+msgstr ""
+
+#: ../english/resume_lang.php:97
+msgid "Business & Professional Associations"
+msgstr ""
+
+#: ../english/resume_lang.php:98
+msgid "Business Legal Services"
+msgstr ""
+
+#: ../english/resume_lang.php:99
+msgid "Business Networking"
+msgstr ""
+
+#: ../english/resume_lang.php:100
+msgid "Charitable & Non-Profit Organizations"
+msgstr ""
+
+#: ../english/resume_lang.php:101
+msgid "Communications Services"
+msgstr ""
+
+#: ../english/resume_lang.php:102
+msgid "Computer & Audio Visual Services"
+msgstr ""
+
+#: ../english/resume_lang.php:103
+msgid "Computer Data Base Service"
+msgstr ""
+
+#: ../english/resume_lang.php:104
+msgid "Computer Graphics"
+msgstr ""
+
+#: ../english/resume_lang.php:105
+msgid "Computer Networks"
+msgstr ""
+
+#: ../english/resume_lang.php:106
+msgid "Computer Services"
+msgstr ""
+
+#: ../english/resume_lang.php:107
+msgid "Computer System Design"
+msgstr ""
+
+#: ../english/resume_lang.php:108
+msgid "Consultants & Services"
+msgstr ""
+
+#: ../english/resume_lang.php:109
+msgid "Copying & Duplicating Services"
+msgstr ""
+
+#: ../english/resume_lang.php:110
+msgid "Decorating & Designing Services"
+msgstr ""
+
+#: ../english/resume_lang.php:111
+msgid "Engineer & Architect Services"
+msgstr ""
+
+#: ../english/resume_lang.php:112
+msgid "General Business Services"
+msgstr ""
+
+#: ../english/resume_lang.php:113
+msgid "Graphic Designer & Artist Services"
+msgstr ""
+
+#: ../english/resume_lang.php:114
+msgid "Internet Services"
+msgstr ""
+
+#: ../english/resume_lang.php:115
+msgid "Investigative Services"
+msgstr ""
+
+#: ../english/resume_lang.php:116
+msgid "Management Consultants & Services"
+msgstr ""
+
+#: ../english/resume_lang.php:117
+msgid "Misc Business Services"
+msgstr ""
+
+#: ../english/resume_lang.php:118
+msgid "Packaging, Shipping & Labeling Services"
+msgstr ""
+
+#: ../english/resume_lang.php:119
+msgid "Printing & Publishing Services"
+msgstr ""
+
+#: ../english/resume_lang.php:120
+msgid "Rental & Leasing Business Equipment"
+msgstr ""
+
+#: ../english/resume_lang.php:121
+msgid "Repair Services"
+msgstr ""
+
+#: ../english/resume_lang.php:122
+msgid "Research Services"
+msgstr ""
+
+#: ../english/resume_lang.php:123
+msgid "Security Services"
+msgstr ""
+
+#: ../english/resume_lang.php:124
+msgid "Small Business Services"
+msgstr ""
+
+#: ../english/resume_lang.php:125
+msgid "Staffing & Support Services"
+msgstr ""
+
+#: ../english/resume_lang.php:126
+msgid "Writing Services"
+msgstr ""
+
+#: ../english/resume_lang.php:127
+msgid "Community Services"
+msgstr ""
+
+#: ../english/resume_lang.php:128
+msgid "Arts & Culture"
+msgstr ""
+
+#: ../english/resume_lang.php:129
+msgid "Community & Recreational Facilities"
+msgstr ""
+
+#: ../english/resume_lang.php:130
+msgid "Foundations, Clubs, Associations, Etc."
+msgstr ""
+
+#: ../english/resume_lang.php:131
+msgid "Mentoring"
+msgstr ""
+
+#: ../english/resume_lang.php:132
+msgid "Political & Ideological Organizations"
+msgstr ""
+
+#: ../english/resume_lang.php:133
+msgid "Religious Organizations"
+msgstr ""
+
+#: ../english/resume_lang.php:134
+msgid "Links Services & Welfare"
+msgstr ""
+
+#: ../english/resume_lang.php:135
+msgid "Utilities"
+msgstr ""
+
+#: ../english/resume_lang.php:136
+msgid "Construction"
+msgstr ""
+
+#: ../english/resume_lang.php:137
+msgid "Builders & Contractors 1 Of 2"
+msgstr ""
+
+#: ../english/resume_lang.php:138
+msgid "Builders & Contractors 2 Of 2"
+msgstr ""
+
+#: ../english/resume_lang.php:139
+msgid "Building Supplies & Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:140
+msgid "Construction Services"
+msgstr ""
+
+#: ../english/resume_lang.php:141
+msgid "Education"
+msgstr ""
+
+#: ../english/resume_lang.php:142
+msgid "Additional Educational Opportunities"
+msgstr ""
+
+#: ../english/resume_lang.php:143
+msgid "Administrative Organizations"
+msgstr ""
+
+#: ../english/resume_lang.php:144
+msgid "Administrative Professionals"
+msgstr ""
+
+#: ../english/resume_lang.php:145
+msgid "Colleges & Universities"
+msgstr ""
+
+#: ../english/resume_lang.php:146
+msgid "Education Services"
+msgstr ""
+
+#: ../english/resume_lang.php:147
+msgid "Educational Aids & Electronic Training Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:148
+msgid "Educational Facilities"
+msgstr ""
+
+#: ../english/resume_lang.php:149
+msgid "Elementary Schools"
+msgstr ""
+
+#: ../english/resume_lang.php:150
+msgid "Preschools"
+msgstr ""
+
+#: ../english/resume_lang.php:151
+msgid "Religious Education"
+msgstr ""
+
+#: ../english/resume_lang.php:152
+msgid "Secondary Schools"
+msgstr ""
+
+#: ../english/resume_lang.php:153
+msgid "Finance"
+msgstr ""
+
+#: ../english/resume_lang.php:154
+msgid "Accounting, Auditing & Bookkeeping Services"
+msgstr ""
+
+#: ../english/resume_lang.php:155
+msgid "Financial Institutions"
+msgstr ""
+
+#: ../english/resume_lang.php:156
+msgid "Financial Services"
+msgstr ""
+
+#: ../english/resume_lang.php:157
+msgid "Insurance Carriers"
+msgstr ""
+
+#: ../english/resume_lang.php:158
+msgid "Insurance Services"
+msgstr ""
+
+#: ../english/resume_lang.php:159
+msgid "Investment Services & Advisors"
+msgstr ""
+
+#: ../english/resume_lang.php:160
+msgid "Government"
+msgstr ""
+
+#: ../english/resume_lang.php:161
+msgid "City & County Government"
+msgstr ""
+
+#: ../english/resume_lang.php:162
+msgid "Federal Government"
+msgstr ""
+
+#: ../english/resume_lang.php:163
+msgid "Foreign Government"
+msgstr ""
+
+#: ../english/resume_lang.php:164
+msgid "Misc Government"
+msgstr ""
+
+#: ../english/resume_lang.php:165
+msgid "National Government"
+msgstr ""
+
+#: ../english/resume_lang.php:166
+msgid "Political Organizations"
+msgstr ""
+
+#: ../english/resume_lang.php:167
+msgid "State Government"
+msgstr ""
+
+#: ../english/resume_lang.php:168
+msgid "Tribal Government"
+msgstr ""
+
+#: ../english/resume_lang.php:169
+msgid "Health & Medical"
+msgstr ""
+
+#: ../english/resume_lang.php:170
+msgid "Health And Medical Centers"
+msgstr ""
+
+#: ../english/resume_lang.php:171
+msgid "Health Care Information & Services"
+msgstr ""
+
+#: ../english/resume_lang.php:172
+msgid "Healthcare Consultants"
+msgstr ""
+
+#: ../english/resume_lang.php:173
+msgid "Healthcare Professionals"
+msgstr ""
+
+#: ../english/resume_lang.php:174
+msgid "Medical Equipment & Supplies"
+msgstr ""
+
+#: ../english/resume_lang.php:175
+msgid "Industry"
+msgstr ""
+
+#: ../english/resume_lang.php:176
+msgid "Aerospace Industry"
+msgstr ""
+
+#: ../english/resume_lang.php:177
+msgid "Aviation & Aerospace Equipment & Supplies"
+msgstr ""
+
+#: ../english/resume_lang.php:178
+msgid "Business Wholesale"
+msgstr ""
+
+#: ../english/resume_lang.php:179
+msgid "Electrical Goods"
+msgstr ""
+
+#: ../english/resume_lang.php:180
+msgid "Environmental Products"
+msgstr ""
+
+#: ../english/resume_lang.php:181
+msgid "Exporters"
+msgstr ""
+
+#: ../english/resume_lang.php:182
+msgid "Farm Products Raw Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:183
+msgid "Fuel"
+msgstr ""
+
+#: ../english/resume_lang.php:184
+msgid "Hauling And Shipping"
+msgstr ""
+
+#: ../english/resume_lang.php:185
+msgid "Health & Safety Industrial"
+msgstr ""
+
+#: ../english/resume_lang.php:186
+msgid "Importers"
+msgstr ""
+
+#: ../english/resume_lang.php:187
+msgid "Industrial Contractors"
+msgstr ""
+
+#: ../english/resume_lang.php:188
+msgid "Industrial Goods & Products - Hard Goods - Large"
+msgstr ""
+
+#: ../english/resume_lang.php:189
+msgid "Industrial Goods & Products - Hard Goods - Small"
+msgstr ""
+
+#: ../english/resume_lang.php:190
+msgid "Industrial Goods & Products - Soft - Large & Small"
+msgstr ""
+
+#: ../english/resume_lang.php:191
+msgid "Industrial Machinery & Equipment"
+msgstr ""
+
+#: ../english/resume_lang.php:192
+msgid "Industrial Machinery Equipment & Supplies Rental & Leasing"
+msgstr ""
+
+#: ../english/resume_lang.php:193
+msgid "Machinery, Equipment & Supplies - Business Production Related"
+msgstr ""
+
+#: ../english/resume_lang.php:194
+msgid "Machinery, Equipment & Supplies - Business Supplies Related"
+msgstr ""
+
+#: ../english/resume_lang.php:195
+msgid "Machinery, Equipment & Supplies - Construction/Contractor Related"
+msgstr ""
+
+#: ../english/resume_lang.php:196
+msgid "Marine Products And Services"
+msgstr ""
+
+#: ../english/resume_lang.php:197
+msgid "Metal Products"
+msgstr ""
+
+#: ../english/resume_lang.php:198
+msgid "Mining"
+msgstr ""
+
+#: ../english/resume_lang.php:199
+msgid "Miscellaneous Industry"
+msgstr ""
+
+#: ../english/resume_lang.php:200
+msgid "Refuse Systems"
+msgstr ""
+
+#: ../english/resume_lang.php:201
+msgid "Scientific Equipment & Services"
+msgstr ""
+
+#: ../english/resume_lang.php:202
+msgid "Scrap & Waste Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:203
+msgid "Storage And Warehousing"
+msgstr ""
+
+#: ../english/resume_lang.php:204
+msgid "Transportation Equipment"
+msgstr ""
+
+#: ../english/resume_lang.php:205
+msgid "Manufacturing"
+msgstr ""
+
+#: ../english/resume_lang.php:206
+msgid "Apparel Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:207
+msgid "Audio & Visual Equipment Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:208
+msgid "Bottling Manufacturing"
+msgstr ""
+
+#: ../english/resume_lang.php:209
+msgid "Building & Homes Manufactures"
+msgstr ""
+
+#: ../english/resume_lang.php:210
+msgid "Building Hardware & Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:211
+msgid "Chemical Product Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:212
+msgid "Computer Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:213
+msgid "Electronics Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:214
+msgid "Finished Textiles Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:215
+msgid "Fitness & Beauty"
+msgstr ""
+
+#: ../english/resume_lang.php:216
+msgid "Food Product Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:217
+msgid "Furniture Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:218
+msgid "Instrument Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:219
+msgid "Lawn & Yard"
+msgstr ""
+
+#: ../english/resume_lang.php:220
+msgid "Leather Goods"
+msgstr ""
+
+#: ../english/resume_lang.php:221
+msgid "Machinery And Equipment Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:222
+msgid "Manufacturing Products"
+msgstr ""
+
+#: ../english/resume_lang.php:223
+msgid "Medical Equipment Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:224
+msgid "Miscellaneous Manufacturing"
+msgstr ""
+
+#: ../english/resume_lang.php:225
+msgid "Musical Instrument Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:226
+msgid "Oil And Petroleum Products"
+msgstr ""
+
+#: ../english/resume_lang.php:227
+msgid "Paper & Cardboard Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:228
+msgid "Plastic Products Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:229
+msgid "Publishing & Printing Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:230
+msgid "Recreational Good Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:231
+msgid "Rubber Products - Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:232
+msgid "Sporting Goods Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:233
+msgid "Stone And Glass Products"
+msgstr ""
+
+#: ../english/resume_lang.php:234
+msgid "Tobacco Products"
+msgstr ""
+
+#: ../english/resume_lang.php:235
+msgid "Transportation Equipment Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:236
+msgid "Waste Treatment Plants Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:237
+msgid "Wood Products Manufacturers"
+msgstr ""
+
+#: ../english/resume_lang.php:238
+msgid "Motorized Vehicle"
+msgstr ""
+
+#: ../english/resume_lang.php:239
+msgid "All-Terrain & Recreational Vehicle Dealers"
+msgstr ""
+
+#: ../english/resume_lang.php:240
+msgid "Auto Maintenance & Repair Services"
+msgstr ""
+
+#: ../english/resume_lang.php:241
+msgid "Auto Services"
+msgstr ""
+
+#: ../english/resume_lang.php:242
+msgid "Automotive Parts, Equipment & Supplies"
+msgstr ""
+
+#: ../english/resume_lang.php:243
+msgid "Aviation & Avionics Sales"
+msgstr ""
+
+#: ../english/resume_lang.php:244
+msgid "Heavy & Industrial Vehicle Dealers"
+msgstr ""
+
+#: ../english/resume_lang.php:245
+msgid "Heavy & Industrial Vehicle Parts & Accessories"
+msgstr ""
+
+#: ../english/resume_lang.php:246
+msgid "Motorized Vehicle Rental & Leasing"
+msgstr ""
+
+#: ../english/resume_lang.php:247
+msgid "Passenger Vehicle Dealers"
+msgstr ""
+
+#: ../english/resume_lang.php:248
+msgid "Personal Watercraft Dealers"
+msgstr ""
+
+#: ../english/resume_lang.php:249
+msgid "Work, Utility & Commercial Vehicle Dealers"
+msgstr ""
+
+#: ../english/resume_lang.php:250
+msgid "Personal Services"
+msgstr ""
+
+#: ../english/resume_lang.php:251
+msgid "Art"
+msgstr ""
+
+#: ../english/resume_lang.php:252
+msgid "Cleaning & Maintenance Services"
+msgstr ""
+
+#: ../english/resume_lang.php:253
+msgid "Employment Assistance"
+msgstr ""
+
+#: ../english/resume_lang.php:254
+msgid "Entertainment Services"
+msgstr ""
+
+#: ../english/resume_lang.php:255
+msgid "Family Services & Care"
+msgstr ""
+
+#: ../english/resume_lang.php:256
+msgid "Fitness"
+msgstr ""
+
+#: ../english/resume_lang.php:257
+msgid "Garment & Linen Services"
+msgstr ""
+
+#: ../english/resume_lang.php:258
+msgid "Household Services"
+msgstr ""
+
+#: ../english/resume_lang.php:259
+msgid "Misc Personal Services"
+msgstr ""
+
+#: ../english/resume_lang.php:260
+msgid "Party & Event Planning"
+msgstr ""
+
+#: ../english/resume_lang.php:261
+msgid "Personal Care"
+msgstr ""
+
+#: ../english/resume_lang.php:262
+msgid "Personal Document & Information Services"
+msgstr ""
+
+#: ../english/resume_lang.php:263
+msgid "Personal Financial Services"
+msgstr ""
+
+#: ../english/resume_lang.php:264
+msgid "Personal Legal Services"
+msgstr ""
+
+#: ../english/resume_lang.php:265
+msgid "Professional"
+msgstr ""
+
+#: ../english/resume_lang.php:266
+msgid "Law Enforcement Professional"
+msgstr ""
+
+#: ../english/resume_lang.php:267
+msgid "Legal Professionals"
+msgstr ""
+
+#: ../english/resume_lang.php:268
+msgid "Miscellaneous Professional"
+msgstr ""
+
+#: ../english/resume_lang.php:269
+msgid "Photography"
+msgstr ""
+
+#: ../english/resume_lang.php:270
+msgid "Professionals Equipment & Supplies"
+msgstr ""
+
+#: ../english/resume_lang.php:271
+msgid "Public Administration"
+msgstr ""
+
+#: ../english/resume_lang.php:272
+msgid "Religious Practitioners"
+msgstr ""
+
+#: ../english/resume_lang.php:273
+msgid "Science & Research"
+msgstr ""
+
+#: ../english/resume_lang.php:274
+msgid "Video, Television And Movies"
+msgstr ""
+
+#: ../english/resume_lang.php:275
+msgid "Real Estate"
+msgstr ""
+
+#: ../english/resume_lang.php:276
+msgid "Commercial & Industrial"
+msgstr ""
+
+#: ../english/resume_lang.php:277
+msgid "Real Estate Services"
+msgstr ""
+
+#: ../english/resume_lang.php:278
+msgid "Residential"
+msgstr ""
+
+#: ../english/resume_lang.php:279
+msgid "Restaurants/Food & Dining"
+msgstr ""
+
+#: ../english/resume_lang.php:280
+msgid "African Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:281
+msgid "Asian Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:282
+msgid "Bakeries"
+msgstr ""
+
+#: ../english/resume_lang.php:283
+msgid "Breakfast Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:284
+msgid "Casual Dining Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:285
+msgid "Central American Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:286
+msgid "Drinking Establishments"
+msgstr ""
+
+#: ../english/resume_lang.php:287
+msgid "Ethnic Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:288
+msgid "European Cuisine"
+msgstr ""
+
+#: ../english/resume_lang.php:289
+msgid "Fine Dining Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:290
+msgid "Fish & Seafood Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:291
+msgid "Food Services"
+msgstr ""
+
+#: ../english/resume_lang.php:292
+msgid "Middle Eastern Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:293
+msgid "North American Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:294
+msgid "Restaurant Information & Referral Service"
+msgstr ""
+
+#: ../english/resume_lang.php:295
+msgid "Snacks & Desserts"
+msgstr ""
+
+#: ../english/resume_lang.php:296
+msgid "South American Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:297
+msgid "Theme & Entertainment Restaurants"
+msgstr ""
+
+#: ../english/resume_lang.php:298
+msgid "Shopping & Shopping Services"
+msgstr ""
+
+#: ../english/resume_lang.php:299
+msgid "Air Conditioning & Heating Equipment & Supplies"
+msgstr ""
+
+#: ../english/resume_lang.php:300
+msgid "Air Purification Systems"
+msgstr ""
+
+#: ../english/resume_lang.php:301
+msgid "Appliances Household & Commercial"
+msgstr ""
+
+#: ../english/resume_lang.php:302
+msgid "Arts & Crafts"
+msgstr ""
+
+#: ../english/resume_lang.php:303
+msgid "Building Restoration Equipment"
+msgstr ""
+
+#: ../english/resume_lang.php:304
+msgid "Cards Stationery & Giftwrap"
+msgstr ""
+
+#: ../english/resume_lang.php:305
+msgid "Catalog, Mail-Order, & Electronic Shopping"
+msgstr ""
+
+#: ../english/resume_lang.php:306
+msgid "Chemicals & Related Products"
+msgstr ""
+
+#: ../english/resume_lang.php:307
+msgid "Commercial Equipment"
+msgstr ""
+
+#: ../english/resume_lang.php:308
+msgid "Computers Electronics"
+msgstr ""
+
+#: ../english/resume_lang.php:309
+msgid "Direct Selling Businesses"
+msgstr ""
+
+#: ../english/resume_lang.php:310
+msgid "Drains, Pipes & Sewage Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:311
+msgid "Durable & Non Durable Goods & Products"
+msgstr ""
+
+#: ../english/resume_lang.php:312
+msgid "Electric Equipment & Supplies"
+msgstr ""
+
+#: ../english/resume_lang.php:313
+msgid "Electronics"
+msgstr ""
+
+#: ../english/resume_lang.php:314
+msgid "Entertainment & Recreation"
+msgstr ""
+
+#: ../english/resume_lang.php:315
+msgid "Fencing & Gate Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:316
+msgid "Flooring Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:317
+msgid "Flowers & Plants"
+msgstr ""
+
+#: ../english/resume_lang.php:318
+msgid "Food & Beverage Stores & Services"
+msgstr ""
+
+#: ../english/resume_lang.php:319
+msgid "Food & Beverages Wholesale & Retail"
+msgstr ""
+
+#: ../english/resume_lang.php:320
+msgid "Fuel Dealers"
+msgstr ""
+
+#: ../english/resume_lang.php:321
+msgid "Games & Hobbies"
+msgstr ""
+
+#: ../english/resume_lang.php:322
+msgid "Garage, Door & Window Products"
+msgstr ""
+
+#: ../english/resume_lang.php:323
+msgid "General Merchandise Stores"
+msgstr ""
+
+#: ../english/resume_lang.php:324
+msgid "Glass & Glass Products"
+msgstr ""
+
+#: ../english/resume_lang.php:325
+msgid "Hardware Stores"
+msgstr ""
+
+#: ../english/resume_lang.php:326
+msgid "Home Improvement Centers"
+msgstr ""
+
+#: ../english/resume_lang.php:327
+msgid "Insulation & Energy Conservation Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:328
+msgid "Kitchen & Bath Products & Supplies"
+msgstr ""
+
+#: ../english/resume_lang.php:329
+msgid "Lacquers Stains & Wood Finishes"
+msgstr ""
+
+#: ../english/resume_lang.php:330
+msgid "Lumber & Lumber Products"
+msgstr ""
+
+#: ../english/resume_lang.php:331
+msgid "Masonry Materials & Supplies"
+msgstr ""
+
+#: ../english/resume_lang.php:332
+msgid "Merchandise Sales Events"
+msgstr ""
+
+#: ../english/resume_lang.php:333
+msgid "Moldings Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:334
+msgid "Music"
+msgstr ""
+
+#: ../english/resume_lang.php:335
+msgid "Nurseries & Garden Centers"
+msgstr ""
+
+#: ../english/resume_lang.php:336
+msgid "Other Building Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:337
+msgid "Outdoor Equipment & Accessories"
+msgstr ""
+
+#: ../english/resume_lang.php:338
+msgid "Paint & Painting Supplies"
+msgstr ""
+
+#: ../english/resume_lang.php:339
+msgid "Paneling Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:340
+msgid "Paper & Paper Products"
+msgstr ""
+
+#: ../english/resume_lang.php:341
+msgid "Pets"
+msgstr ""
+
+#: ../english/resume_lang.php:342
+msgid "Plastering Stucco Caulking & Grouting Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:343
+msgid "Prefabricated Buildings"
+msgstr ""
+
+#: ../english/resume_lang.php:344
+msgid "Product Rental & Leasing"
+msgstr ""
+
+#: ../english/resume_lang.php:345
+msgid "Product Repair Services"
+msgstr ""
+
+#: ../english/resume_lang.php:346
+msgid "Roofing Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:347
+msgid "Siding Materials"
+msgstr ""
+
+#: ../english/resume_lang.php:348
+msgid "Solar Products & Services"
+msgstr ""
+
+#: ../english/resume_lang.php:349
+msgid "Specialty Stores"
+msgstr ""
+
+#: ../english/resume_lang.php:350
+msgid "Steel Products"
+msgstr ""
+
+#: ../english/resume_lang.php:351
+msgid "Telecommunications"
+msgstr ""
+
+#: ../english/resume_lang.php:352
+msgid "Wallpaper & Wallcoverings"
+msgstr ""
+
+#: ../english/resume_lang.php:353
+msgid "Transportation"
+msgstr ""
+
+#: ../english/resume_lang.php:354
+msgid "Air Transportation, Except Passenger"
+msgstr ""
+
+#: ../english/resume_lang.php:355
+msgid "Ground Transportation, Except Passenger"
+msgstr ""
+
+#: ../english/resume_lang.php:356
+msgid "Passenger Air Transportation"
+msgstr ""
+
+#: ../english/resume_lang.php:357
+msgid "Passenger Ground Transportation"
+msgstr ""
+
+#: ../english/resume_lang.php:358
+msgid "Passenger Water Transportation"
+msgstr ""
+
+#: ../english/resume_lang.php:359
+msgid "Transportation Equipment And Supplies (Except Motor Vehicle)"
+msgstr ""
+
+#: ../english/resume_lang.php:360
+msgid "Transportation Facilities & Services"
+msgstr ""
+
+#: ../english/resume_lang.php:361
+msgid "Transportation Inspection Services"
+msgstr ""
+
+#: ../english/resume_lang.php:362
+msgid "Transportation Rental & Leasing"
+msgstr ""
+
+#: ../english/resume_lang.php:363
+msgid "Transportation Repair & Maintenance"
+msgstr ""
+
+#: ../english/resume_lang.php:364
+msgid "Water Transportation, Except Passenger"
+msgstr ""
+
+#: ../english/resume_lang.php:365
+msgid "Travel & Tourism"
+msgstr ""
+
+#: ../english/resume_lang.php:366
+msgid "Historical Places & Services"
+msgstr ""
+
+#: ../english/resume_lang.php:367
+msgid "Lodging"
+msgstr ""
+
+#: ../english/resume_lang.php:368
+msgid "Recreational Services"
+msgstr ""
+
+#: ../english/resume_lang.php:369
+msgid "Tourist Attractions"
+msgstr ""
+
+#: ../english/resume_lang.php:370
+msgid "Travel Arrangement & Services"
+msgstr ""
+
+#: ../english/resume_lang.php:371
+msgid "Unknown"
+msgstr ""
+
