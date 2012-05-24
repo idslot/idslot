@@ -56,7 +56,7 @@ ul.links li a, ul.links li a:visited{text-decoration:none;}
 .clear-both{clear:both;}
 div.infoTitle{display:inline; margin-right:10px; font-size:12px; font-weight:700;}
 
-input, textarea {background-color:#999999;border:1px solid #231f1f; margin-bottom:5px;}
+input, textarea {background-color:#2C2828;border:1px solid #130f0f; margin-bottom:5px;}
 input[type=text], textarea {width:250px; font-size:11px; padding:4px;}
 input[type=submit] {font-size:12px; height:24px;}
 textarea {height:70px;}
