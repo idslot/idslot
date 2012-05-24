@@ -68,7 +68,11 @@ class System extends CI_Model {
       $subdata = $this->html_purifier->purify($plugin_data = $this->$ptitle->fetch($uid));
       if ($plugin_data['visible'] == 1) {
         $data['plugins'][$pname]['title'] = $plugin_data['title'];
-        $data['plugins'][$pname]['view'] = $this->load->view('templates/' . $data['user']->template . '/plugins/' . $pname, $subdata, true);
+        if(file_exists(FCPATH . APPPATH . 'views/templates/' . $data['user']->template . '/plugins/' . $pname . '.php')){
+          $data['plugins'][$pname]['view'] = $this->load->view('templates/' . $data['user']->template . '/plugins/' . $pname, $subdata, true);
+        }else{
+          $data['plugins'][$pname]['view'] = $this->plugin->view($pname, $pname, $subdata, true);
+        }
       }
     }
 
