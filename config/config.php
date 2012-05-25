@@ -390,6 +390,9 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+// Version
+$config['version'] = '1.0';
+
 // Plugins
 $config['plugins'] = array('about'=>'About', 'photos'=>'Photos', 'links'=>'Links', 'contact'=>'Contact');
 
