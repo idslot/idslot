@@ -58,7 +58,8 @@ class Install extends CI_Controller {
   public function database() {
     $data['steps'] = $this->steps;
     $data['current_step'] = 'database';
-
+    $version = $this->config->item('version');
+            
     $config = array(
         array(
             'field' => 'db_host',
@@ -102,7 +103,7 @@ class Install extends CI_Controller {
       if (@mysql_select_db($this->input->post('db_name'), $link)) {
 
         mysql_query('ALTER DATABASE `' . $this->input->post('db_name') . '` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci', $link);
-        $this->import_sql('sql/idslot_mysql.sql', $link, $this->input->post('db_prefix'));
+        $this->import_sql('etc/idslot_mysql_' . $version . '.sql', $link, $this->input->post('db_prefix'));
         @mysql_close();
         $this->set_var('config/database.php', $vars, $vals);
         $this->set_var('config/config.php', "\$config['encryption_key']", $encryption_key = random_string('alnum', 10));
