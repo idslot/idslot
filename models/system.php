@@ -300,7 +300,7 @@ class System extends CI_Model {
     closedir($dir);
   }
 
-  function rmdir($dirname) {
+  public function rmdir($dirname) {
     if (is_dir($dirname)) {
       $dir_handle = opendir($dirname);
     }
@@ -319,5 +319,30 @@ class System extends CI_Model {
     @rmdir($dirname);
     return true;
   }
+  
+  public function check_remote_update(){
+    $current_version = $this->config->item('version');
+    if($this->session->userdata('remote_version')){
+      $remote_version = $this->session->userdata('remote_version');
+    }else{
+      $remote_version = str_replace(array('\'', '"', '&', '\\', '<', '>'), '', trim(@file_get_contents("http://repository.idslot.org/stable/version.txt")));
+      $data['remote_version'] = $remote_version;
+      $this->session->set_userdata($data);
+    }
+    if (version_compare(trim($remote_version), $current_version, '<=')) {
+      return false;
+    }else{
+      return trim($remote_version);
+    }
+  }
 
+  public function check_local_update(){
+    $current_version = $this->config->item('version');
+    $versions = file(APPPATH . 'etc/VERSIONS');
+    if (version_compare(trim($versions[0]), $current_version, '<=')) {
+      return false;
+    }else{
+      return trim($versions[0]);
+    }
+  }
 }

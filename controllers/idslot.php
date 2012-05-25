@@ -124,7 +124,7 @@ class Idslot extends CI_Controller {
     
     $data['username'] = $user->username;
     $data['language'] = $user->language;
-    
+    $data['new_update'] = $this->system->check_local_update() || $this->system->check_remote_update();
     $this->load->view('user/index', $data);
   }
 
