@@ -137,17 +137,14 @@ class System extends CI_Model {
           if ($size[2]) {
             $crop_config = $config;
             $crop_config['maintain_ratio'] = false;
+            $crop_config['master_dim'] = 'auto';
             $img_size = getimagesize($crop_config['source_image']);
             $xratio = $img_size[0] / $size[0];
             $yratio = $img_size[1] / $size[1];
             if ($xratio > $yratio) {
-              $crop_config['x_axis'] = $img_size[0] - $size[0] * $yratio;
-              $crop_config['y_axis'] = 0;
               $crop_config['width'] = $size[0] * $yratio;
               $crop_config['height'] = $img_size[1];
             } else {
-              $crop_config['x_axis'] = 0;
-              $crop_config['y_axis'] = $img_size[1] - $size[1] * $xratio;
               $crop_config['width'] = $img_size[0];
               $crop_config['height'] = $size[1] * $xratio;
             }
