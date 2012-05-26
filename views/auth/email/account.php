@@ -13,8 +13,3 @@ Email: <?php echo $val->email."\n";?>
 Password: <?php echo $val->password."\n";?>
 
 You can try logging in now by going to <?php echo site_url($this->config->item('CL_login_uri')); ?>.
-
-We hope that you enjoy your stay with us :)
-
-Regards,
-The <?php echo $this->config->item('CL_website_name');?> Team

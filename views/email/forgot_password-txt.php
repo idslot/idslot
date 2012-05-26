@@ -7,7 +7,3 @@ To create a new password, just follow this link:
 
 
 You received this email, because it was requested by a <?php echo $site_name; ?> user. This is part of the procedure to create a new password on the system. If you DID NOT request a new password then please ignore this email and your password will remain the same.
-
-
-Thank you,
-The <?php echo $site_name; ?> Team

@@ -8,6 +8,3 @@ If the link doesn't work, then please use the form provided here:
 
 Your New Password: <?=$password;?>
 Key for Activation: <?=$key;?>
-
-
-Regards.

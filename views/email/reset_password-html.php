@@ -15,9 +15,6 @@ Please, keep it in your records so you don't forget it.<br />
 Your email address: <?php echo $email; ?><br />
 <?php /* Your new password: <?php echo $new_password; ?><br /> */ ?>
 <br />
-<br />
-Thank you,<br />
-The <?php echo $site_name; ?> Team
 </td>
 </tr>
 </table>

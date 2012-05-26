@@ -22,9 +22,6 @@ Your email address: <?php echo $new_email; ?><br />
 <br />
 You received this email, because it was requested by a <a href="<?php echo site_url(''); ?>" style="color: #3366cc;"><?php echo $site_name; ?></a> user. If you have received this by mistake, please DO NOT click the confirmation link, and simply delete this email. After a short time, the request will be removed from the system.<br />
 <br />
-<br />
-Thank you,<br />
-The <?php echo $site_name; ?> Team
 </td>
 </tr>
 </table>
