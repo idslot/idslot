@@ -38,4 +38,16 @@ class IDS_Form_validation extends CI_Form_validation {
     return str_replace(array("'", '"', '<', '>'), array('&#39;', '&quot;', '&lt;', '&gt;'), stripslashes($data));
   }
 
+  public function alpha($str) {
+    return (bool) preg_match('/^([a-z]+)?$/i', $str);
+  }
+
+  public function alpha_numeric($str) {
+    return (bool) preg_match('/^([a-z0-9]+)?$/i', $str);
+  }
+
+  public function alpha_dash($str) {
+    return (bool) preg_match('/^([a-z0-9_-]+)?$/i', $str);
+  }
+
 }
