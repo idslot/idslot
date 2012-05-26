@@ -84,7 +84,7 @@ $this->load->helper('language');
         <!-- START CONTENT -->
         <div class="span-17"><div class="rightpad mainbox">
             <div id="page-heading"><h3 class="title"><?php
-    echo __("Update Idslot");
+    echo lang('Upgrade');
     ?></h3><hr></div>
 
 
@@ -118,34 +118,34 @@ $this->load->helper('language');
 
             <!-- start id-form -->
             <?php
-            $update_button = '';
-            $update_desc = __("You are using the last version.");
-            echo __("Current version") . ": $current_version<br />";
+            $upgrade_button = '';
+            $upgrade_desc = lang('Latest version');
+            echo lang('Current version') . ": $current_version<br />";
             if ($local_version) {
-              echo __("Local version") . ": $local_version<br />";
+              echo lang('Local version') . ": $local_version<br />";
             } elseif ($remote_version) {
-              echo __("Remote version") . ": $remote_version<br />";
+              echo lang('Remote version') . ": $remote_version<br />";
             }
             if (!$config) {
               if($local_version || $remote_version){
-                $update_desc = "config/config.php " . __("must be writable.");
+                $upgrade_desc = "config/config.php " . lang('must be writable for upgrade');
               }
             } else {
               if ($local_version) {
-                $update_button = '<a class="button form-submit" href="' . site_url('update/local') . '">' . __("Update") . '</a>';
-                $update_desc = __("Complete local update");
-              } elseif ($remote_version && $auto_update) {
-                $update_button = '<a class="button form-submit" href="' . site_url('update/remote') . '">' . __("Update") . '</a>';
-                $update_desc = __("Automatic update");
+                $upgrade_button = '<a class="button form-submit" href="' . site_url('upgrade/local') . '">' . lang('Complete upgrade') . '</a>';
+                $upgrade_desc = lang('Complete local upgrade');
+              } elseif ($remote_version && $auto_upgrade) {
+                $upgrade_button = '<a class="button form-submit" href="' . site_url('upgrade/remote') . '">' . lang('Upgrade Automatically') . '</a>';
+                $upgrade_desc = lang('Automatic upgrade');
               } elseif ($remote_version) {
-                $update_desc = __("Please download new version from <a href='http://idslot.org/'>IDSlot website</a> and follow the instructions.");
+                $upgrade_desc = lang('Manual upgrade');
               }
             }
-            echo "<br />$update_desc<br />";
+            echo "<br />$upgrade_desc<br />";
             ?>
             <br /><br />
             <div class="form">
-              <label>&nbsp;</label><?php echo $update_button; ?> <a class="button form-submit" href="<?php echo site_url('idslot') ?>" ><?php echo __("Go back to IDSlot"); ?></a>
+              <label>&nbsp;</label><?php echo $upgrade_button; ?> <a class="button form-submit" href="<?php echo site_url('idslot') ?>" ><?php echo __("Go back to IDSlot"); ?></a>
             </div>
             <!-- end id-form  -->
           </div></div>

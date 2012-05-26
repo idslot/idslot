@@ -139,8 +139,8 @@ $data = $this->form_validation->_field_data;
                 <li><a<?php echo ($page_title == 'Resume') ? ' id="current"' : ''; ?> href="<?php echo site_url('idslot/resume'); ?>"><?php echo lang('Resume'); ?></a></li>
                 <li><a<?php echo ($page_title == 'Details') ? ' id="current"' : ''; ?> href="<?php echo site_url('idslot/details'); ?>"><?php echo lang('Details'); ?></a></li>
                 <li><a href="<?php echo $base_url; ?>" target="_blank"><?php echo lang('View Card'); ?></a></li>
-                <?php if($new_update){  ?>
-                <li><a href="<?php echo site_url('update'); ?>"><?php echo __("Update"); ?></a></li>
+                <?php if($new_upgrade){  ?>
+                <li><a href="<?php echo site_url('upgrade'); ?>"><?php echo lang('Upgrade'); ?></a></li>
                 <?php } ?>
               </ul>
             </div>

@@ -320,7 +320,7 @@ class System extends CI_Model {
     return true;
   }
   
-  public function check_remote_update(){
+  public function check_remote_upgrade(){
     $current_version = $this->config->item('version');
     if($this->session->userdata('remote_version')){
       $remote_version = $this->session->userdata('remote_version');
@@ -336,7 +336,7 @@ class System extends CI_Model {
     }
   }
 
-  public function check_local_update(){
+  public function check_local_upgrade(){
     $current_version = $this->config->item('version');
     $versions = file(APPPATH . 'etc/VERSIONS');
     if (version_compare(trim($versions[0]), $current_version, '<=')) {

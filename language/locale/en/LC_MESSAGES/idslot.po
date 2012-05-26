@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IDSlot 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-25 01:51+0330\n"
-"PO-Revision-Date: 2012-05-25 01:51+0330\n"
+"POT-Creation-Date: 2012-05-26 13:01+0330\n"
+"PO-Revision-Date: 2012-05-26 13:01+0330\n"
 "Last-Translator: Armin Borumand <armin390@gmail.com>\n"
 "Language-Team: IDSlot development team <info@idslot.org>\n"
 "Language: \n"
@@ -256,6 +256,62 @@ msgstr ""
 
 #: ../english/idslot_lang.php:75
 msgid "Hide"
+msgstr ""
+
+#: ../english/idslot_lang.php:78
+msgid "Upgrade IDSlot"
+msgstr ""
+
+#: ../english/idslot_lang.php:79
+msgid "You are using the latest version."
+msgstr ""
+
+#: ../english/idslot_lang.php:80
+msgid "Installed version"
+msgstr ""
+
+#: ../english/idslot_lang.php:81
+msgid "New version"
+msgstr ""
+
+#: ../english/idslot_lang.php:82
+msgid "Latest released version"
+msgstr ""
+
+#: ../english/idslot_lang.php:83
+msgid "must be writable for upgrade."
+msgstr ""
+
+#: ../english/idslot_lang.php:84
+msgid "It seems you overwrite IDSlot files to a new version please complete your upgrade. Click `Complete upgrade`."
+msgstr ""
+
+#: ../english/idslot_lang.php:85
+msgid "Complete upgrade"
+msgstr ""
+
+#: ../english/idslot_lang.php:86
+msgid "You can upgrade automatically to latest verion. The upgrade process will affect all files and folders included in the main IDSlot installation. Click `Upgrade Automatically`."
+msgstr ""
+
+#: ../english/idslot_lang.php:87
+msgid "Upgrade Automatically"
+msgstr ""
+
+#: ../english/idslot_lang.php:88
+msgid "You can't upgrade automatically. Please download latest released version from <a href='http://idslot.org/'>IDSlot website</a> and follow the instructions for upgrade."
+msgstr ""
+
+#: ../english/idslot_lang.php:89
+msgid "There are no upgrade for IDSlot."
+msgstr ""
+
+#: ../english/idslot_lang.php:90
+msgid "IDSlot upgraded to "
+msgstr ""
+
+#: ../english/idslot_lang.php:91
+msgid "Error in archive file!"
 msgstr ""
 
 #: ../english/tank_auth_lang.php:4

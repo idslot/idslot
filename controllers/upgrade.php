@@ -21,15 +21,15 @@ if (!defined('BASEPATH'))
  * @license	http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * @link	http://idslot.org
  */
-class Update extends IDS_Controller {
+class Upgrade extends IDS_Controller {
 
   public function index() {
     $data['config'] = is_writable(APPPATH . "config/config.php");
     $data['etc_dir'] = is_writable(APPPATH . "etc/tmp/");
     $data['current_version'] = $this->config->item('version');
-    $data['local_version'] = $this->system->check_local_update();
-    $data['remote_version'] = $this->system->check_remote_update();
-    $data['auto_update'] = false;
+    $data['local_version'] = $this->system->check_local_upgrade();
+    $data['remote_version'] = $this->system->check_remote_upgrade();
+    $data['auto_upgrade'] = false;
 
     if ($data['config'] && $data['etc_dir'] && !$data['local_version'] && $data['remote_version']) {
       $files = array();
@@ -39,7 +39,7 @@ class Update extends IDS_Controller {
       }
       $files = @file(APPPATH . 'etc/tmp/' . $file_name);
       if (is_array($files) && count($files) > 0) {
-        $data['auto_update'] = true;
+        $data['auto_upgrade'] = true;
         foreach ($files as $file) {
           $file = explode('|', trim($file));
           switch ($file[0]) {
@@ -58,20 +58,20 @@ class Update extends IDS_Controller {
           }
 
           if (!$check) {
-            $data['auto_update'] = false;
+            $data['auto_upgrade'] = false;
             break;
           }
         }
       }
     }
-    $this->load->view('user/update', $data);
+    $this->load->view('user/upgrade', $data);
   }
 
   public function local() {
     $current_version = $this->config->item('version');
     $versions = file(APPPATH . 'etc/VERSIONS');
     if (trim($versions[0]) == $current_version) {
-      $this->system->add_msg(__("There are no update for IDSlot.") . $current_version);
+      $this->system->add_msg(lang('No upgrade'));
       redirect('idslot');
       return;
     }
@@ -79,18 +79,18 @@ class Update extends IDS_Controller {
     for ($i = $steps; $i >= 0; $i--) {
       $versions[$i] = trim($versions[$i]);
       if ($this->compare($versions[$i], $current_version)) {
-        $current_version = $this->update_version($current_version, $versions[$i]);
+        $current_version = $this->upgrade_version($current_version, $versions[$i]);
       }
     }
-    $this->system->add_msg(__("IDSlot updated to ") . $current_version);
+    $this->system->add_msg(lang('Upgraded to') . $current_version);
     redirect('idslot');
   }
 
   public function remote() {
     $current_version = $this->config->item('version');
-    $remote_version = $this->system->check_remote_update();
+    $remote_version = $this->system->check_remote_upgrade();
     if ($remote_version == $current_version) {
-      $this->system->add_msg(__("There are no update for IDSlot.") . $current_version);
+      $this->system->add_msg(lang('No upgrade'));
       redirect('idslot');
       return;
     }
@@ -110,8 +110,8 @@ class Update extends IDS_Controller {
     }
 
     if (!is_array($files) || count($files) == 0) {
-      $this->system->add_msg(__("Error in archive file!"));
-      redirect('update');
+      $this->system->add_msg(lang('Archive error'));
+      redirect('upgrade');
       return;
     }
     unset($archive);
@@ -144,12 +144,12 @@ class Update extends IDS_Controller {
     unlink(APPPATH . 'etc/tmp/' . $file_name . '.zip');
     $this->system->rmdir(APPPATH . 'etc/tmp/' . $file_name);
     
-    $current_version = $this->update_version($current_version, $remote_version);
-    $this->system->add_msg(__("IDSlot updated to ") . $current_version);
+    $current_version = $this->upgrade_version($current_version, $remote_version);
+    $this->system->add_msg(lang('Upgraded to') . $current_version);
     redirect('idslot');
   }
 
-  private function update_version($from, $to) {
+  private function upgrade_version($from, $to) {
     if ($this->config->item('version') != $from) {
       return;
     }

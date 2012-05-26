@@ -73,3 +73,19 @@ $lang['Visibility'] = __("Visibility");
 $lang['Visible Description'] = __("You can show/hide this section");
 $lang['Show'] = __("Show");
 $lang['Hide'] = __("Hide");
+
+// Upgrade
+$lang['Upgrade'] = __("Upgrade IDSlot");
+$lang['Latest version'] = __("You are using the latest version.");
+$lang['Current version'] = __("Installed version");
+$lang['Local version'] = __("New version");
+$lang['Remote version'] = __("Latest released version");
+$lang['must be writable for upgrade'] = __("must be writable for upgrade.");
+$lang['Complete local upgrade'] = __("It seems you overwrite IDSlot files to a new version please complete your upgrade. Click `Complete upgrade`.");
+$lang['Complete upgrade'] = __("Complete upgrade");
+$lang['Automatic upgrade'] = __("You can upgrade automatically to latest verion. The upgrade process will affect all files and folders included in the main IDSlot installation. Click `Upgrade Automatically`.");
+$lang['Upgrade Automatically'] = __("Upgrade Automatically");
+$lang['Manual upgrade'] = __("You can't upgrade automatically. Please download latest released version from <a href='http://idslot.org/'>IDSlot website</a> and follow the instructions for upgrade.");
+$lang['No upgrade'] = __("There are no upgrade for IDSlot.");
+$lang['Upgraded to'] = __("IDSlot upgraded to ");
+$lang['Archive error'] = __("Error in archive file!");
