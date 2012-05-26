@@ -129,27 +129,27 @@ class Install extends CI_Controller {
         array(
             'field' => 'title',
             'label' => lang('Title'),
-            'rules' => 'required|xss_clean'
+            'rules' => 'required|specialchars'
         ),
         array(
             'field' => 'username',
             'label' => lang('Username'),
-            'rules' => 'trim|required|xss_clean|alpha_dash'
+            'rules' => 'trim|required|specialchars|alpha_dash'
         ),
         array(
             'field' => 'email',
             'label' => lang('Email'),
-            'rules' => 'trim|required|xss_clean|valid_email'
+            'rules' => 'trim|required|specialchars|valid_email'
         ),
         array(
             'field' => 'password',
             'label' => lang('Password'),
-            'rules' => 'trim|required|xss_clean'
+            'rules' => 'trim|required|specialchars|alpha_dash'
         ),
         array(
             'field' => 'password_confirm',
             'label' => lang('Password Confirm'),
-            'rules' => 'trim|required|xss_clean|matches[password]'
+            'rules' => 'trim|required|specialchars|matches[password]'
         )
     );
     $this->form_validation->set_rules($config);
