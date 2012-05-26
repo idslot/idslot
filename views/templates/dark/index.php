@@ -20,7 +20,10 @@ $this->load->helper('language');
     
     <!--styles-->
     <link href="<!--theme_url-->styles/dark.css" type="text/css" rel="stylesheet" />
-    
+    <?php
+    if (lang('direction') == 'rtl')
+      echo '<link href="<!--theme_url-->styles/dark-rtl.css" type="text/css" rel="stylesheet" />';
+    ?>
     <link href="<!--theme_url-->styles/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" />
     <!--javascript-->
     <script type="text/javascript" src="<!--theme_url-->js/jquery-1.6.2.min.js"></script>

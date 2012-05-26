@@ -44,8 +44,8 @@ ul.links{margin:10px 0px 0px 0px; padding:0px; list-style-type:none;display:inli
 ul.links li{list-style-type:none; float:left; display:inline; margin:0 5px 10px 5px; padding:5px 0 0 4px; background-color:#DFD5C2; width:260px; height:35px;border: 1px solid #BFB592;}
 ul.links li a, ul.links li a:visited{text-decoration:none;}
 .links span{line-height:15px;}
-.links span.address{font-size:11px;color:#6B5B3C;}
-.links span.linkTitle{color:#444; font-size: 16px;}
+.links span.address{font-size:11px;color:#6B5B3C;max-width: 220px;overflow: hidden;}
+.links span.linkTitle{color:#444; font-size: 16px;max-width: 220px;overflow: hidden;}
 .links img{padding-right:3px;}
 
 .float {float:left;}
