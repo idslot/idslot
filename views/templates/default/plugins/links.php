@@ -3,7 +3,7 @@ $web = base_url() . 'views/social_icons/';
 ?>
 <div id="links" class="panel">
 	<span class="ptitle block"><?php print($title); ?></span>
-	<span class="description block"><?php print($description); ?></span>
+	<span class="description block"><?php print(nl2br($description)); ?></span>
 		<ul class="links">
 			<?php
 				foreach($links as $link){

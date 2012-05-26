@@ -3,7 +3,7 @@
 <div id="contact" class="panel">
 	<span class="ptitle block"><?php print($title); ?></span>
 	<div class="info">
-		<span class="description block"><?php print($description); ?></span>
+		<span class="description block"><?php print(nl2br($description)); ?></span>
 		<?php
 			if($email && filter_var(strip_tags($email), FILTER_VALIDATE_EMAIL)){
 			  echo "<div><div class=\"infoTitle\">" . lang('Email') . ":</div><a href=\"mailto:{$email}\" class=\"email\" target=\"_blank\">{$email}</a></div>";
