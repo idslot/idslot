@@ -10,6 +10,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `biography`
 --
 
+DROP TABLE IF EXISTS `#_biography`;
 CREATE TABLE IF NOT EXISTS `#_biography` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uid` int(10) unsigned NOT NULL,
@@ -25,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `#_biography` (
 -- Table structure for table `ci_sessions`
 --
 
+DROP TABLE IF EXISTS `#_ci_sessions`;
 CREATE TABLE IF NOT EXISTS `#_ci_sessions` (
   `session_id` varchar(40) COLLATE utf8_bin NOT NULL DEFAULT '0',
   `ip_address` varchar(16) COLLATE utf8_bin NOT NULL DEFAULT '0',
@@ -40,6 +42,7 @@ CREATE TABLE IF NOT EXISTS `#_ci_sessions` (
 -- Table structure for table `contact`
 --
 
+DROP TABLE IF EXISTS `#_contact`;
 CREATE TABLE IF NOT EXISTS `#_contact` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -65,6 +68,7 @@ CREATE TABLE IF NOT EXISTS `#_contact` (
 -- Table structure for table `events`
 --
 
+DROP TABLE IF EXISTS `#_events`;
 CREATE TABLE IF NOT EXISTS `#_events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) DEFAULT NULL,
@@ -84,6 +88,7 @@ CREATE TABLE IF NOT EXISTS `#_events` (
 -- Table structure for table `events_categories`
 --
 
+DROP TABLE IF EXISTS `#_events_categories`;
 CREATE TABLE IF NOT EXISTS `#_events_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
@@ -401,6 +406,7 @@ INSERT INTO `#_events_categories` (`id`, `title`, `pid`) VALUES
 -- Table structure for table `login_attempts`
 --
 
+DROP TABLE IF EXISTS `#_login_attempts`;
 CREATE TABLE IF NOT EXISTS `#_login_attempts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ip_address` varchar(40) COLLATE utf8_bin NOT NULL,
@@ -415,6 +421,7 @@ CREATE TABLE IF NOT EXISTS `#_login_attempts` (
 -- Table structure for table `portfolio`
 --
 
+DROP TABLE IF EXISTS `#_portfolio`;
 CREATE TABLE IF NOT EXISTS `#_portfolio` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -430,6 +437,7 @@ CREATE TABLE IF NOT EXISTS `#_portfolio` (
 -- Table structure for table `portfolio_list`
 --
 
+DROP TABLE IF EXISTS `#_portfolio_list`;
 CREATE TABLE IF NOT EXISTS `#_portfolio_list` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL,
@@ -444,6 +452,7 @@ CREATE TABLE IF NOT EXISTS `#_portfolio_list` (
 -- Table structure for table `publications`
 --
 
+DROP TABLE IF EXISTS `#_publications`;
 CREATE TABLE IF NOT EXISTS `#_publications` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `resume_id` int(11) NOT NULL,
@@ -463,6 +472,7 @@ CREATE TABLE IF NOT EXISTS `#_publications` (
 -- Table structure for table `resume`
 --
 
+DROP TABLE IF EXISTS `#_resume`;
 CREATE TABLE IF NOT EXISTS `#_resume` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -477,6 +487,7 @@ CREATE TABLE IF NOT EXISTS `#_resume` (
 -- Table structure for table `resume_has_skill`
 --
 
+DROP TABLE IF EXISTS `#_resume_has_skill`;
 CREATE TABLE IF NOT EXISTS `#_resume_has_skill` (
   `resume_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
@@ -491,6 +502,7 @@ CREATE TABLE IF NOT EXISTS `#_resume_has_skill` (
 -- Table structure for table `skills`
 --
 
+DROP TABLE IF EXISTS `#_skills`;
 CREATE TABLE IF NOT EXISTS `#_skills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
@@ -503,6 +515,7 @@ CREATE TABLE IF NOT EXISTS `#_skills` (
 -- Table structure for table `social`
 --
 
+DROP TABLE IF EXISTS `#_social`;
 CREATE TABLE IF NOT EXISTS `#_social` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -518,6 +531,7 @@ CREATE TABLE IF NOT EXISTS `#_social` (
 -- Table structure for table `social_links`
 --
 
+DROP TABLE IF EXISTS `#_social_links`;
 CREATE TABLE IF NOT EXISTS `#_social_links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sid` int(11) NOT NULL,
@@ -534,6 +548,7 @@ CREATE TABLE IF NOT EXISTS `#_social_links` (
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `#_user`;
 CREATE TABLE IF NOT EXISTS `#_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `is_new` enum('false','true') COLLATE utf8_bin NOT NULL,
@@ -568,6 +583,7 @@ CREATE TABLE IF NOT EXISTS `#_user` (
 -- Table structure for table `user_autologin`
 --
 
+DROP TABLE IF EXISTS `#_user_autologin`;
 CREATE TABLE IF NOT EXISTS `#_user_autologin` (
   `key_id` char(32) COLLATE utf8_bin NOT NULL,
   `user_id` int(11) NOT NULL DEFAULT '0',
