@@ -77,8 +77,8 @@ $config['login_by_email'] = TRUE;
 $config['login_record_ip'] = TRUE;
 $config['login_record_time'] = TRUE;
 $config['login_count_attempts'] = TRUE;
-$config['login_max_attempts'] = 6;
-$config['login_attempt_expire'] = 60*60*2;
+$config['login_max_attempts'] = 10;
+$config['login_attempt_expire'] = 60*60*12;
 
 /*
 |--------------------------------------------------------------------------
