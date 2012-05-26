@@ -79,7 +79,7 @@ class Install extends CI_Controller {
         array(
             'field' => 'db_pass',
             'label' => lang('Database password'),
-            'rules' => 'alpha_dash|xss_clean'
+            'rules' => 'xss_clean'
         ),
         array(
             'field' => 'db_prefix',
