@@ -101,6 +101,7 @@ $confirm_new_password = array(
                 <div class="desc"><?php echo form_error($confirm_new_password['name']); ?><?php echo isset($errors[$confirm_new_password['name']]) ? $errors[$confirm_new_password['name']] : ''; ?></div>
               </div>
               <div class="submit">
+                <label>&nbsp;</label>
                 <?php echo form_submit('change', lang('Change Password')); ?>
               </div>
             </fieldset>

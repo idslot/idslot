@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IDSlot 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-25 02:18+0330\n"
-"PO-Revision-Date: 2012-05-25 02:18+0330\n"
+"POT-Creation-Date: 2012-05-26 18:04+0330\n"
+"PO-Revision-Date: 2012-05-26 18:04+0330\n"
 "Last-Translator: Armin Borumand <armin390@gmail.com>\n"
 "Language-Team: IDSlot development team <info@idslot.org>\n"
 "Language: \n"
@@ -19,7 +19,7 @@ msgid "Account settings"
 msgstr ""
 
 #: ../english/settings_lang.php:5
-msgid "Old Password"
+msgid "Current Password"
 msgstr ""
 
 #: ../english/settings_lang.php:6

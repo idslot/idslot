@@ -60,7 +60,9 @@ $lang['Password'] = __("Password");
 $lang['Password Confirm'] = __("Password Confirm");
 $lang['Remember me'] = __("Remember me");
 $lang['Confirmation Code'] = __("Confirmation Code");
-
+$lang['New Password'] = __("New Password");
+$lang['New Password Confirm'] = __("New Password Confirm");
+$lang['Change Password'] = __("Change Password");
 
 // Others
 $lang['auth_subject_send_password'] = __("Welcome to %s");

@@ -73,9 +73,10 @@ class Settings_Model extends CI_Model {
       $this->tank_auth->change_email($arr['email'], $arr['old_password']);
       
       if (!is_null($data = $this->tank_auth->set_new_email($arr['email'], $arr['old_password']))) {   // success
-         $data['site_name'] = $this->config->item('website_name', 'tank_auth');
-         $this->_send_email('change_email', $data['new_email'], $data);
-         $this->system->add_msg(sprintf(lang('auth_message_new_email_sent'), $data['new_email']));
+         //$data['site_name'] = $this->config->item('website_name', 'tank_auth');
+         //$this->_send_email('change_email', $data['new_email'], $data);
+         $this->users->activate_new_email($uid, $data['new_email_key']);
+         //$this->system->add_msg(sprintf(lang('auth_message_new_email_sent'), $data['new_email']));
          return true;
       } else {
         $errors = $this->tank_auth->get_error_message();
@@ -105,17 +106,17 @@ class Settings_Model extends CI_Model {
       array(
             'field'   => 'settings[old_password]',
             'label'   => lang('Old Password'),
-            'rules'   => 'required|trim|xss_clean'
+            'rules'   => 'required|trim|specialchars|alpha_dash'
           ),
       array(
             'field'   => 'settings[new_password]',
             'label'   => lang('New Password'),
-            'rules'   => 'trim|matches[confirm_password]|xss_clean'
+            'rules'   => 'trim|matches[confirm_password]|specialchars|alpha_dash'
           ),
       array(
             'field'   => 'confirm_password',
             'label'   => lang('New Password Confirm'),
-            'rules'   => 'trim|xss_clean'
+            'rules'   => 'trim|specialchars|alpha_dash'
           )
     );
   }
@@ -141,10 +142,10 @@ class Settings_Model extends CI_Model {
    */
   public function _send_email($type, $email, &$data) {
     $this->load->library('email');
-    $this->email->from('noreply@' . $this->config->item('base_url'), $this->config->item('website_name', 'tank_auth'));
-    $this->email->reply_to('noreply@' . $this->config->item('base_url'), $this->config->item('website_name', 'tank_auth'));
+    $this->email->from('noreply@' . $_SERVER['HTTP_HOST'], $this->config->item('website_name', 'tank_auth'));
     $this->email->to($email);
     $this->email->subject(sprintf($this->lang->line('auth_subject_' . $type), $this->config->item('website_name', 'tank_auth')));
+    $this->email->set_mailtype('html');
     $this->email->message($this->load->view('email/' . $type . '-html', $data, TRUE));
     $this->email->set_alt_message($this->load->view('email/' . $type . '-txt', $data, TRUE));
     $this->email->send();

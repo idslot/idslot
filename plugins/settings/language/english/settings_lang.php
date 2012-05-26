@@ -2,7 +2,7 @@
 
 // Settings
 $lang['Settings'] = __("Account settings", "settings");
-$lang['Old Password'] = __("Old Password", "settings");
+$lang['Old Password'] = __("Current Password", "settings");
 $lang['New Password'] = __("New Password", "settings");
 $lang['New Password Confirm'] = __("New Password Confirm", "settings");
 $lang['Settings Description'] = "";

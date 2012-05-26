@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IDSlot 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-26 13:01+0330\n"
-"PO-Revision-Date: 2012-05-26 13:01+0330\n"
+"POT-Creation-Date: 2012-05-26 18:03+0330\n"
+"PO-Revision-Date: 2012-05-26 18:03+0330\n"
 "Last-Translator: Armin Borumand <armin390@gmail.com>\n"
 "Language-Team: IDSlot development team <info@idslot.org>\n"
 "Language: \n"
@@ -232,88 +232,100 @@ msgstr ""
 msgid "Confirmation Code"
 msgstr ""
 
-#: ../english/idslot_lang.php:66
+#: ../english/idslot_lang.php:63
+msgid "New Password"
+msgstr ""
+
+#: ../english/idslot_lang.php:64
+msgid "New Password Confirm"
+msgstr ""
+
+#: ../english/idslot_lang.php:65
+msgid "Change Password"
+msgstr ""
+
+#: ../english/idslot_lang.php:68
 #, php-format
 msgid "Welcome to %s"
 msgstr ""
 
-#: ../english/idslot_lang.php:69
+#: ../english/idslot_lang.php:71
 msgid "Home"
 msgstr ""
 
-#: ../english/idslot_lang.php:70
+#: ../english/idslot_lang.php:72
 msgid "Error in connection"
 msgstr ""
 
-#: ../english/idslot_lang.php:72
+#: ../english/idslot_lang.php:74
 msgid "Visibility"
 msgstr ""
 
-#: ../english/idslot_lang.php:73
+#: ../english/idslot_lang.php:75
 msgid "You can show/hide this section"
 msgstr ""
 
-#: ../english/idslot_lang.php:74
+#: ../english/idslot_lang.php:76
 msgid "Show"
 msgstr ""
 
-#: ../english/idslot_lang.php:75
+#: ../english/idslot_lang.php:77
 msgid "Hide"
 msgstr ""
 
-#: ../english/idslot_lang.php:78
+#: ../english/idslot_lang.php:80
 msgid "Upgrade IDSlot"
 msgstr ""
 
-#: ../english/idslot_lang.php:79
+#: ../english/idslot_lang.php:81
 msgid "You are using the latest version."
 msgstr ""
 
-#: ../english/idslot_lang.php:80
+#: ../english/idslot_lang.php:82
 msgid "Installed version"
 msgstr ""
 
-#: ../english/idslot_lang.php:81
+#: ../english/idslot_lang.php:83
 msgid "New version"
 msgstr ""
 
-#: ../english/idslot_lang.php:82
+#: ../english/idslot_lang.php:84
 msgid "Latest released version"
 msgstr ""
 
-#: ../english/idslot_lang.php:83
+#: ../english/idslot_lang.php:85
 msgid "must be writable for upgrade."
 msgstr ""
 
-#: ../english/idslot_lang.php:84
+#: ../english/idslot_lang.php:86
 msgid "It seems you overwrite IDSlot files to a new version please complete your upgrade. Click `Complete upgrade`."
 msgstr ""
 
-#: ../english/idslot_lang.php:85
+#: ../english/idslot_lang.php:87
 msgid "Complete upgrade"
 msgstr ""
 
-#: ../english/idslot_lang.php:86
+#: ../english/idslot_lang.php:88
 msgid "You can upgrade automatically to latest verion. The upgrade process will affect all files and folders included in the main IDSlot installation. Click `Upgrade Automatically`."
 msgstr ""
 
-#: ../english/idslot_lang.php:87
+#: ../english/idslot_lang.php:89
 msgid "Upgrade Automatically"
 msgstr ""
 
-#: ../english/idslot_lang.php:88
+#: ../english/idslot_lang.php:90
 msgid "You can't upgrade automatically. Please download latest released version from <a href='http://idslot.org/'>IDSlot website</a> and follow the instructions for upgrade."
 msgstr ""
 
-#: ../english/idslot_lang.php:89
+#: ../english/idslot_lang.php:91
 msgid "There are no upgrade for IDSlot."
 msgstr ""
 
-#: ../english/idslot_lang.php:90
+#: ../english/idslot_lang.php:92
 msgid "IDSlot upgraded to "
 msgstr ""
 
-#: ../english/idslot_lang.php:91
+#: ../english/idslot_lang.php:93
 msgid "Error in archive file!"
 msgstr ""
 

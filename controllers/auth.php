@@ -223,8 +223,8 @@ class Auth extends CI_Controller {
     $user_id = $this->uri->segment(3);
     $new_pass_key = $this->uri->segment(4);
 
-    $this->form_validation->set_rules('new_password', 'New Password', 'trim|required|xss_clean|min_length[' . $this->config->item('password_min_length', 'tank_auth') . ']|max_length[' . $this->config->item('password_max_length', 'tank_auth') . ']|alpha_dash');
-    $this->form_validation->set_rules('confirm_new_password', 'Confirm new Password', 'trim|required|xss_clean|matches[new_password]');
+    $this->form_validation->set_rules('new_password', 'New Password', 'trim|required|specialchars|alpha_dash|min_length[' . $this->config->item('password_min_length', 'tank_auth') . ']|max_length[' . $this->config->item('password_max_length', 'tank_auth') . ']|alpha_dash');
+    $this->form_validation->set_rules('confirm_new_password', 'Confirm new Password', 'trim|required|specialchars|alpha_dash|matches[new_password]');
 
     $data['errors'] = array();
 
@@ -234,7 +234,7 @@ class Auth extends CI_Controller {
         $data['site_name'] = $this->config->item('website_name', 'tank_auth');
 
         // Send email with new password
-        $this->_send_email('reset_password', $data['email'], $data);
+        //$this->_send_email('reset_password', $data['email'], $data);
 
         $this->system->add_msg($this->lang->line('auth_message_new_password_activated'));
         redirect('auth/login');
@@ -259,9 +259,9 @@ class Auth extends CI_Controller {
     if (!$this->tank_auth->is_logged_in()) {        // not logged in or not activated
       redirect('/auth/login/');
     } else {
-      $this->form_validation->set_rules('old_password', 'Old Password', 'trim|required|xss_clean');
-      $this->form_validation->set_rules('new_password', 'New Password', 'trim|required|xss_clean|min_length[' . $this->config->item('password_min_length', 'tank_auth') . ']|max_length[' . $this->config->item('password_max_length', 'tank_auth') . ']|alpha_dash');
-      $this->form_validation->set_rules('confirm_new_password', 'Confirm new Password', 'trim|required|xss_clean|matches[new_password]');
+      $this->form_validation->set_rules('old_password', 'Old Password', 'trim|required|specialchars|alpha_dash');
+      $this->form_validation->set_rules('new_password', 'New Password', 'trim|required|specialchars|alpha_dash|min_length[' . $this->config->item('password_min_length', 'tank_auth') . ']|max_length[' . $this->config->item('password_max_length', 'tank_auth') . ']|alpha_dash');
+      $this->form_validation->set_rules('confirm_new_password', 'Confirm new Password', 'trim|required|specialchars|alpha_dash|matches[new_password]');
 
       $data['errors'] = array();
 
@@ -288,7 +288,7 @@ class Auth extends CI_Controller {
     if (!$this->tank_auth->is_logged_in()) {        // not logged in or not activated
       redirect('/auth/login/');
     } else {
-      $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
+      $this->form_validation->set_rules('password', 'Password', 'trim|required|specialchars|alpha_dash');
       $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|valid_email');
 
       $data['errors'] = array();
@@ -353,10 +353,10 @@ class Auth extends CI_Controller {
    */
   public function _send_email($type, $email, &$data) {
     $this->load->library('email');
-    $this->email->from('noreply@' . $this->config->item('base_url'), $this->config->item('website_name', 'tank_auth'));
-    $this->email->reply_to('noreply@' . $this->config->item('base_url'), $this->config->item('website_name', 'tank_auth'));
+    $this->email->from('noreply@' . $_SERVER['HTTP_HOST'], $this->config->item('website_name', 'tank_auth'));
     $this->email->to($email);
     $this->email->subject(sprintf($this->lang->line('auth_subject_' . $type), $this->config->item('website_name', 'tank_auth')));
+    $this->email->set_mailtype('html');
     $this->email->message($this->load->view('email/' . $type . '-html', $data, TRUE));
     $this->email->set_alt_message($this->load->view('email/' . $type . '-txt', $data, TRUE));
     $this->email->send();
