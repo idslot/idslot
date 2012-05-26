@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>IDSlot</title>
+    <style type="text/css">
+
+      ::selection{ background-color: #E13300; color: white; }
+      ::moz-selection{ background-color: #E13300; color: white; }
+      ::webkit-selection{ background-color: #E13300; color: white; }
+
+      body {
+        background-color: #fff;
+        margin: 40px;
+        font: 13px/20px normal Helvetica, Arial, sans-serif;
+        color: #4F5155;
+      }
+
+      a {
+        color: #003399;
+        background-color: transparent;
+        font-weight: normal;
+      }
+
+      h1 {
+        color: #444;
+        background-color: transparent;
+        border-bottom: 1px solid #D0D0D0;
+        font-size: 19px;
+        font-weight: normal;
+        margin: 0 0 14px 0;
+        padding: 14px 15px 10px 15px;
+      }
+
+      code {
+        font-family: Consolas, Monaco, Courier New, Courier, monospace;
+        font-size: 12px;
+        background-color: #f9f9f9;
+        border: 1px solid #D0D0D0;
+        color: #002166;
+        display: block;
+        margin: 14px 0 14px 0;
+        padding: 12px 10px 12px 10px;
+      }
+
+      #container {
+        margin: 10px;
+        border: 1px solid #D0D0D0;
+        box-shadow: 0 0 8px #D0D0D0;
+      }
+
+      p {
+        margin: 12px 15px 12px 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1><img src="views/images/idslot.png" alt="IDSlot" border="0" /><br />Online identity management system (Version: 1.0)</h1>
+      <p>IDSlot is an open source online identity management system.<br />
+Use IDSlot to present everything about you, any information such as your identity, photos, resume, skills, links, contact information, location map, ...
+      </p>
+      <h1>System requirements </h1>
+      <p>To install and run IDSlot your web host must meet the following requirements:<br />
+      <ul>
+        <li>Web server (Recommended: Apache 2.x with mod_rewrite enabled)</li>
+        <li>MySQL Database server (Recommended: MySQL 5.x)</li>
+        <li>PHP 5.2.4 or newer (With GD2 image libraries)</li>
+      </ul>
+      </p>
+      <h1>How to install IDSlot</h1>
+      <p><strong>1- Download and Extract IDSlot</strong><br>You can download IDSlot from <a target="_blank" href="http://idslot.org/">IDSlot website</a><br>Extract IDSlot package and put the contents of IDSlot folder into the web server's document root or your public HTML directory.</p>
+<p><strong>2- Check the permissions</strong><br>Prior to install IDSlot, you must set some permissions. You must make the config files and the compile folder writeable, so that the installer can edit it.</p>
+<p>Config files:<br>&nbsp;&nbsp;&nbsp; config/config.php<br>&nbsp;&nbsp;&nbsp; config/database.php<br>Compile folder:<br>&nbsp;&nbsp;&nbsp; views/idslot/</p>
+<p>Several FTP tools like Filezilla, Transmit, and Fetch allow you to change file permissions. For linux systems, you can set permissions using chmod command.</p>
+<p><strong>3- Create the database (MySQL)</strong><br>You must create a database. You must also have (or add) a user who has full access to this newly created database. IDSlot installer needs the database name, username and password for use in the installation.<br>You can create your IDSlot database using a web browser-based control panel (such as "CPanel" or "Plesk"), or by using phpMyAdmin (another browser-based database utility), or by creating the database directly from the MySQL command prompt (for more advanced users).</p>
+<p><strong>4- Use installer</strong><br>To run the installer, point your browser to the installer in the base URL of your web site.<br>The "base URL" means the document root (directory) where you placed your IDSlot files. If you have installed IDSlot on a web host this will likely be a domain name such as <a href="http://www.example.com">http://www.example.com</a>. If you installed IDSlot in a subfolder, then you should point your browser to the subfolder (e.g. <a href="http://example.com/subfolder">http://example.com/subfolder</a>).</p>
+<p>You can run the installer by entering the base URL of your site, add the "index.php/install" (for example <a href="http://www.example.com/index.php/install">http://www.example.com/index.php/install</a>).</p>
+<p><strong>5- Login to IDSlot</strong></p>
+<p>You can login to IDSlot by entering the base URL of your site, add the "index.php/auth" (for example <a href="http://www.example.com/index.php/auth">http://www.example.com/index.php/auth</a>).</p>
+    </div>
+  </body>
+</html>
