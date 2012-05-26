@@ -62,7 +62,7 @@ $this->load->helper('language');
           <div class="span-24 htop">
             <div class="span-12">
               <div class="beta"></div>
-              <h2 class="logo rightpad"><a href=""></a></h2>
+              <h2 class="logo rightpad"><a href="<?php echo site_url('idslot'); ?>"></a></h2>
             </div>
             <div class="span-12 last">
 

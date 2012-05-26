@@ -117,7 +117,7 @@ $data = $this->form_validation->_field_data;
           <div class="span-24 htop">
             <div class="span-12">
               <div class="beta"></div>
-              <h2 class="logo rightpad"><a href=""></a></h2>
+              <h2 class="logo rightpad"><a href="<?php echo site_url('idslot'); ?>"></a></h2>
             </div>
             <div class="span-12 last">
               <div class="reverse-float leftpad toplinks" style="margin-top: 7px;"><a<?php echo ($page_title == 'Settings') ? ' id="current"' : ''; ?> href="<?php echo site_url('idslot/settings'); ?>"><?php echo __('Account settings', 'settings'); ?></a>&nbsp;&nbsp;&nbsp;<a href="<?php echo site_url('auth/logout'); ?>" id="logout"><?php echo lang('Logout'); ?></a></div>
