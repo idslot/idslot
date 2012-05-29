@@ -76,7 +76,7 @@ class Details_Model extends CI_Model {
     }else{
       // check if language changed
       if($arr['language'] != $user->language){
-        $this->load->model('plugins/resume');
+        $this->plugin->model('resume');
         $this->resume->build_pdf($uid);
       }
       return true;
