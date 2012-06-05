@@ -600,6 +600,6 @@ CREATE TABLE IF NOT EXISTS `#_user_autologin` (
 --
 -- Constraints for table `resume`
 --
-ALTER TABLE `resume`
-  ADD CONSTRAINT `fk_resumes_users1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `#_resume`
+  ADD CONSTRAINT `fk_resumes_users1` FOREIGN KEY (`user_id`) REFERENCES `#_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
