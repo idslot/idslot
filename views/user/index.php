@@ -79,6 +79,62 @@ $data = $this->form_validation->_field_data;
             });
           }
         });
+        $("#skills").sortable({
+          placeholder: "ui-state-highlight",
+          update : function () {
+            serial = $('#skills').sortable('serialize');
+            $.ajax({
+              url: "<?php echo site_url('plugins/resume/sort_skills/') . ""; ?>",
+              type: "post",
+              data: serial,
+              error: function(){
+                alert("<?php echo lang('Error in connection'); ?>");
+              }
+            });
+          }
+        });
+        $("#educations").sortable({
+          placeholder: "ui-state-highlight",
+          update : function () {
+            serial = $('#educations').sortable('serialize');
+            $.ajax({
+              url: "<?php echo site_url('plugins/resume/sort_educations/') . ""; ?>",
+              type: "post",
+              data: serial,
+              error: function(){
+                alert("<?php echo lang('Error in connection'); ?>");
+              }
+            });
+          }
+        });
+        $("#experiences").sortable({
+          placeholder: "ui-state-highlight",
+          update : function () {
+            serial = $('#experiences').sortable('serialize');
+            $.ajax({
+              url: "<?php echo site_url('plugins/resume/sort_experiences/') . ""; ?>",
+              type: "post",
+              data: serial,
+              error: function(){
+                alert("<?php echo lang('Error in connection'); ?>");
+              }
+            });
+          }
+        });
+        $("#publications").sortable({
+          placeholder: "ui-state-highlight",
+          update : function () {
+            serial = $('#publications').sortable('serialize');
+            $.ajax({
+              url: "<?php echo site_url('plugins/resume/sort_publications/') . ""; ?>",
+              type: "post",
+              data: serial,
+              error: function(){
+                alert("<?php echo lang('Error in connection'); ?>");
+              }
+            });
+          }
+        });
       }
     );
     tinyMCE.init({

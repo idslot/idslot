@@ -100,7 +100,11 @@ class Resume_Controller extends IDS_Controller {
     $this->system->add_msg(lang('Skill removed'));
     redirect('idslot/edit/resume');
   }
-  
+
+  public function sort_skills(){
+    $this->resume->sort_skills($this->rid, $this->input->post('skills'));
+  }
+
   public function add_education(){
     $rules = $this->resume->form_rules_event();
     $this->form_validation->set_rules($rules);
@@ -148,6 +152,10 @@ class Resume_Controller extends IDS_Controller {
     $this->resume->remove_event($id);
     $this->system->add_msg(lang('Education removed'));
     redirect('idslot/edit/resume');
+  }
+
+  public function sort_educations(){
+    $this->resume->sort_events($this->rid, 'education', $this->input->post('educations'));
   }
   
   public function add_experience(){
@@ -198,6 +206,10 @@ class Resume_Controller extends IDS_Controller {
     $this->system->add_msg(lang('Experience removed'));
     redirect('idslot/edit/resume');
   }
+
+  public function sort_experiences(){
+    $this->resume->sort_events($this->rid, 'experience', $this->input->post('experiences'));
+  }
   
   public function add_publication(){
     $rules = $this->resume->form_rules_publication();
@@ -246,6 +258,10 @@ class Resume_Controller extends IDS_Controller {
     $this->resume->remove_publication($id);
     $this->system->add_msg(lang('Publication removed'));
     redirect('idslot/edit/resume');
+  }
+
+  public function sort_publications(){
+    $this->resume->sort_publications($this->rid, $this->input->post('publications'));
   }
   
   public function build_pdf(){

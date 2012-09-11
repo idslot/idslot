@@ -117,6 +117,7 @@ class Resume_Model extends CI_Model {
     $this->db->from('resume_has_skill');
     $this->db->join('skills', 'skills.id = resume_has_skill.skill_id');
     $this->db->where(array('resume_has_skill.resume_id' => $rid));
+    $this->db->order_by('resume_has_skill.sort');
     $skills = $this->db->get();
     return $skills->result_array();
   }
@@ -187,7 +188,23 @@ class Resume_Model extends CI_Model {
       return false;
     }
   }
-  
+
+  public function sort_skills($rid, $serial){
+    $this->load->database();
+
+    $this->db->where('resume_id', $rid);
+    $query = $this->db->get('resume_has_skill');
+    $s = $query->row_array();
+
+    $count = count($serial);
+    for($i=0; $i<$count; $i++){
+      $data['sort'] = $i+1;
+      $this->db->where(array('skill_id' => $serial[$i], 'resume_id' => $rid));
+      $this->db->update('resume_has_skill', $data);
+    }
+    return true;
+  }
+
   public function form_rules_skill(){
     return array(
       array(
@@ -201,6 +218,8 @@ class Resume_Model extends CI_Model {
   public function fetch_events($rid, $type){
     $this->db->from('events');
     $this->db->where(array('resume_id' => $rid, 'type' => $type));
+    $this->db->order_by('sort');
+    $this->db->order_by('id', 'desc');
     $events = $this->db->get();
     $events = $events->result_array();
     foreach(@$events as $index => $event){
@@ -250,6 +269,23 @@ class Resume_Model extends CI_Model {
     $this->db->where(array('resume_id'=>$resume['id'], 'id'=>$id));
     $this->db->delete('events');
   }
+
+  public function sort_events($rid, $type, $serial){
+    $this->load->database();
+
+    $this->db->where('resume_id', $rid);
+    $this->db->where('type', $type);
+    $query = $this->db->get('events');
+    $s = $query->row_array();
+
+    $count = count($serial);
+    for($i=0; $i<$count; $i++){
+      $data['sort'] = $i+1;
+      $this->db->where(array('id' => $serial[$i], 'resume_id' => $rid));
+      $this->db->update('events', $data);
+    }
+    return true;
+  }
   
   public function form_rules_event(){
     return array(
@@ -284,6 +320,8 @@ class Resume_Model extends CI_Model {
   public function fetch_publications($rid){
     $this->db->from('publications');
     $this->db->where(array('resume_id' => $rid));
+    $this->db->order_by('sort');
+    $this->db->order_by('id', 'desc');
     $publications = $this->db->get();
     $publications = $publications->result_array();
     foreach(@$publications as $index => $publication){
@@ -329,6 +367,23 @@ class Resume_Model extends CI_Model {
     $resume = $this->fetch($uid);
     $this->db->where(array('resume_id'=>$resume['id'], 'id'=>$id));
     $this->db->delete('publications');
+  }
+
+  public function sort_publications($rid, $serial){
+    $this->load->database();
+
+    $this->db->where('resume_id', $rid);
+
+    $query = $this->db->get('publications');
+    $s = $query->row_array();
+
+    $count = count($serial);
+    for($i=0; $i<$count; $i++){
+      $data['sort'] = $i+1;
+      $this->db->where(array('id' => $serial[$i], 'resume_id' => $rid));
+      $this->db->update('publications', $data);
+    }
+    return true;
   }
   
   public function form_rules_publication(){

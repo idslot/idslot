@@ -24,14 +24,13 @@ $data = $this->form_validation->_field_data;
 </form>
 
 <h3 class="title"><?php echo lang('Skills'); ?></h3><hr>
-<table border="0" cellpadding="0" cellspacing="0" class="style1">
+<ul id="skills" class="style1 ui-sortable">
 	<?php
 	foreach($skills as $skill){
 	?>
-	<tr>
-		<td>
+  <li id="skills_<?php echo $skill['id']; ?>" class="ui-state-default">
 		<?php
-		echo sprintf('<div id="%d-skill" class="li"><a href="%s" onclick="$(\'#%d-skill\').slideUp(); $(\'#%d-skill-form\').slideDown();return false;">%s</a></div>',
+		echo sprintf('<div id="%d-skill" class="li"><a href="%s" onclick="$(\'#%d-skill\').slideUp(); $(\'#%d-skill-form\').slideDown();return false;">%s</a><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></div>',
 			$skill['id'],
 			site_url('plugins/resume/edit_skill/' . $skill['id']),
 			$skill['id'],
@@ -53,12 +52,11 @@ $data = $this->form_validation->_field_data;
 			
 		  </div>
 		</form>
-		</td>
-	</tr>
+	</li>
 	<?php
 	}
 	?>
-</table>
+</ul>
 <?php
 echo form_open_multipart('plugins/resume/add_skill/'); 
 ?>
@@ -75,14 +73,13 @@ echo form_open_multipart('plugins/resume/add_skill/');
 
 
 <h3 class="title"><?php echo lang('Educations'); ?></h3><hr>
-<table border="0" cellpadding="0" cellspacing="0" class="style1">
+<ul id="educations" class="style1 ui-sortable">
 	<?php
 	foreach($educations as $education){
 	?>
-	<tr>
-		<td>
+    <li id="educations_<?php echo $education['id']; ?>" class="ui-state-default">
 		<?php
-		echo sprintf('<div id="%d-education" class="li"><a href="%s" onclick="$(\'#%d-education\').slideUp(); $(\'#%d-education-form\').slideDown();return false;">%s</a></div>',
+		echo sprintf('<div id="%d-education" class="li"><a href="%s" onclick="$(\'#%d-education\').slideUp(); $(\'#%d-education-form\').slideDown();return false;">%s</a><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></div>',
 			$education['id'],
 			site_url('plugins/resume/edit_education/' . $education['id']),
 			$education['id'],
@@ -113,12 +110,11 @@ echo form_open_multipart('plugins/resume/add_skill/');
 		
 		</div>
 		</form>
-		</td>
-	</tr>
+	</li>
 	<?php
 	}
 	?>
-</table>
+</ul>
 <?php
 echo form_open_multipart('plugins/resume/add_education/'); 
 ?>
@@ -146,14 +142,13 @@ echo form_open_multipart('plugins/resume/add_education/');
 
 
 <h3 class="title"><?php echo lang('Experiences'); ?></h3><hr>
-<table border="0" cellpadding="0" cellspacing="0" class="style1">
+<ul id="experiences" class="style1 ui-sortable">
 	<?php
 	foreach($experiences as $experience){
 	?>
-	<tr>
-		<td>
+	<li id="experiences_<?php echo $experience['id']; ?>" class="ui-state-default">
 		<?php
-		echo sprintf('<div id="%d-experience" class="li"><a href="%s" onclick="$(\'#%d-experience\').slideUp(); $(\'#%d-experience-form\').slideDown();return false;">%s</a></div>',
+		echo sprintf('<div id="%d-experience" class="li"><a href="%s" onclick="$(\'#%d-experience\').slideUp(); $(\'#%d-experience-form\').slideDown();return false;">%s</a><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></div>',
 			$experience['id'],
 			site_url('plugins/resume/edit_experience/' . $experience['id']),
 			$experience['id'],
@@ -213,12 +208,11 @@ echo form_open_multipart('plugins/resume/add_education/');
 		</div>
 		</div>
 		</form>
-		</td>
-	</tr>
+	</li>
 	<?php
 	}
 	?>
-</table>
+</ul>
 <?php
 echo form_open_multipart('plugins/resume/add_experience/'); 
 ?>
@@ -294,14 +288,13 @@ echo form_open_multipart('plugins/resume/add_experience/');
 
 
 <h3 class="title"><?php echo lang('Publications'); ?></h3><hr>
-<table border="0" cellpadding="0" cellspacing="0" class="style1">
+<ul id="publications" class="style1 ui-sortable">
 	<?php
 	foreach($publications as $publication){
 	?>
-	<tr>
-		<td>
+	<li id="publications_<?php echo $publication['id']; ?>" class="ui-state-default">
 		<?php
-		echo sprintf('<div id="%d-publication" class="li"><a href="%s" onclick="$(\'#%d-publication\').slideUp(); $(\'#%d-publication-form\').slideDown();return false;">%s</a></div>',
+		echo sprintf('<div id="%d-publication" class="li"><a href="%s" onclick="$(\'#%d-publication\').slideUp(); $(\'#%d-publication-form\').slideDown();return false;">%s</a><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></div>',
 			$publication['id'],
 			site_url('plugins/resume/edit_publication/' . $publication['id']),
 			$publication['id'],
@@ -341,12 +334,11 @@ echo form_open_multipart('plugins/resume/add_experience/');
 		
 		</div>
 		</form>
-		</td>
-	</tr>
+	</li>
 	<?php
 	}
 	?>
-</table>
+</ul>
 <?php
 echo form_open_multipart('plugins/resume/add_publication/'); 
 ?>
