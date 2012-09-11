@@ -488,7 +488,7 @@ class Resume_Model extends CI_Model {
     
     $resume = $this->plugin->view('resume', 'resume_pdf', $data, true);
     file_put_contents($this->system->render_path('resume') . '/' . $uid . '.html', $resume);
-    $cmd = 'xvfb-run wkhtmltopdf -s A4 -B 0 -L 0 -R 0 -T 0 "' . $this->system->render_path('resume') . '/' . $uid . '.html" "' . $this->system->render_path('resume') . '/' . $uid . '.pdf"';
+    $cmd = 'xvfb-run wkhtmltopdf -s A4 -B 0 -L 0 -R 0 -T 0 "' . $this->system->render_path('resume') . '/' . $uid . '.html" "' . $this->system->render_path('resume') . '/' . $uid . '.pdf" 2>&1';
     exec($cmd);
   }
   
