@@ -22,7 +22,7 @@ $data = $this->form_validation->_field_data;
 </form>
 
 <h3 class="title"><?php echo lang('List of links'); ?></h3><hr>
-<h3 class="subtitle"><?php echo lang('How to edit links'); ?></h3>
+<p><?php echo lang('How to edit links'); ?></p>
 <ul id="links" class="style1 ui-sortable">
 <?php
 $icons = array('aim', 'apple', 'blogger', 'delicious', 'digg', 'facebook', 'feedburner', 'flickr', 'friendfeed', 'google', 'hi5', 'identica', 'lastfm', 'linkedin', 'myspace', 'twitter', 'vimeo', 'wordpress', 'youtube', 'website');

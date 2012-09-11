@@ -22,7 +22,7 @@ $data = $this->form_validation->_field_data;
 
 
 <h3 class="title"><?php echo lang('List'); ?></h3><hr>
-<h3 class="subtitle"><?php echo lang('How to edit'); ?></h3>
+<p><?php echo lang('How to edit'); ?></p>
 <ul id="photos" class="style1 ui-sortable">
 <?php
 $web = base_url() . "views/idslot/files/photos/thumb_";
