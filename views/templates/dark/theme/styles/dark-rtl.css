@@ -1,19 +1,21 @@
-@font-face { font-family: irsans; src: url('../fonts/irsans.ttf'); }
-* {font-family: 'irsans', tahoma; font-size:12px;	line-height: 15px; letter-spacing: -0.5px; }
+* {font-family: tahoma; font-size:12px;	line-height: 18px; letter-spacing: -0.5px; }
 .header{direction:rtl;}
-.header .htitle{ font-size: 15px; padding-top:20px; font-family: 'irsans', tahoma; font-style: italic; letter-spacing: -2px;}
-.desc{ font-size: 13px;font-family: 'irsans', tahoma; font-style: italic;}
-.navigation {font-family: 'irsans', tahoma; font-size: 12px; font-weight:700; padding: 10px;letter-spacing: -1px;direction:rtl;}
-.panels {	font-family: 'irsans', tahoma;direction:rtl;}
-.panels .ptitle{font-size: 12px;letter-spacing: -1px;}
+.header .htitle{ font-size: 15px; padding-top:12px; font-family: tahoma; font-style: normal; letter-spacing: 0;}
+.desc{ font-size: 13px;font-family: tahoma; font-style: italic;}
+.navigation {font-family: tahoma; font-size: 12px; font-weight:700; padding: 10px;letter-spacing: -1px;direction:rtl;}
+.navigation .item a, .navigation .active a{font-size: 13px;}
+.panels {	font-family: tahoma;direction:rtl;}
+.panels .ptitle{font-size: 13px; letter-spacing: 0; font-style: normal;}
 .panels .content{font-size: 11px;}
 .panels .description{font-size: 11px;}
+ul.photos{width: 475px;}
 .links span.address{font-size: 11px;}
-.links span.linkTitle{font-size: 14px;}
+.links span.linkTitle{font-size: 13px;}
 ul.links{text-align:right;}
 ul.links li{float:right; padding:5px 4px 0 0;}
 .links img{float:right;padding:0 4px 0 4px;}
 .info{ font-size: 11px;}
+.info span, .info div{line-height: 17px;}
 div.infoTitle{font-size: 11px;letter-spacing: -1px; float:right; margin: 0 0 0 10px;}
 input[type=text], textarea {font-size: 11px;}
 input[type=submit] {font-size: 10px;}
@@ -24,7 +26,7 @@ label { font-size: 10px;}
 
 .info{width:262px; float:right;}
 .form{margin:0 262px 0 0; width:260px;}
-
+form span{display: block;}
 
 
 input#captcha{width:138px; margin:0 52px 0 0;}
