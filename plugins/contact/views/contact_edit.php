@@ -18,7 +18,7 @@ map_language = "<?php echo substr($language, 0, 2); ?>";
     <label><?php echo lang('Description'); ?>:</label><textarea name="contact[description]" cols="50" class="form-textarea"><?php echo $description; ?></textarea>
   </div>
   <div class="form <?php echo $this->system->is_required($data, 'contact[email]'); ?>" title="<?php echo lang('Contact Email Description'); ?>">
-    <label><?php echo lang('Contact Email'); ?></label><input type="text" class="ltr inp-form" name="contact[email]" value="<?php echo $email; ?>" />
+    <label><?php echo lang('Contact Email'); ?>:</label><input type="text" class="ltr inp-form" name="contact[email]" value="<?php echo $email; ?>" />
   </div>	    
   <div class="form <?php echo $this->system->is_required($data, 'contact[tel]'); ?>" title="<?php echo lang('Contact Telephone Description'); ?>">
     <label><?php echo lang('Telephone'); ?>:</label><input type="text" class="ltr inp-form" name="contact[tel]" value="<?php echo $tel; ?>"/>
@@ -48,7 +48,7 @@ map_language = "<?php echo substr($language, 0, 2); ?>";
     <label><?php echo lang('Postcode'); ?>:</label><input type="text" class="ltr inp-form" name="contact[postcode]" value="<?php echo $postcode; ?>"/>
   </div>	    
   <div class="form <?php echo $this->system->is_required($data, 'contact[use_form]'); ?>" title="<?php echo lang('Use Form Description'); ?>">
-    <label><?php echo lang('Use Form'); ?></label><input type="radio" name="contact[use_form]" value="1" <?php echo $use_form=='1'?'checked="checked"':'0'; ?> /><?php echo lang('Yes'); ?><input type="radio" name="contact[use_form]" value="0" <?php echo $use_form=='0'?'checked="checked"':'0'; ?> /><?php echo lang('No'); ?>
+    <label><?php echo lang('Use Form'); ?>:</label><input type="radio" name="contact[use_form]" value="1" <?php echo $use_form=='1'?'checked="checked"':'0'; ?> /><?php echo lang('Yes'); ?><input type="radio" name="contact[use_form]" value="0" <?php echo $use_form=='0'?'checked="checked"':'0'; ?> /><?php echo lang('No'); ?>
   </div>	
   <div class="form <?php echo $this->system->is_required($data, 'contact[visible]'); ?>" title="<?php echo lang('Visible Description');?>">
     <label><?php echo lang('Visibility');?>:</label>
