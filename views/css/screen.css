@@ -2,8 +2,8 @@
 
 /* reset.css */
 html {margin:0;padding:0;border:0;}
-body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:11px;font-family:inherit;vertical-align:baseline;}
-article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:12px;font-family:inherit;vertical-align:baseline;}
+article, aside, figure, footer, header, hgroup, nav, section {display:block;}
 body {line-height:1.5;background:#E6E6E6;}
 table {border-collapse:separate;border-spacing:0;}
 caption, th, td {text-align:left;font-weight:normal;float:none !important;}
@@ -17,12 +17,12 @@ a img {border:none;}
 
 body {color:#222;font-family:verdana,helvetica,arial,sans-serif;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
-h1 {font-size:15px;}
-h2 {font-size:13px;}
-h3 {font-size:11px;}
-h4 {font-size:11px;}
-h5 {font-size:11px;}
-h6 {font-size:10px;}
+h1 {font-size:17px;}
+h2 {font-size:15px;}
+h3 {font-size:14px;}
+h4 {font-size:13px;}
+h5 {font-size:13px;}
+h6 {font-size:12px;}
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 p {margin:0 0 1.5em;}
 .left {float:left !important;}
@@ -51,7 +51,7 @@ table {margin-bottom:1.4em;width:100%;}
 tfoot {font-style:italic;}
 caption {background:#eee;}
 .small {font-size:10px;margin-bottom:1.875em;line-height:1.875em;}
-.large {font-size:11px;line-height:2.5em;margin-bottom:1.25em;}
+.large {font-size:13px;line-height:2.5em;margin-bottom:1.25em;}
 .hide {display:none;}
 .quiet {color:#666;}
 .loud {color:#000;}
@@ -66,17 +66,17 @@ caption {background:#eee;}
 /* forms.css */
 
 fieldset {padding:0 1.4em 1.4em 1.4em;margin:0 0 1.5em 0;border:1px solid #ccc;}
-legend {font-weight:bold;font-size:11px;margin-top:-0.2em;margin-bottom:1em;}
+legend {font-weight:bold;font-size:12px;margin-top:-0.2em;margin-bottom:1em;}
 fieldset, #IE8#HACK {padding-top:1.4em;}
 legend, #IE8#HACK {margin-top:0;margin-bottom:0;}
-input[type=text], input[type=password], input.text, input.title, textarea {background-color:#fff;border:1px solid #ccc; font-size:11px; color:#333;}
+input[type=text], input[type=password], input.text, input.title, textarea {background-color:#fff;border:1px solid #ccc; font-size:12px; color:#333;}
 input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus {background:#f9f9f9;	}
 
 /* div.required input:focus , div.required textarea:focus {border:1px solid #E4ACA3;} */
 
 input.text, input.title {width:400px;padding:5px;}
-input.title {font-size:11px;}
-textarea {width:400px;height:60px;padding:4px; font-size:11px;}
+input.title {font-size:12px;}
+textarea {width:400px;height:60px;padding:4px; font-size:12px;}
 textarea[name="about[content]"]{height: 300px;}
 form.inline {line-height:3;}
 form.inline p {margin-bottom:0;}
@@ -254,7 +254,7 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 /* custom */
 .title {color:#5381A5; margin: 0 5px 5px 0; font-weight:bold;}
 .subfieldset{padding:5px 0 5px 0; border:0; background: #FFFADB; margin: 0;}
-.subtitle {margin: 0 5px 20px 0; color:#333;}
+.subtitle {margin: 10px 5px 10px 0; color:#333; font-weight: bold; padding: 5px;}
 hr {
   border-bottom: 1px solid #ccc;
   margin: 0 0 15px 0;
@@ -263,7 +263,7 @@ hr {
 	-o-box-shadow:rgba(0,0,0,.1) 0px 1px 2px;
 	box-shadow:rgba(0,0,0,.1) 0px 1px 2px;
   }
-input {font-size:11px;}
+input {font-size:12px;}
 input[type=text], input[type=password] {padding:4px;}
 select {width: 250px;}
 input[type=text], input[type=password] {width:400px;}
@@ -273,7 +273,7 @@ input[type=text], input[type=password] {width:400px;}
 .container1 {background: #fff; width: 950px; margin: 0 auto; padding: 15px 0 15px 0; display:table;}
 .container2 {background:#292929;width: 100%;}
 .header {background-color:#85A5BA; background-image:-moz-linear-gradient(center top , #96B2C4 0%, #85A5BA 100%); width:950px; height: 111px; margin-bottom: 10px; margin:0 auto;}
-.htop {height: 91px;}
+.htop {height: 87px;}
 h2.logo {background:url(../images/logoen.png) no-repeat 0 0;width:220px;height:52px;margin: 22px 0 0 10px;}
 h2.logo a {height:51px;text-indent:-9999px;display:block;}
 
@@ -323,7 +323,7 @@ h2.ban a {height:16;text-indent:-9999px;display:block;}
 .block-content {padding:0.5em; text-align: justify;}
 
 
-label{width:100px;display:inline-block;margin-right:10px;text-align:right;vertical-align:top;}
+label{width:100px;display:inline-block;margin-right:10px;margin-top:2px;text-align:right;vertical-align:top;font-weight:normal;}
 
 
 input[type=submit], input[type=reset], input[type=button], a.button{
@@ -351,7 +351,7 @@ border-left:1px solid #eee;
 a.button:hover, a.button:active, a.button:visited { color:#d12f19; text-decoration:none;}
 
 
-.desc{font-size:10px;display:inline-block;margin-left:5px;vertical-align:top;color:#666;}
+.desc{font-size:11px;display:inline-block;margin-left:5px;vertical-align:top;color:#666;}
 .reverse-float {float:right;}
 .icon-list {
 	width: 400px;
@@ -410,8 +410,9 @@ background: #CEDBE3;
 border: 0px solid #ccc;
 color: #666;
 float: left;
+font-size: 12px;
 font-weight: normal;
-line-height: 14px;
+line-height: 18px;
 margin-right: 8px;
 padding: 3px 10px 3px 10px;
 text-decoration: none;
@@ -431,6 +432,7 @@ border-bottom: 1px solid #fff;
 border-right: 1px solid #ccc;
 border-left: 1px solid #ccc;
 color: #000;
+font-weight: bold;
 }
 
 #navlist a:hover { background: #E3EBF1; color: #006699; }
@@ -446,9 +448,9 @@ color: #000;
 
 .mainbox {background-color:#FAFAF8; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; min-height: 400px;}
 
-.toplinks {color:#fff; padding: 2px 5px 2px 5px;}
+.toplinks {color:#fff; padding: 2px 5px 2px 5px; background-color: #7595AA; padding: 5px;}
 .toplinks:hover { }
-.toplinks a {color: #fff;}
+.toplinks a {color: #fff; font-size: 12px; letter-spacing: 1px; }
 
 .loginblock label{width:70px;display:inline-block;vertical-align:top;}
 .loginblock input[type=text], .loginblock input[type=password]{width:140px;}
@@ -456,7 +458,7 @@ color: #000;
 
 .intro {display: inline-block; width: 210px;vertical-align:top; padding-top: 10px;}
 .intro img {float:left; padding-right: 5px;}
-.intro h1 {font-size:13px; font-weight: bold;white-space: nowrap; color:#333;}
+.intro h1 {font-size:17px; font-weight: bold;white-space: nowrap; color:#333;}
 .intro h2 {color:#E88200; word-spacing: -2px; letter-spacing:-0.5px;}
 .subintro {display: inline-block; width: 190px; line-height: 20px; color:#444; padding-top: 5px;}
 .start {
@@ -475,7 +477,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 background: linear-gradient(top, #ffffff 0%,#f4f4f4 100%); /* W3C */
 	}
 .substart {padding-top: 20px;}
-.substart h1 {font-size:13px; display: inline-block; color:#333;}
+.substart h1 {font-size:17px; display: inline-block; color:#333;}
 .substart a.button:hover, .substart a.button:active, .substart a.button:visited { color:#006699; text-decoration:none;}
 .substart .form-submit{ color:#006699; padding: 5px 10px 5px 10px; background:#dff4ff; border:1px solid #c2e1ef; margin-left: 10px; font-size: 13px; font-weight: normal;}
 .substart .form-submit:hover{ background:#dff4ff; border:1px solid #6EAAC5; }
