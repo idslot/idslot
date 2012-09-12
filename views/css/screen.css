@@ -432,12 +432,12 @@ text-decoration: none;
 border-radius: 3px 3px 0 0 ;
 }
 
-.SkillDiv {height:70.75px;}
-.EduDiv {height:281.5px;}
-.ExpDiv {height:349.5px;}
-.PubDiv {height:240.75px;}
-.LinksDiv {height:183px;}
-.PhotosDiv {height:250px;}
+.SkillDiv {height:80px;}
+.EduDiv {height:250px;}
+.ExpDiv {height:320px;}
+.PubDiv {height:280px;}
+.LinksDiv {height:200px;}
+.PhotosDiv {height:260px;}
 
 #navlist a:link#current, #navlist a:visited#current
 {
