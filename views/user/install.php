@@ -153,21 +153,20 @@ $data = $this->form_validation->_field_data;
         </div>
         <!-- END CONTENT -->
       </div>
-      <div class="container2">
-        <!-- START FOOTER -->
-        <div class="footer quiet">
+    </div>
+    <div class="container2">
+      <!-- START FOOTER -->
+      <div class="footer quiet">
 
-          <div class="footer1">
-            <?php echo lang('Idslot'); ?>
-          </div>
+        <div class="footer1">
+          <?php echo lang('Idslot'); ?>
+        </div>
 
-          <div class="footer2">
-            <a href="http://idslot.org/" target="_blank"><img src="<?php echo $base_url; ?>/views/images/footer.png" alt="<?php echo lang('Idslot'); ?>" /></a>
-          </div>
-        </div> 
-        <!-- END FOOTER -->
+        <div class="footer2">
+          <a href="http://idslot.org/" target="_blank"><img src="<?php echo $base_url; ?>/views/images/footer.png" alt="<?php echo lang('Idslot'); ?>" /></a>
+        </div>
       </div>
-
+      <!-- END FOOTER -->
     </div>
 
   </body>
