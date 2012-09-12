@@ -21,7 +21,7 @@ $data = $this->form_validation->_field_data;
 </form>
 </div>
 <div class="rightpad mainbox">
-<h3 class="title"><?php echo lang('List'); ?></h3><hr>
+<h3 class="title"><?php echo lang('Photos'); ?></h3><hr>
 <p><?php echo lang('How to edit'); ?></p>
 <ul id="photos" class="style1 ui-sortable">
 <?php

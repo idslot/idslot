@@ -22,7 +22,7 @@ $data = $this->form_validation->_field_data;
 </form>
 </div>
 <div class="rightpad mainbox">
-<h3 class="title"><?php echo lang('List of links'); ?></h3><hr>
+<h3 class="title"><?php echo lang('Links'); ?></h3><hr>
 <p><?php echo lang('How to edit links'); ?></p>
 <ul id="links" class="style1 ui-sortable">
 <?php
