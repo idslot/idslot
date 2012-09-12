@@ -20,7 +20,8 @@ $data = $this->form_validation->_field_data;
   </div>
 
 </form>
-
+</div>
+<div class="rightpad mainbox">
 <h3 class="title"><?php echo lang('List of links'); ?></h3><hr>
 <p><?php echo lang('How to edit links'); ?></p>
 <ul id="links" class="style1 ui-sortable">
@@ -72,7 +73,7 @@ echo form_open_multipart('plugins/links/edit/' . $link['id']);
 echo form_open_multipart('plugins/links/add/' . $id); 
 ?>
 
-<h3 class="title"><?php echo lang('Add a new link'); ?></h3><hr>
+<h4 class="subtitle"><?php echo lang('Add a new link'); ?></h4>
   <div class="form required" title="<?php echo lang('Links Link Title'); ?>">
     <label><?php echo lang('Title'); ?>:</label><input type="text" class="inp-form" name="name" value=""/>
   </div>

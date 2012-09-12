@@ -22,7 +22,8 @@ $data = $this->form_validation->_field_data;
   </div>
 
 </form>
-
+</div>
+<div class="rightpad mainbox">
 <h3 class="title"><?php echo lang('Skills'); ?></h3><hr>
 <ul id="skills" class="style1 ui-sortable">
 	<?php
@@ -71,7 +72,8 @@ echo form_open_multipart('plugins/resume/add_skill/');
 
 </form>
 
-
+</div>
+<div class="rightpad mainbox">
 <h3 class="title"><?php echo lang('Educations'); ?></h3><hr>
 <ul id="educations" class="style1 ui-sortable">
 	<?php
@@ -139,7 +141,8 @@ echo form_open_multipart('plugins/resume/add_education/');
 
 </form>
 
-
+</div>
+<div class="rightpad mainbox">
 
 <h3 class="title"><?php echo lang('Experiences'); ?></h3><hr>
 <ul id="experiences" class="style1 ui-sortable">
@@ -285,7 +288,8 @@ echo form_open_multipart('plugins/resume/add_experience/');
 </form>
 
 
-
+</div>
+<div class="rightpad mainbox">
 
 <h3 class="title"><?php echo lang('Publications'); ?></h3><hr>
 <ul id="publications" class="style1 ui-sortable">

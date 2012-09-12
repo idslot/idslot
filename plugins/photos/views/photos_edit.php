@@ -19,8 +19,8 @@ $data = $this->form_validation->_field_data;
     	<label></label><input type="submit" value="<?php echo lang('Submit');?>" class="form-submit" />
   </div>
 </form>
-
-
+</div>
+<div class="rightpad mainbox">
 <h3 class="title"><?php echo lang('List'); ?></h3><hr>
 <p><?php echo lang('How to edit'); ?></p>
 <ul id="photos" class="style1 ui-sortable">
@@ -67,7 +67,7 @@ echo form_open_multipart('plugins/photos/edit/' . $photos['id']);
 echo form_open_multipart('plugins/photos/add/' . $id); 
 ?>
 
-<h3 class="title"><?php echo lang('Add a new photos'); ?></h3><hr>
+<h4 class="subtitle"><?php echo lang('Add a new photos'); ?></h4>
   <div class="form required" title="<?php echo lang('Photos text description'); ?>">
     <label><?php echo lang('Content'); ?>:</label><textarea name="content" cols="50" class="form-textarea"></textarea>
   </div>
