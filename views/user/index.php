@@ -176,7 +176,7 @@ $data = $this->form_validation->_field_data;
               <h2 class="logo rightpad"><a href="<?php echo site_url('idslot'); ?>"></a></h2>
             </div>
             <div class="span-12 last">
-              <div class="reverse-float leftpad toplinks" style="margin-top: 7px;"><a<?php echo ($page_title == 'Settings') ? ' id="current"' : ''; ?> href="<?php echo site_url('idslot/settings'); ?>"><?php echo __('Account settings', 'settings'); ?></a>&nbsp;&nbsp;&nbsp;<a href="<?php echo site_url('auth/logout'); ?>" id="logout"><?php echo lang('Logout'); ?></a></div>
+              <div class="reverse-float leftpad toplinks"><a<?php echo ($page_title == 'Settings') ? ' id="current"' : ''; ?> href="<?php echo site_url('idslot/settings'); ?>"><?php echo __('Account settings', 'settings'); ?></a>&nbsp;&nbsp;&nbsp;<a href="<?php echo site_url('auth/logout'); ?>" id="logout"><?php echo lang('Logout'); ?></a></div>
             </div>
           </div>
           <!-- END HEADER -->
@@ -275,20 +275,21 @@ $data = $this->form_validation->_field_data;
         </div>
         <!-- END CONTENT -->
       </div>
-      <div class="container2">
-        <!-- START FOOTER -->
-        <div class="footer quiet">
 
-          <div class="footer1">
-            <?php echo lang('Idslot'); ?>
-          </div>
+    </div>
+    <div class="container2">
+      <!-- START FOOTER -->
+      <div class="footer quiet">
 
-          <div class="footer2">
-            <a href="http://idslot.org/" target="_blank"><img src="<?php echo $base_url; ?>/views/images/footer.png" alt="<?php echo lang('Idslot'); ?>" /></a>
-          </div>
-        </div> 
-        <!-- END FOOTER -->
+        <div class="footer1">
+          <?php echo lang('Idslot'); ?>
+        </div>
+
+        <div class="footer2">
+          <a href="http://idslot.org/" target="_blank"><img src="<?php echo $base_url; ?>/views/images/footer.png" alt="<?php echo lang('Idslot'); ?>" /></a>
+        </div>
       </div>
+      <!-- END FOOTER -->
     </div>
 
   </body>
