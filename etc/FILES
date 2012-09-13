@@ -1524,7 +1524,8 @@ system/fonts/index.html
 etc/
 etc/VERSIONS
 etc/FILES
-etc/idslot_mysql_1.0.sql
+etc/idslot_mysql_1.0.1.sql
+etc/idslot_mysql_1.0-1.0.1.sql
 etc/tmp/
 etc/tmp/index.html
 etc/index.html

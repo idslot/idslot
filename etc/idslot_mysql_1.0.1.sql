@@ -76,6 +76,7 @@ CREATE TABLE IF NOT EXISTS `#_events` (
   `summary` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
   `description` text COLLATE utf8_general_ci,
   `type` enum('experience','education') COLLATE utf8_general_ci DEFAULT NULL,
+  `sort` INT NOT NULL DEFAULT  '0',
   `start` date DEFAULT NULL,
   `end` date DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -456,6 +457,7 @@ DROP TABLE IF EXISTS `#_publications`;
 CREATE TABLE IF NOT EXISTS `#_publications` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `resume_id` int(11) NOT NULL,
+  `sort` INT NOT NULL DEFAULT  '0',
   `title` varchar(2000) COLLATE utf8_general_ci DEFAULT NULL,
   `creators` varchar(2000) COLLATE utf8_general_ci DEFAULT NULL,
   `date` date DEFAULT NULL,
@@ -491,6 +493,7 @@ DROP TABLE IF EXISTS `#_resume_has_skill`;
 CREATE TABLE IF NOT EXISTS `#_resume_has_skill` (
   `resume_id` int(11) NOT NULL,
   `skill_id` int(11) NOT NULL,
+  `sort` INT NOT NULL DEFAULT  '0',
   PRIMARY KEY (`resume_id`,`skill_id`),
   KEY `fk_resumes_has_skills_skills1` (`skill_id`),
   KEY `fk_resumes_has_skills_resumes1` (`resume_id`)
